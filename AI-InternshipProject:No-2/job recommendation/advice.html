@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advice</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="nav">
+                <a href="/home/shayan/Desktop/Ammad stuff/all2/Internship Project No 1/index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Dashboard
+                </a>
+            </div>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-lightbulb"></i>
+                    <h1>AI Career Advice</h1>
+                </div>
+                <p class="subtitle">Get personalized career recommendations and skill development roadmap</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Container -->
+            <div class="form-container">
+                <form id="advice-form" class="recommendation-form">
+                    <h3><i class="fas fa-user-graduate"></i> Your Educational Background</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="degree">Education/Degree *</label>
+                            <input type="text" id="degree" name="degree" 
+                                   placeholder="e.g., BS Computer Science, MBA, MS Data Science" required>
+                            <small>Enter your highest qualification or current degree</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="majors">Major/Specialization</label>
+                            <input type="text" id="majors" name="majors" 
+                                   placeholder="e.g., Software Engineering, Machine Learning, Business Analytics">
+                            <small>Your area of specialization or focus</small>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="skills">Current Skills *</label>
+                            <textarea id="skills" name="skills" rows="4" 
+                                      placeholder="List your technical skills, programming languages, tools, frameworks, etc. Separate with commas.
+Example: Python, JavaScript, React, Machine Learning, SQL, Docker, AWS" required></textarea>
+                            <small>Be specific about your technical abilities and tools you're familiar with</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-magic"></i>
+                        Get AI Career Advice
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI is analyzing your profile...</p>
+                <small>This may take a few moments</small>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results" class="results-container hidden">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 AI Career Advice System. Powered by Machine Learning & BERT Analysis.</p>
+        </footer>
+    </div>
+
+    <script>
+        // API Configuration
+        const API_ENDPOINT = 'http://127.0.0.1:3000/recommend_advice';
+
+        // DOM Elements
+        const form = document.getElementById('advice-form');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+
+        // Form submission handler
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const userData = {
+                degree: formData.get('degree'),
+                majors: formData.get('majors'),
+                skills: formData.get('skills')
+            };
+            
+            try {
+                showLoading();
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                console.error('Error:', error);
+                displayError('Failed to get career advice. Please check if the backend service is running on port 5000.');
+            } finally {
+                hideLoading();
+            }
+        });
+
+        // Display results
+        function displayResults(data) {
+            const resultsHTML = `
+                <div class="results-header">
+                    <h2><i class="fas fa-star"></i> Your AI Career Analysis</h2>
+                    <p>Personalized recommendations based on your profile</p>
+                </div>
+                
+                <div class="career-results">
+                    <div class="recommendation-card">
+                        <h3><i class="fas fa-bullseye"></i> Recommended Career Path</h3>
+                        <div class="career-title">${data.recommended_job_title}</div>
+                        <p class="career-subtitle">This role aligns perfectly with your educational background and skills</p>
+                    </div>
+                    
+                    <div class="skills-section">
+                        <div class="skills-card">
+                            <h3><i class="fas fa-code"></i> Technical Skills to Master</h3>
+                            <div class="skills-list">
+                                ${data.technical_skills_to_learn.map(skill => 
+                                    `<span class="skill-tag technical">${skill}</span>`
+                                ).join('')}
+                            </div>
+                            <p class="skills-note">Focus on these technologies to excel in your recommended career path</p>
+                        </div>
+                        
+                        <div class="skills-card">
+                            <h3><i class="fas fa-users"></i> Soft Skills to Develop</h3>
+                            <div class="skills-list">
+                                ${data.soft_skills_to_develop.map(skill => 
+                                    `<span class="skill-tag soft">${skill}</span>`
+                                ).join('')}
+                            </div>
+                            <p class="skills-note">These interpersonal skills will boost your career growth</p>
+                        </div>
+                    </div>
+                    
+                    <div class="advice-card">
+                        <h3><i class="fas fa-compass"></i> Personalized Career Guidance</h3>
+                        <p class="advice-text">${data.career_advice}</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button onclick="window.print()" class="action-btn print-btn">
+                            <i class="fas fa-print"></i>
+                            Print Report
+                        </button>
+                        <button onclick="clearResults()" class="action-btn retry-btn">
+                            <i class="fas fa-redo"></i>
+                            Try Again
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            results.innerHTML = resultsHTML;
+            results.classList.remove('hidden');
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Display error
+        function displayError(message) {
+            const errorHTML = `
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Oops! Something went wrong</h3>
+                    <p>${message}</p>
+                    <button onclick="clearResults()" class="retry-btn">Try Again</button>
+                </div>
+            `;
+            
+            results.innerHTML = errorHTML;
+            results.classList.remove('hidden');
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Utility functions
+        function showLoading() {
+            loading.classList.remove('hidden');
+            results.classList.add('hidden');
+        }
+
+        function hideLoading() {
+            loading.classList.add('hidden');
+        }
+
+        function clearResults() {
+            results.classList.add('hidden');
+            results.innerHTML = '';
+        }
+
+        // Add smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>

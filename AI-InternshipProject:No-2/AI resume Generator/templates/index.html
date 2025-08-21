@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered CV Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-file-alt"></i> AI-Powered CV Generator</h1>
+            <div class="training-info" id="trainingInfo">
+                <i class="fas fa-spinner fa-spin"></i> Loading training information...
+            </div>
+            <div class="api-test-section">
+                <button id="testApiBtn" class="btn btn-secondary btn-small">
+                    <i class="fas fa-key"></i> Test API Key
+                </button>
+                <span id="apiTestResult"></span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Panel - Input Form -->
+            <div class="panel input-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-edit"></i> Input Data</h2>
+                    <div class="panel-controls">
+                        <button id="uploadCsvBtn" class="btn btn-secondary">
+                            <i class="fas fa-upload"></i> Upload CSV
+                        </button>
+                        <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <form id="cvForm">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn</label>
+                                    <input type="url" id="linkedin" name="linkedin">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="github">GitHub</label>
+                                    <input type="url" id="github" name="github">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="education_highest_degree">Degree</label>
+                                    <input type="text" id="education_highest_degree" name="education_highest_degree" placeholder="e.g., Bachelor of Science">
+                                </div>
+                                <div class="form-group">
+                                    <label for="education_institute">Institution</label>
+                                    <input type="text" id="education_institute" name="education_institute" placeholder="University name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="education_start">Start Year</label>
+                                    <input type="text" id="education_start" name="education_start" placeholder="2020">
+                                </div>
+                                <div class="form-group">
+                                    <label for="education_end">End Year</label>
+                                    <input type="text" id="education_end" name="education_end" placeholder="2024">
+                                </div>
+                                <div class="form-group">
+                                    <label for="education_gpa">GPA</label>
+                                    <input type="text" id="education_gpa" name="education_gpa" placeholder="3.8">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                                <button type="button" id="addExperienceBtn" class="btn btn-secondary btn-small">
+                                    <i class="fas fa-plus"></i> Add Experience
+                                </button>
+                            </div>
+
+                            <div id="experienceContainer">
+                                <!-- Experience items will be added dynamically -->
+                            </div>
+
+                            <div class="empty-state" id="experienceEmptyState">
+                                <i class="fas fa-briefcase"></i>
+                                <p>No work experience added yet</p>
+                                <p class="text-muted">Click "Add Experience" to add your work history</p>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-cogs"></i> Skills</h3>
+                                <button type="button" id="generateAtsKeywordsBtn" class="btn btn-secondary btn-small">
+                                    <i class="fas fa-robot"></i> Generate ATS Keywords
+                                </button>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="skills_technical">Technical Skills</label>
+                                    <input type="text" id="skills_technical" name="skills_technical" placeholder="Python, JavaScript, React, Node.js">
+                                    <small>Separate skills with commas</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="skills_soft">Soft Skills</label>
+                                    <input type="text" id="skills_soft" name="skills_soft" placeholder="Leadership, Communication, Problem Solving">
+                                    <small>Separate skills with commas</small>
+                                </div>
+                            </div>
+
+                            <!-- ATS Keywords Section -->
+                            <div class="ats-keywords-section" id="atsKeywordsSection" style="display: none;">
+                                <h4><i class="fas fa-robot"></i> AI-Generated ATS Keywords</h4>
+                                <div class="ats-keywords-container" id="atsKeywordsContainer">
+                                    <!-- Keywords will be populated here -->
+                                </div>
+                                <div class="ats-actions">
+                                    <button type="button" id="addSelectedKeywordsBtn" class="btn btn-primary btn-small">
+                                        <i class="fas fa-plus"></i> Add Selected to Skills
+                                    </button>
+                                    <button type="button" id="clearKeywordsBtn" class="btn btn-secondary btn-small">
+                                        <i class="fas fa-times"></i> Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+                                <button type="button" id="addProjectBtn" class="btn btn-secondary btn-small">
+                                    <i class="fas fa-plus"></i> Add Project
+                                </button>
+                            </div>
+
+                            <div id="projectContainer">
+                                <!-- Project items will be added dynamically -->
+                            </div>
+
+                            <div class="empty-state" id="projectEmptyState">
+                                <i class="fas fa-project-diagram"></i>
+                                <p>No projects added yet</p>
+                                <p class="text-muted">Click "Add Project" to showcase your work</p>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                                <button type="button" id="addCertificationBtn" class="btn btn-secondary btn-small">
+                                    <i class="fas fa-plus"></i> Add Certification
+                                </button>
+                            </div>
+
+                            <div id="certificationContainer">
+                                <!-- Certification items will be added dynamically -->
+                            </div>
+
+                            <div class="empty-state" id="certificationEmptyState">
+                                <i class="fas fa-certificate"></i>
+                                <p>No certifications added yet</p>
+                                <p class="text-muted">Click "Add Certification" to add your credentials</p>
+                            </div>
+                        </div>
+
+                        <!-- Professional Summary -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user-tie"></i> Professional Summary</h3>
+                            <div class="form-group">
+                                <label for="summary">Professional Summary</label>
+                                <div class="summary-container">
+                                    <textarea id="summary" name="summary" rows="3" placeholder="Brief professional summary..."></textarea>
+                                    <button type="button" id="generateSummaryBtn" class="btn btn-secondary btn-small generate-summary-btn">
+                                        <i class="fas fa-magic"></i> Generate with AI
+                                    </button>
+                                </div>
+                                <small>AI will generate a professional summary based on your information above</small>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Generate Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-file-alt"></i> Generate CV
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Panel - CV Render -->
+            <div class="panel cv-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-file-pdf"></i> CV Preview</h2>
+                    <div class="panel-controls">
+                        <button id="downloadPdfBtn" class="btn btn-primary" disabled>
+                            <i class="fas fa-download"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div id="cvPreview" class="cv-display">
+                        <div class="cv-placeholder">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Your generated CV will appear here</p>
+                            <p class="text-muted">Fill the form and generate to see the preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Generating CV with AI...</p>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

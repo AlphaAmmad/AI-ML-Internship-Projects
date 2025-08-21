@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Recommendations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="nav">
+                <a href="/home/shayan/Desktop/Ammad stuff/all2/Internship Project No 1/index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Dashboard
+                </a>
+            </div>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-briefcase"></i>
+                    <h1>AI Job Recommendations</h1>
+                </div>
+                <p class="subtitle">Find jobs that perfectly match your profile using semantic analysis</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Container -->
+            <div class="form-container">
+                <form id="jobs-form" class="recommendation-form">
+                    <h3><i class="fas fa-user-circle"></i> Your Job Preferences</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="preferred_roles">Preferred Roles *</label>
+                            <input type="text" id="preferred_roles" name="preferred_roles" 
+                                   placeholder="e.g., Software Engineer, Data Scientist, Product Manager" required>
+                            <small>What job titles are you looking for?</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Technical Skills *</label>
+                            <textarea id="skills" name="skills" rows="3" 
+                                      placeholder="e.g., Python, JavaScript, React, Machine Learning, SQL" required></textarea>
+                            <small>Your technical expertise and programming skills</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="soft_skills">Soft Skills</label>
+                            <input type="text" id="soft_skills" name="soft_skills" 
+                                   placeholder="e.g., Leadership, Communication, Problem Solving, Teamwork">
+                            <small>Your interpersonal and professional skills</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tools_technologies">Tools & Technologies</label>
+                            <input type="text" id="tools_technologies" name="tools_technologies" 
+                                   placeholder="e.g., Docker, AWS, Git, Jira, Kubernetes">
+                            <small>Tools and platforms you're familiar with</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="industry_preference">Industry Preference</label>
+                            <select id="industry_preference" name="industry_preference">
+                                <option value="">Select Industry</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Education">Education</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Consulting">Consulting</option>
+                                <option value="Media">Media & Entertainment</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="job_type_preference">Job Type</label>
+                            <select id="job_type_preference" name="job_type_preference">
+                                <option value="">Select Job Type</option>
+                                <option value="Full-Time">Full-Time</option>
+                                <option value="Part-Time">Part-Time</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Remote">Remote</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred_shift">Preferred Shift</label>
+                            <select id="preferred_shift" name="preferred_shift">
+                                <option value="">Select Shift</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Night">Night</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience_required">Experience Level</label>
+                            <select id="experience_required" name="experience_required">
+                                <option value="">Select Experience</option>
+                                <option value="0-1 years">Entry Level (0-1 years)</option>
+                                <option value="2-4 years">Mid Level (2-4 years)</option>
+                                <option value="5-7 years">Senior Level (5-7 years)</option>
+                                <option value="8+ years">Expert Level (8+ years)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-search"></i>
+                        Find Matching Jobs
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI is finding your perfect job matches...</p>
+                <small>Analyzing thousands of job postings</small>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results" class="results-container hidden">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 AI Job Recommendation System. Powered by Semantic Analysis & Machine Learning.</p>
+        </footer>
+    </div>
+
+    <script>
+        // API Configuration
+        const API_ENDPOINT = 'http://127.0.0.1:3000/recommend_jobs';
+
+        // DOM Elements
+        const form = document.getElementById('jobs-form');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+
+        // Form submission handler
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const userData = {
+                preferred_roles: formData.get('preferred_roles'),
+                skills: formData.get('skills'),
+                soft_skills: formData.get('soft_skills'),
+                tools_technologies: formData.get('tools_technologies'),
+                industry_preference: formData.get('industry_preference'),
+                job_type_preference: formData.get('job_type_preference'),
+                preferred_shift: formData.get('preferred_shift'),
+                experience_required: formData.get('experience_required')
+            };
+            
+            try {
+                showLoading();
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                console.error('Error:', error);
+                displayError('Failed to fetch job recommendations. Please check if the backend service is running on port 5000.');
+            } finally {
+                hideLoading();
+            }
+        });
+
+        // Display results
+        function displayResults(jobs) {
+            if (!jobs || jobs.length === 0) {
+                displayError('No matching jobs found. Try adjusting your criteria or preferences.');
+                return;
+            }
+            
+            const resultsHTML = `
+                <div class="results-header">
+                    <h2><i class="fas fa-briefcase"></i> Your Job Matches</h2>
+                    <p>Found ${jobs.length} jobs that match your profile (60%+ compatibility)</p>
+                </div>
+                <div class="jobs-grid">
+                    ${jobs.map((job, index) => `
+                        <div class="job-card" style="animation-delay: ${index * 0.1}s">
+                            <div class="job-header">
+                                <h3>${job.title}</h3>
+                                <div class="similarity-score">
+                                    <span class="score-label">Match</span>
+                                    <span class="score-value">${Math.round(job.similarity_score * 100)}%</span>
+                                </div>
+                            </div>
+                            <div class="job-details">
+                                <p class="company"><i class="fas fa-building"></i> ${job.company}</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> ${job.location}</p>
+                                <p class="job-id"><i class="fas fa-id-card"></i> Job ID: ${job.job_id}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="results-actions">
+                    <button onclick="window.print()" class="action-btn print-btn">
+                        <i class="fas fa-print"></i>
+                        Print Results
+                    </button>
+                    <button onclick="clearResults()" class="action-btn retry-btn">
+                        <i class="fas fa-redo"></i>
+                        Search Again
+                    </button>
+                </div>
+            `;
+            
+            results.innerHTML = resultsHTML;
+            results.classList.remove('hidden');
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+
+        // Display error
+        function displayError(message) {
+            const errorHTML = `
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Oops! Something went wrong</h3>
+                    <p>${message}</p>
+                    <button onclick="clearResults()" class="retry-btn">Try Again</button>
+                </div>
+            `;
+            
+            results.innerHTML = errorHTML;
+            results.classList.remove('hidden');
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Utility functions
+        function showLoading() {
+            loading.classList.remove('hidden');
+            results.classList.add('hidden');
+        }
+
+        function hideLoading() {
+            loading.classList.add('hidden');
+        }
+
+        function clearResults() {
+            results.classList.add('hidden');
+            results.innerHTML = '';
+        }
+
+        // Add smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>

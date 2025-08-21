@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>AI Career Dashboard</h1>
+            <p>Your AI-powered career companion</p>
+        </header>
+        
+        <main class="dashboard-main">
+            <div class="button-grid">
+                <button class="dashboard-btn cv-generator" onclick="navigateTo('http://127.0.0.1:5001/')">
+                    <div class="btn-icon">📄</div>
+                    <h3>AI CV Generator</h3>
+                    <p>Create professional resumes with AI assistance</p>
+                </button>
+                
+                <button class="dashboard-btn career-advice" onclick="navigateTo('job recommendation/advice.html')">
+                    <div class="btn-icon">💡</div>
+                    <h3>AI Career Advice</h3>
+                    <p>Get personalized career guidance and tips</p>
+                </button>
+
+                <button class="dashboard-btn job-recommendation" onclick="navigateTo('job recommendation/jobs.html')">
+                    <div class="btn-icon">🎯</div>
+                    <h3>AI Job Recommendation</h3>
+                    <p>Find jobs that match your skills and interests</p>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
