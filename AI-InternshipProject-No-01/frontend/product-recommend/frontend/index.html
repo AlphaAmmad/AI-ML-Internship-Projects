@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ Product Recommendation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-shopping-bag"></i> Product Recommendation System</h1>
+            <p>Get personalized product recommendations based on your preferences</p>
+            <a href="../../index.html" class="btn btn-secondary">← Back to Dashboard</a>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Form -->
+            <div class="form-container">
+                <h2><i class="fas fa-user-circle"></i> Tell us about yourself</h2>
+                <form id="recommendationForm">
+                    <!-- Region -->
+                    <div class="form-group">
+                        <label for="region"><i class="fas fa-globe"></i> Region</label>
+                        <select id="region" name="region" required>
+                            <option value="">Select your region</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="India">India</option>
+                            <option value="UAE">UAE</option>
+                        </select>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label for="gender"><i class="fas fa-venus-mars"></i> Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <!-- Age Group -->
+                    <div class="form-group">
+                        <label for="user_age_group"><i class="fas fa-birthday-cake"></i> Age Group</label>
+                        <select id="user_age_group" name="user_age_group" required>
+                            <option value="">Select age group</option>
+                            <option value="18-25">18-25</option>
+                            <option value="25-30">25-30</option>
+                            <option value="30-40">30-40</option>
+                            <option value="40+">40+</option>
+                        </select>
+                    </div>
+
+                    <!-- User Preferences -->
+                    <div class="form-group">
+                        <label for="user_preferences"><i class="fas fa-heart"></i> Style Preference</label>
+                        <select id="user_preferences" name="user_preferences" required>
+                            <option value="">Select your style</option>
+                            <option value="office wear">Office Wear</option>
+                            <option value="party wear">Party Wear</option>
+                            <option value="sports wear">Sports Wear</option>
+                            <option value="daily wear">Daily Wear</option>
+                            <option value="casual wear">Casual Wear</option>
+                        </select>
+                    </div>
+
+                    <!-- Season -->
+                    <div class="form-group">
+                        <label for="season"><i class="fas fa-sun"></i> Season</label>
+                        <select id="season" name="season" required>
+                            <option value="">Select season</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Autumn">Autumn</option>
+                            <option value="Winter">Winter</option>
+                        </select>
+                    </div>
+
+                    <!-- Product Keywords -->
+                    <div class="form-group">
+                        <label for="product_keywords"><i class="fas fa-tags"></i> Product Keywords</label>
+                        <input type="text" id="product_keywords" name="product_keywords" 
+                               placeholder="e.g., fashion,shoes,shirts,jeans" required>
+                        <small class="help-text">Enter keywords separated by commas</small>
+                    </div>
+
+                    <!-- Previous Buy -->
+                    <div class="form-group">
+                        <label for="previous_buy"><i class="fas fa-shopping-cart"></i> Previous Purchase</label>
+                        <select id="previous_buy" name="previous_buy" required>
+                            <option value="">Select previous purchase</option>
+                            <option value="tshirt">T-shirt</option>
+                            <option value="shirt">Shirt</option>
+                            <option value="jeans">Jeans</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="joggers">Joggers</option>
+                            <option value="shorts">Shorts</option>
+                            <option value="flipflop">Flip Flop</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-magic"></i>
+                        <span class="btn-text">Get Recommendation</span>
+                        <div class="loading-spinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-container" id="resultsContainer" style="display: none;">
+                <h2><i class="fas fa-star"></i> Your Recommendation</h2>
+                <div class="result-card" id="resultCard">
+                    <!-- Results will be populated here -->
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-container" id="errorContainer" style="display: none;">
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="errorText"></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Product Recommendation System. Powered by ammad </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

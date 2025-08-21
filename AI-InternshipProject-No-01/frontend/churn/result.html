@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Churn Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🔮 Customer Churn Predictor</h1>
+      <p>Predict customer churn probability using advanced ML algorithms</p>
+      <a href="../index.html" class="btn btn-secondary">← Back to Dashboard</a>
+    </header>
+
+    <div class="form-container">
+      <form id="churnForm">
+        <div class="form-grid">
+        <input type="number" name="customer_tenure" placeholder="Customer Tenure (months)" required>
+        <input type="number" name="number_of_services_or_products" placeholder="Number of Services" required>
+        <input type="number" step="0.1" name="average_monthly_usage" placeholder="Monthly Usage" required>
+        <input type="number" name="days_since_last_interaction" placeholder=" Days Since Interaction" required>
+        <input type="number" step="0.01" name="complaints_resolved_ratio" placeholder=" Complaints Resolved Ratio" required>
+        <input type="number" name="total_spent" placeholder=" Total Spent" required>
+        <input type="number" name="average_transaction_value" placeholder=" Avg. Transaction Value" required>
+
+        <!-- ✅ Dropdown for Discount -->
+        <select name="discount_or_offer_received" required>
+          <option value="" disabled selected>Discount Received?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+
+        <!-- ✅ Dropdown for Account Status -->
+        <select name="account_status" required>
+          <option value="" disabled selected> Select Account Status</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+          <option value="Suspended">Suspended</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </div>
+
+        <button type="submit" class="btn">Predict Churn</button>
+      </form>
+    </div>
+
+    <div id="result" class="results-container" style="display: none;">
+      <div class="result-card">
+        <h3>Prediction Result</h3>
+        <p><strong>Prediction:</strong> <span id="predictionText">---</span></p>
+        <p><strong>Probability:</strong> <span id="probabilityText">---</span></p>
+        <p><strong>Churn Zone:</strong> <span id="zoneText">---</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("churnForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        // Treat "account_status" as text, rest as numbers
+        jsonData[key] = (key === "account_status") ? value : parseFloat(value);
+      });
+
+      const res = await fetch("http://127.0.0.1:5000/predict-churn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(jsonData)
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        document.getElementById("result").style.display = "block";
+        document.getElementById("predictionText").innerText = data.prediction;
+        document.getElementById("probabilityText").innerText = data.probability;
+        document.getElementById("zoneText").innerText = data.churn_zone;
+      } else {
+        alert("❌ Error: " + (data.error || "Unexpected error"));
+      }
+    });
+  </script>
+</body>
+</html>

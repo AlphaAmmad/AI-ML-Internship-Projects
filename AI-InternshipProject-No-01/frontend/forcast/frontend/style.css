@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+}
+.container {
+  background: white;
+  margin: auto;
+  padding: 30px;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+canvas {
+  margin: 20px auto;
+  max-width: 95%;
+  height: 400px;
+}
+input, button, select {
+  margin: 10px;
+  padding: 10px;
+}
+#forecastTable {
+  margin: 20px auto;
+  max-width: 95%;
+  border-collapse: collapse;
+}

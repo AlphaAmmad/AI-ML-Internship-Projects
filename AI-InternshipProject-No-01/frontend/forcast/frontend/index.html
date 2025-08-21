@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Forecast Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📈 Retail Demand Forecast</h1>
+      <p>Advanced sales forecasting using machine learning algorithms</p>
+      <a href="../../index.html" class="btn btn-secondary">← Back to Dashboard</a>
+    </header>
+
+      <input type="file" id="csvFile">
+      <button class="btn" onclick="uploadFile()">Upload & Forecast</button>
+      <h3 id="accuracy"></h3>
+    </div>
+
+    <div class="results-container">
+      <h3>Chart 1: Overall Sales Trend</h3>
+      <canvas id="chart1"></canvas>
+
+      <h3>Chart 2: Grouped Breakdown</h3>
+      <div class="form-group">
+        <label>View by:</label>
+        <select id="filterType" onchange="updateGroupedChart()">
+          <option value="category">Category</option>
+          <option value="gender">Gender</option>
+          <option value="region">Region</option>
+        </select>
+      </div>
+      <canvas id="chart2"></canvas>
+
+      <h3>Chart 3: Category Change</h3>
+      <canvas id="chart3"></canvas>
+
+      <div id="forecastTable"></div>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+</html>
