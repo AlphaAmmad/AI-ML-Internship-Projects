@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meeting Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h1>AI Meeting Summarizer</h1>
+                </div>
+                <p class="subtitle">Transform your meeting recordings into professional minutes instantly</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section" id="uploadSection">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h2>Upload Meeting Recording</h2>
+                        <p>Upload your MP3 meeting recording to generate professional minutes</p>
+                    </div>
+                    
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <i class="fas fa-file-audio"></i>
+                            <p class="upload-text">
+                                <span class="primary-text">Click to upload</span> or drag and drop
+                            </p>
+                            <p class="upload-subtext">MP3 files only (Max 100MB)</p>
+                        </div>
+                        <input type="file" id="fileInput" accept=".mp3" hidden>
+                    </div>
+
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <i class="fas fa-file-audio"></i>
+                            <div class="file-text">
+                                <span class="file-name" id="fileName"></span>
+                                <span class="file-size" id="fileSize"></span>
+                            </div>
+                            <button class="remove-file" id="removeFile">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="process-btn" id="processBtn" disabled>
+                        <i class="fas fa-magic"></i>
+                        Generate Minutes of Meeting
+                    </button>
+                </div>
+            </section>
+
+            <!-- Processing Section -->
+            <section class="processing-section" id="processingSection" style="display: none;">
+                <div class="processing-card">
+                    <div class="processing-animation">
+                        <div class="spinner"></div>
+                        <div class="processing-steps">
+                            <div class="step active" id="step1">
+                                <i class="fas fa-upload"></i>
+                                <span>Uploading file...</span>
+                            </div>
+                            <div class="step" id="step2">
+                                <i class="fas fa-microphone"></i>
+                                <span>Transcribing audio...</span>
+                            </div>
+                            <div class="step" id="step3">
+                                <i class="fas fa-brain"></i>
+                                <span>Generating minutes...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="processing-text">Please wait while we process your meeting recording...</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-card">
+                    <div class="results-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Meeting Minutes Generated</h2>
+                        <p>Your professional meeting minutes are ready</p>
+                    </div>
+                    
+                    <div class="results-content">
+                        <div class="results-toolbar">
+                            <button class="toolbar-btn" id="copyBtn">
+                                <i class="fas fa-copy"></i>
+                                Copy
+                            </button>
+                            <button class="toolbar-btn" id="downloadBtn">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                            <button class="toolbar-btn secondary" id="newMeetingBtn">
+                                <i class="fas fa-plus"></i>
+                                New Meeting
+                            </button>
+                        </div>
+                        
+                        <div class="minutes-container">
+                            <div class="minutes-content" id="minutesContent">
+                                <!-- Generated minutes will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-card">
+                    <div class="error-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h2>Processing Error</h2>
+                    </div>
+                    <div class="error-content">
+                        <p class="error-message" id="errorMessage"></p>
+                        <button class="retry-btn" id="retryBtn">
+                            <i class="fas fa-redo"></i>
+                            Try Again
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 AI Meeting Summarizer. Powered by Whisper & DeepSeek AI.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

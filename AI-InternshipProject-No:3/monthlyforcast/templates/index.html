@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block title %}AI Expense Forecasting - Upload Your Data{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-brain me-3"></i>
+                    AI-Powered Expense Forecasting
+                </h1>
+                <p class="lead mb-4">
+                    Upload your company's historical expense data and let our AI predict future expenses with advanced machine learning algorithms.
+                </p>
+                <div class="d-flex gap-3">
+                    <span class="badge bg-light text-dark fs-6">
+                        <i class="fas fa-robot me-1"></i>Machine Learning
+                    </span>
+                    <span class="badge bg-light text-dark fs-6">
+                        <i class="fas fa-chart-bar me-1"></i>Interactive Charts
+                    </span>
+                    <span class="badge bg-light text-dark fs-6">
+                        <i class="fas fa-file-csv me-1"></i>CSV Upload
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-chart-line" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold">How It Works</h2>
+                <p class="text-muted">Simple 3-step process to get your expense forecasts</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-upload text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">1. Upload CSV</h5>
+                        <p class="card-text">Upload your historical expense data in CSV format with columns: Month, Miscellaneous, Financial, CapEx, COGS, Operating, Total</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-cogs text-success" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">2. AI Analysis</h5>
+                        <p class="card-text">Our AI analyzes patterns, trends, and seasonality in your data using advanced machine learning algorithms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-bar text-warning" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">3. Get Forecasts</h5>
+                        <p class="card-text">Receive detailed forecasts with interactive charts and performance metrics for informed decision making</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">
+                            <i class="fas fa-file-upload me-2"></i>
+                            Upload Your Expense Data
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="uploadForm">
+                            <div class="upload-area" id="uploadArea">
+                                <i class="fas fa-cloud-upload-alt text-muted mb-3" style="font-size: 4rem;"></i>
+                                <h5>Drag & Drop your CSV file here</h5>
+                                <p class="text-muted mb-3">or click to browse</p>
+                                <input type="file" name="file" id="fileInput" accept=".csv" class="d-none" required>
+                                <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click()">
+                                    <i class="fas fa-folder-open me-2"></i>Choose File
+                                </button>
+                            </div>
+                            
+                            <div id="fileInfo" class="mt-3 d-none">
+                                <div class="alert alert-info">
+                                    <i class="fas fa-file-csv me-2"></i>
+                                    <span id="fileName"></span>
+                                    <span class="badge bg-secondary ms-2" id="fileSize"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100" id="uploadBtn" disabled>
+                                    <i class="fas fa-upload me-2"></i>
+                                    Upload and Analyze
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- CSV Format Info -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-info-circle me-2"></i>
+                            CSV Format Requirements
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Your CSV file should contain the following columns:</p>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Miscellaneous</th>
+                                        <th>Financial</th>
+                                        <th>CapEx</th>
+                                        <th>COGS</th>
+                                        <th>Operating</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2020-01-01</td>
+                                        <td>10149.01</td>
+                                        <td>11880.21</td>
+                                        <td>15395.52</td>
+                                        <td>21750.27</td>
+                                        <td>18722.62</td>
+                                        <td>77897.62</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-check-circle text-success me-1"></i> Supported:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-1"></i> Various date formats</li>
+                                    <li><i class="fas fa-check text-success me-1"></i> Missing values (auto-filled)</li>
+                                    <li><i class="fas fa-check text-success me-1"></i> Different number formats</li>
+                                    <li><i class="fas fa-check text-success me-1"></i> Minimum 12 months data</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-exclamation-triangle text-warning me-1"></i> Tips:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-lightbulb text-warning me-1"></i> More data = better accuracy</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-1"></i> 2-5 years recommended</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-1"></i> Consistent monthly data</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-1"></i> File size limit: 16MB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const fileInfo = document.getElementById('fileInfo');
+    const fileName = document.getElementById('fileName');
+    const fileSize = document.getElementById('fileSize');
+    const uploadBtn = document.getElementById('uploadBtn');
+
+    // Drag and drop functionality
+    uploadArea.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        uploadArea.classList.add('dragover');
+    });
+
+    uploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+    });
+
+    uploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            fileInput.files = files;
+            handleFileSelect();
+        }
+    });
+
+    // File input change
+    fileInput.addEventListener('change', handleFileSelect);
+
+    function handleFileSelect() {
+        const file = fileInput.files[0];
+        if (file) {
+            fileName.textContent = file.name;
+            fileSize.textContent = formatFileSize(file.size);
+            fileInfo.classList.remove('d-none');
+            uploadBtn.disabled = false;
+        }
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+});
+</script>
+{% endblock %}

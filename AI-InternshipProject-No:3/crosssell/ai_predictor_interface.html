@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Upsell/Cross-sell Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .result { margin-top: 20px; padding: 15px; border-radius: 5px; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .warning { background: #fff3cd; border: 1px solid #ffeaa7; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+    <h1>🤖 AI Upsell/Cross-sell Predictor</h1>
+    <p>Enter customer information to get AI-powered upsell and cross-sell predictions</p>
+    
+    <form id="customerForm">
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" id="age" min="18" max="100" value="35" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Annual Income ($):</label>
+            <input type="number" id="income" min="20000" max="500000" value="75000" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Spending Score (1-100):</label>
+            <input type="number" id="spending_score" min="1" max="100" value="65" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Membership Years:</label>
+            <input type="number" id="membership_years" min="0" max="20" value="2" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Previous Purchases:</label>
+            <input type="number" id="previous_purchases" min="0" max="100" value="10" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Average Order Value ($):</label>
+            <input type="number" id="avg_order_value" min="10" max="2000" value="150" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Days Since Last Purchase:</label>
+            <input type="number" id="last_purchase_days" min="0" max="1000" value="30" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Product Category Preference:</label>
+            <select id="product_category_preference" required>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Books">Books</option>
+                <option value="Home">Home</option>
+                <option value="Sports">Sports</option>
+                <option value="Beauty">Beauty</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Health">Health</option>
+                <option value="Toys">Toys</option>
+                <option value="Garden">Garden</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Satisfaction Score (1-10):</label>
+            <input type="number" id="satisfaction_score" min="1" max="10" value="7" required>
+        </div>
+        
+        <button type="submit">🔮 Get AI Predictions</button>
+    </form>
+    
+    <div id="results"></div>
+    
+    <script>
+        document.getElementById('customerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const customerData = {
+                age: parseInt(document.getElementById('age').value),
+                income: parseInt(document.getElementById('income').value),
+                spending_score: parseInt(document.getElementById('spending_score').value),
+                membership_years: parseInt(document.getElementById('membership_years').value),
+                previous_purchases: parseInt(document.getElementById('previous_purchases').value),
+                avg_order_value: parseInt(document.getElementById('avg_order_value').value),
+                last_purchase_days: parseInt(document.getElementById('last_purchase_days').value),
+                product_category_preference: document.getElementById('product_category_preference').value,
+                satisfaction_score: parseInt(document.getElementById('satisfaction_score').value)
+            };
+            
+            // Simulate AI prediction (in real app, this would be an API call)
+            const prediction = simulateAIPrediction(customerData);
+            displayResults(prediction);
+        });
+        
+        function simulateAIPrediction(customer) {
+            // This simulates the AI model prediction
+            // In real implementation, this would call your Python backend
+            
+            let upsellScore = 0;
+            let crosssellScore = 0;
+            
+            // Income factor
+            if (customer.income > 100000) upsellScore += 0.4;
+            else if (customer.income > 70000) upsellScore += 0.25;
+            
+            // Spending score
+            if (customer.spending_score > 70) {
+                upsellScore += 0.3;
+                crosssellScore += 0.3;
+            }
+            
+            // Loyalty
+            if (customer.membership_years > 3) {
+                upsellScore += 0.2;
+                crosssellScore += 0.25;
+            }
+            
+            // Purchase history
+            if (customer.previous_purchases > 10) crosssellScore += 0.3;
+            
+            // Recent activity
+            if (customer.last_purchase_days < 60) crosssellScore += 0.2;
+            
+            // Satisfaction
+            if (customer.satisfaction_score > 7) {
+                upsellScore += 0.15;
+                crosssellScore += 0.15;
+            }
+            
+            return {
+                can_upsell: upsellScore > 0.5,
+                can_crosssell: crosssellScore > 0.4,
+                upsell_probability: Math.min(upsellScore, 1),
+                crosssell_probability: Math.min(crosssellScore, 1),
+                recommendations: generateRecommendations(customer, upsellScore, crosssellScore)
+            };
+        }
+        
+        function generateRecommendations(customer, upsellScore, crosssellScore) {
+            const recommendations = [];
+            
+            if (upsellScore > 0.6 && customer.income > 80000) {
+                recommendations.push({
+                    product: 'Premium Products',
+                    type: 'upsell',
+                    probability: upsellScore * 0.8,
+                    confidence: 'High'
+                });
+            }
+            
+            if (crosssellScore > 0.5 && customer.product_category_preference === 'Electronics') {
+                recommendations.push({
+                    product: 'Accessories & Add-ons',
+                    type: 'crosssell',
+                    probability: crosssellScore * 0.9,
+                    confidence: 'High'
+                });
+            }
+            
+            if (customer.avg_order_value > 200) {
+                recommendations.push({
+                    product: 'Extended Warranty',
+                    type: 'crosssell',
+                    probability: crosssellScore * 0.7,
+                    confidence: 'Medium'
+                });
+            }
+            
+            if (crosssellScore > 0.4 && customer.last_purchase_days < 90) {
+                recommendations.push({
+                    product: 'Monthly Subscription',
+                    type: 'crosssell',
+                    probability: crosssellScore * 0.6,
+                    confidence: 'Medium'
+                });
+            }
+            
+            return recommendations.filter(r => r.probability > 0.3);
+        }
+        
+        function displayResults(prediction) {
+            const resultsDiv = document.getElementById('results');
+            
+            let html = '<div class="result success">';
+            html += '<h2>🤖 AI Predictions</h2>';
+            
+            // Upsell prediction
+            html += '<h3>⬆️ Upsell Analysis</h3>';
+            if (prediction.can_upsell) {
+                html += '<p>✅ <strong>YES</strong> - Customer can be upsold</p>';
+                html += `<p>Probability: ${(prediction.upsell_probability * 100).toFixed(1)}%</p>`;
+            } else {
+                html += '<p>❌ <strong>NO</strong> - Low upsell potential</p>';
+                html += `<p>Probability: ${(prediction.upsell_probability * 100).toFixed(1)}%</p>`;
+            }
+            
+            // Cross-sell prediction
+            html += '<h3>➡️ Cross-sell Analysis</h3>';
+            if (prediction.can_crosssell) {
+                html += '<p>✅ <strong>YES</strong> - Customer can be cross-sold</p>';
+                html += `<p>Probability: ${(prediction.crosssell_probability * 100).toFixed(1)}%</p>`;
+            } else {
+                html += '<p>❌ <strong>NO</strong> - Low cross-sell potential</p>';
+                html += `<p>Probability: ${(prediction.crosssell_probability * 100).toFixed(1)}%</p>`;
+            }
+            
+            // Recommendations
+            if (prediction.recommendations.length > 0) {
+                html += '<h3>🎁 Recommended Products</h3>';
+                html += '<ul>';
+                prediction.recommendations.forEach(rec => {
+                    html += `<li><strong>${rec.product}</strong> (${rec.type}) - ${(rec.probability * 100).toFixed(1)}% (${rec.confidence} confidence)</li>`;
+                });
+                html += '</ul>';
+            } else {
+                html += '<h3>❌ No Recommendations</h3>';
+                html += '<p>Customer profile suggests focusing on retention rather than upselling/cross-selling.</p>';
+            }
+            
+            html += '</div>';
+            resultsDiv.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
+        

@@ -1,0 +1,349 @@
+import whisper
+import torch
+from pydub import AudioSegment
+import os
+from openai import OpenAI
+from flask import Flask, request, jsonify, render_template, send_from_directory
+import threading
+import uuid
+import time
+import re
+from datetime import datetime
+from typing import Dict, List, Optional
+
+# Flask app setup
+app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB max file size
+app.config['UPLOAD_FOLDER'] = 'uploads'
+
+# Create uploads directory if it doesn't exist
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+# Job tracking
+jobs = {}
+ALLOWED_EXTENSIONS = {'mp3', 'wav', 'm4a', 'ogg', 'flac', 'aac'}
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def convert_to_wav(input_path):
+    """Convert any audio file to WAV format"""
+    audio = AudioSegment.from_file(input_path)
+    wav_path = os.path.splitext(input_path)[0] + ".wav"
+    audio.export(wav_path, format="wav")
+    return wav_path
+
+def transcribe_with_whisper(audio_path, model_size="base"):
+    """
+    Transcribe audio using Whisper
+    
+    Args:
+        audio_path (str): Path to audio file
+        model_size (str): Whisper model size (tiny, base, small, medium, large)
+    
+    Returns:
+        str: Transcribed text
+    """
+    # Check if CUDA (GPU) is available
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+    
+    # Load Whisper model
+    print(f"Loading Whisper {model_size} model...")
+    model = whisper.load_model(model_size).to(device)
+    
+    # Convert to WAV if needed (Whisper handles many formats but WAV is most reliable)
+    if not audio_path.lower().endswith('.wav'):
+        print("Converting to WAV format...")
+        audio_path = convert_to_wav(audio_path)
+    
+    # Transcribe the audio
+    print("Transcribing audio...")
+    result = model.transcribe(audio_path)
+    
+    return result["text"]
+
+def summarize_with_deepseek(transcript: str, api_key: str = "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"):
+    """
+    Summarize transcript using DeepSeek API via OpenRouter
+
+    Args:
+        transcript (str): The meeting transcript to summarize
+        api_key (str): OpenRouter API key
+
+    Returns:
+        dict: Contains summary, action_items, and key_points
+    """
+    try:
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=api_key,
+        )
+
+        prompt = f"""
+        Please analyze this meeting transcript and provide:
+        1. A concise summary (2-3 paragraphs)
+        2. Action items (bullet points)
+        3. Key decisions made
+        4. Important topics discussed
+
+        Meeting Transcript:
+        {transcript}
+
+        Please format your response as:
+        SUMMARY:
+        [Your summary here]
+
+        ACTION ITEMS:
+        - [Action item 1]and so on
+        - [Action item 2]and so on
+
+        KEY DECISIONS:
+        - [Decision 1] and so on
+        - [Decision 2] and so on
+
+        TOPICS DISCUSSED:
+        - [Topic 1] and so on
+        - [Topic 2] and so on
+        """
+
+        completion = client.chat.completions.create(
+            model="deepseek/deepseek-r1-0528:free",
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            max_tokens=1500,
+            temperature=0.7
+        )
+
+        response_text = completion.choices[0].message.content
+
+        # Parse the response
+        summary_data = parse_summary_response(response_text)
+        return summary_data
+
+    except Exception as e:
+        print(f"Error with DeepSeek API: {e}")
+        # Fallback to simple summarization
+        return create_fallback_summary(transcript)
+
+def parse_summary_response(response_text: str) -> dict:
+    """Parse the structured response from DeepSeek API"""
+    sections = {
+        'summary': '',
+        'action_items': [],
+        'key_decisions': [],
+        'topics_discussed': []
+    }
+
+    current_section = None
+    lines = response_text.split('\n')
+
+    for line in lines:
+        line = line.strip()
+        if line.upper().startswith('SUMMARY:'):
+            current_section = 'summary'
+            sections['summary'] = line.replace('SUMMARY:', '').strip()
+        elif line.upper().startswith('ACTION ITEMS:'):
+            current_section = 'action_items'
+        elif line.upper().startswith('KEY DECISIONS:'):
+            current_section = 'key_decisions'
+        elif line.upper().startswith('TOPICS DISCUSSED:'):
+            current_section = 'topics_discussed'
+        elif line.startswith('- ') and current_section:
+            if current_section in ['action_items', 'key_decisions', 'topics_discussed']:
+                sections[current_section].append(line[2:])  # Remove '- '
+        elif current_section == 'summary' and line:
+            sections['summary'] += ' ' + line
+
+    return sections
+
+def create_fallback_summary(transcript: str) -> dict:
+    """Create a simple fallback summary when API is unavailable"""
+    words = transcript.split()
+    word_count = len(words)
+
+    # Simple extractive summary - take first and last portions
+    if word_count > 200:
+        summary_words = words[:100] + ['...'] + words[-50:]
+        summary = ' '.join(summary_words)
+    else:
+        summary = transcript
+
+    # Extract potential action items (simple keyword matching)
+    action_keywords = ['will', 'should', 'need to', 'action', 'todo', 'follow up']
+    sentences = transcript.split('.')
+    action_items = []
+
+    for sentence in sentences:
+        if any(keyword in sentence.lower() for keyword in action_keywords):
+            action_items.append(sentence.strip())
+
+    return {
+        'summary': summary,
+        'action_items': action_items[:5],  # Limit to 5 items
+        'key_decisions': ['Unable to extract decisions - API unavailable'],
+        'topics_discussed': ['Unable to extract topics - API unavailable']
+    }
+
+def extract_action_items(transcript: str) -> List[str]:
+    """Extract action items from transcript using keyword matching"""
+    action_keywords = [
+        'action item', 'todo', 'to do', 'follow up', 'next step',
+        'will do', 'should do', 'need to', 'must do', 'assign',
+        'responsible for', 'deadline', 'by next week', 'by friday'
+    ]
+
+    sentences = re.split(r'[.!?]+', transcript)
+    action_items = []
+
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if len(sentence) > 10:  # Filter out very short sentences
+            for keyword in action_keywords:
+                if keyword in sentence.lower():
+                    action_items.append(sentence)
+                    break
+
+    return action_items[:10]  # Limit to 10 action items
+
+def process_audio(job_id: str, file_path: str):
+    """Background function to process audio file"""
+    try:
+        # Update job status
+        jobs[job_id]['status'] = 'transcribing'
+        jobs[job_id]['progress'] = 20
+        jobs[job_id]['message'] = 'Transcribing audio...'
+
+        # Transcribe audio
+        transcript = transcribe_with_whisper(file_path, model_size="base")
+
+        jobs[job_id]['progress'] = 60
+        jobs[job_id]['message'] = 'Generating summary...'
+
+        # Summarize transcript
+        summary_data = summarize_with_deepseek(transcript)
+
+        # Extract action items
+        action_items = extract_action_items(transcript)
+
+        jobs[job_id]['progress'] = 100
+        jobs[job_id]['status'] = 'completed'
+        jobs[job_id]['message'] = 'Processing complete!'
+        jobs[job_id]['result'] = {
+            'transcript': transcript,
+            'summary': summary_data.get('summary', ''),
+            'action_items': action_items,
+            'key_decisions': summary_data.get('key_decisions', []),
+            'topics_discussed': summary_data.get('topics_discussed', [])
+        }
+
+        # Clean up uploaded file
+        try:
+            os.remove(file_path)
+        except:
+            pass
+
+    except Exception as e:
+        jobs[job_id]['status'] = 'error'
+        jobs[job_id]['message'] = f'Error processing audio: {str(e)}'
+        print(f"Error processing job {job_id}: {e}")
+
+# Flask Routes
+@app.route('/')
+def index():
+    """Serve the main web interface"""
+    return render_template('index.html')
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    """Handle file upload and start processing"""
+    try:
+        if 'audio' not in request.files:
+            return jsonify({'error': 'No file provided'}), 400
+
+        file = request.files['audio']
+        if file.filename == '':
+            return jsonify({'error': 'No file selected'}), 400
+
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'Unsupported file type. Please use MP3, WAV, M4A, OGG, FLAC, or AAC'}), 400
+
+        # Generate unique job ID
+        job_id = str(uuid.uuid4())
+
+        # Save uploaded file
+        filename = f"{job_id}_{file.filename}"
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+
+        # Initialize job tracking
+        jobs[job_id] = {
+            'status': 'uploaded',
+            'progress': 10,
+            'message': 'File uploaded successfully',
+            'filename': file.filename,
+            'created_at': datetime.now().isoformat()
+        }
+
+        # Start background processing
+        thread = threading.Thread(target=process_audio, args=(job_id, file_path))
+        thread.daemon = True
+        thread.start()
+
+        return jsonify({
+            'job_id': job_id,
+            'message': 'File uploaded successfully. Processing started.',
+            'status': 'uploaded'
+        })
+
+    except Exception as e:
+        return jsonify({'error': f'Upload failed: {str(e)}'}), 500
+
+@app.route('/status/<job_id>')
+def get_status(job_id):
+    """Get processing status for a job"""
+    if job_id not in jobs:
+        return jsonify({'error': 'Job not found'}), 404
+
+    job = jobs[job_id]
+    return jsonify({
+        'job_id': job_id,
+        'status': job['status'],
+        'progress': job['progress'],
+        'message': job['message'],
+        'filename': job.get('filename', ''),
+        'created_at': job.get('created_at', '')
+    })
+
+@app.route('/result/<job_id>')
+def get_result(job_id):
+    """Get final results for a completed job"""
+    if job_id not in jobs:
+        return jsonify({'error': 'Job not found'}), 404
+
+    job = jobs[job_id]
+    if job['status'] != 'completed':
+        return jsonify({'error': 'Job not completed yet'}), 400
+
+    return jsonify({
+        'job_id': job_id,
+        'status': job['status'],
+        'result': job.get('result', {})
+    })
+
+if __name__ == "__main__":
+    print("Starting AI Meeting Transcriber...")
+    print("Server will be available at: http://localhost:5000")
+    print("Press Ctrl+C to stop the server")
+
+    # Run Flask app
+    app.run(
+        debug=True,
+        host='0.0.0.0',
+        port=5000,
+        threaded=True
+    )

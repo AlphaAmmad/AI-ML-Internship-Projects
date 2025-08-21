@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+
+{% block title %}Forecast Results - AI Expense Forecasting{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="alert alert-success">
+                <h4 class="alert-heading">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Forecast Generated Successfully!
+                </h4>
+                <p class="mb-0">Your {{ forecast_months }}-month expense forecast is ready. Scroll down to explore the results and insights.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Performance Summary -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-trophy me-2"></i>
+                        Model Performance Summary
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for category, models in model_performance.items() %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100 border-0 bg-light">
+                                <div class="card-body">
+                                    <h6 class="card-title">{{ category }}</h6>
+                                    {% for model_name, metrics in models.items() %}
+                                    <div class="mb-2">
+                                        <small class="text-muted">{{ model_name }}</small>
+                                        <div class="d-flex justify-content-between">
+                                            <span>R²:</span>
+                                            <span class="fw-bold">{{ metrics['R²'] }}</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>RMSE:</span>
+                                            <span class="fw-bold">{{ "{:,.0f}".format(metrics['RMSE']) }}</span>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Forecast by Category
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="categoriesChart" class="chart-container" style="width:100%;height:500px;"></div>
+                    <div id="chartError2" class="alert alert-danger d-none">Chart loading failed. Check console for errors.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forecast Data Table -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-table me-2"></i>
+                        Detailed Forecast Data
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        {{ forecast_data|safe }}
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-outline-primary" onclick="downloadCSV()">
+                            <i class="fas fa-download me-2"></i>
+                            Download Forecast as CSV
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Insights -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        Key Insights & Recommendations
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-trending-up me-2"></i>Forecast Trends</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-arrow-right text-primary me-2"></i>AI models automatically selected based on data patterns</li>
+                                <li><i class="fas fa-arrow-right text-primary me-2"></i>Forecasts consider historical trends and seasonality</li>
+                                <li><i class="fas fa-arrow-right text-primary me-2"></i>Multiple algorithms ensure robust predictions</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-exclamation-circle me-2"></i>Important Notes</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-info-circle text-info me-2"></i>Forecasts are estimates based on historical patterns</li>
+                                <li><i class="fas fa-info-circle text-info me-2"></i>External factors may affect actual expenses</li>
+                                <li><i class="fas fa-info-circle text-info me-2"></i>Regular updates with new data improve accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5>What's Next?</h5>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="{{ url_for('index') }}" class="btn btn-primary">
+                            <i class="fas fa-upload me-2"></i>
+                            Upload New Data
+                        </a>
+                        <button class="btn btn-success" onclick="window.print()">
+                            <i class="fas fa-print me-2"></i>
+                            Print Report
+                        </button>
+                        <button class="btn btn-info" onclick="shareResults()">
+                            <i class="fas fa-share me-2"></i>
+                            Share Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Render charts
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, starting chart rendering...');
+
+    // Check if Plotly is loaded
+    if (typeof Plotly === 'undefined') {
+        console.error('Plotly is not loaded!');
+        document.getElementById('chartError1').classList.remove('d-none');
+        document.getElementById('chartError2').classList.remove('d-none');
+        return;
+    }
+
+    try {
+        // Check if chart data exists
+        {% if charts %}
+            console.log('Chart data available');
+
+            // Categories chart
+            const categoriesChartData = {{ charts.categories_chart|safe }};
+            console.log('Categories chart data:', categoriesChartData);
+
+            if (categoriesChartData && categoriesChartData.data && categoriesChartData.data.length > 0) {
+                const categoriesConfig = {
+                    responsive: true,
+                    displayModeBar: true,
+                    modeBarButtonsToRemove: ['pan2d', 'lasso2d', 'select2d'],
+                    displaylogo: false
+                };
+
+                Plotly.newPlot('categoriesChart', categoriesChartData.data, categoriesChartData.layout, categoriesConfig)
+                    .then(() => console.log('Categories chart rendered successfully'))
+                    .catch(err => {
+                        console.error('Categories chart error:', err);
+                        document.getElementById('chartError2').classList.remove('d-none');
+                    });
+            } else {
+                console.error('No categories chart data');
+                document.getElementById('categoriesChart').innerHTML = '<div class="alert alert-warning">No chart data available</div>';
+            }
+        {% else %}
+            console.error('No charts data passed to template');
+            document.getElementById('categoriesChart').innerHTML = '<div class="alert alert-danger">Chart data missing from server</div>';
+        {% endif %}
+
+    } catch (error) {
+        console.error('Error rendering charts:', error);
+        document.getElementById('categoriesChart').innerHTML = '<div class="alert alert-danger">Chart rendering error: ' + error.message + '</div>';
+    }
+});
+
+// Download CSV function
+function downloadCSV() {
+    // Get table data
+    const table = document.querySelector('.table');
+    let csv = '';
+    
+    // Get headers
+    const headers = table.querySelectorAll('thead tr th');
+    const headerRow = Array.from(headers).map(th => th.textContent.trim()).join(',');
+    csv += headerRow + '\n';
+    
+    // Get data rows
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        const rowData = Array.from(cells).map(td => td.textContent.trim()).join(',');
+        csv += rowData + '\n';
+    });
+    
+    // Download
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'expense_forecast.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+
+// Share results function
+function shareResults() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'AI Expense Forecast Results',
+            text: 'Check out my expense forecast generated by AI!',
+            url: window.location.href
+        });
+    } else {
+        // Fallback: copy URL to clipboard
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            alert('URL copied to clipboard!');
+        });
+    }
+}
+</script>
+{% endblock %}
