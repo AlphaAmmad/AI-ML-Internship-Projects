@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Face Recognition Attendance</h1>
+    <nav>
+      <button class="tab-btn" data-target="#enroll">Enroll</button>
+      <button class="tab-btn" data-target="#start">Start Attendance</button>
+      <button class="tab-btn" data-target="#log">Attendance Log</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Enroll Section -->
+    <section id="enroll" class="tab active">
+      <h2>Enroll</h2>
+      <form id="enroll-form" class="card">
+        <label>
+          Name
+          <input type="text" id="enroll-name" placeholder="Enter full name" required />
+        </label>
+
+        <div class="grid-2">
+          <div>
+            <h4>Capture from Webcam</h4>
+            <video id="enroll-video" autoplay playsinline muted></video>
+            <div class="row">
+              <select id="enroll-camera-select" style="width: auto;">
+                <option value="">Select Camera...</option>
+              </select>
+              <button type="button" id="enroll-start-cam">Start Camera</button>
+              <button type="button" id="enroll-capture">Capture Angle</button>
+              <button type="button" id="enroll-clear">Clear Captures</button>
+            </div>
+            <canvas id="enroll-canvas" width="320" height="240"></canvas>
+            <p class="muted">Captured angles:</p>
+            <div id="enroll-captures" class="row" style="flex-wrap: wrap; gap: 8px;"></div>
+          </div>
+
+          <div>
+            <h4>Or Upload Images</h4>
+            <input type="file" id="enroll-file" accept="image/*" multiple />
+            <div id="enroll-uploads" class="row" style="flex-wrap: wrap; gap: 8px;"></div>
+          </div>
+        </div>
+
+        <button type="submit">Submit Enrollment</button>
+        <p id="enroll-status" class="status"></p>
+      </form>
+    </section>
+
+    <!-- Start Attendance Section -->
+    <section id="start" class="tab">
+      <h2>Start Attendance</h2>
+      <div class="card">
+        <div class="video-wrapper">
+          <video id="live-video" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+        </div>
+        <div class="row">
+          <select id="camera-select" style="width: auto;">
+            <option value="">Select Camera...</option>
+          </select>
+          <button id="start-cam">Start Camera</button>
+          <button id="stop-cam">Stop Camera</button>
+        </div>
+        <p class="muted">Frames are processed every 2 seconds for performance.</p>
+        <ul id="recognized-list"></ul>
+      </div>
+    </section>
+
+    <!-- Attendance Log Section -->
+    <section id="log" class="tab">
+      <h2>Attendance Log</h2>
+      <div class="card">
+        <button id="refresh-log">Refresh</button>
+        <table id="attendance-table">
+          <thead>
+            <tr><th>Name</th><th>Date</th><th>Time</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Offline, private, and simple. Built with Flask + face_recognition.</p>
+  </footer>
+
+  <script>
+    window.BACKEND_URL = 'http://127.0.0.1:5000';
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,2001 @@
+User_ID,Age,Education_Level,Goal,Preferred_Category,Subcategory,Course_Name,Rating
+1,25,High School,Upskilling,Writing,Creative Writing,Writing Fiction,4.5
+2,23,PhD,Job,Programming,Web Development,Complete Web Dev Bootcamp,3.5
+3,19,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.6
+4,18,Bachelors,Switching Career,Language Learning,French,French for Travelers,3.4
+5,39,High School,Job,Health & Fitness,Nutrition,Meal Planning,4.7
+6,34,High School,Switching Career,Photography,DSLR Basics,Photography Composition,3.2
+7,36,Masters,Freelancing,Business,Marketing,Digital Marketing 101,4.5
+8,23,Bachelors,Job,Health & Fitness,Yoga,Advanced Yoga Poses,4.3
+9,41,Bachelors,Upskilling,Language Learning,Spanish,Conversational Spanish,4.4
+10,22,Bachelors,Freelancing,Design,Graphic Design,Illustrator Course,3.5
+11,32,Masters,Job,Writing,Creative Writing,Short Story Writing,3.8
+12,22,Bachelors,Upskilling,Writing,Content Writing,SEO Content Writing,3.8
+13,47,Bachelors,Upskilling,Design,Canva,Designing with Canva,4.5
+14,45,PhD,Upskilling,Writing,Creative Writing,Short Story Writing,3.2
+15,21,High School,Freelancing,Design,Graphic Design,Photoshop Basics,3.8
+16,47,Masters,Job,Business,Entrepreneurship,Business Planning,3.2
+17,45,Bachelors,Switching Career,Programming,Machine Learning,Scikit-learn Basics,4.5
+18,24,Masters,Freelancing,Design,UI/UX,UX Research,4.1
+19,18,Masters,Switching Career,Programming,Web Development,HTML CSS JS Mastery,4.8
+20,37,Bachelors,Job,Writing,Content Writing,Blog Writing,3.2
+21,49,High School,Freelancing,Design,Graphic Design,Photoshop Basics,3.5
+22,45,Bachelors,Freelancing,Personal Development,Leadership,Emotional Intelligence,3.9
+23,46,High School,Freelancing,Writing,Creative Writing,Short Story Writing,3.0
+24,32,Bachelors,Job,Business,Marketing,Digital Marketing 101,3.1
+25,20,Masters,Job,Photography,DSLR Basics,Photography Composition,4.3
+26,31,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.4
+27,24,PhD,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.7
+28,21,High School,Job,Health & Fitness,Mental Health,Mindfulness Meditation,4.6
+29,24,Bachelors,Freelancing,Writing,Content Writing,SEO Content Writing,3.3
+30,29,Masters,Switching Career,Writing,Creative Writing,Short Story Writing,4.6
+31,24,High School,Job,Business,Finance,Personal Finance,3.8
+32,48,Bachelors,Switching Career,Programming,App Development,React Native Guide,3.0
+33,42,Masters,Switching Career,Personal Development,Leadership,Emotional Intelligence,3.3
+34,36,Bachelors,Job,Engineering,Electrical,Power Engineering,3.1
+35,48,Bachelors,Job,Photography,DSLR Basics,Camera Settings 101,3.1
+36,22,Bachelors,Switching Career,Business,Finance,Personal Finance,4.2
+37,44,Masters,Upskilling,Writing,Content Writing,SEO Content Writing,3.5
+38,43,Bachelors,Upskilling,Music,Piano,Piano Lessons 101,3.0
+39,24,High School,Freelancing,Photography,Photo Editing,Lightroom Editing,4.9
+40,22,Bachelors,Upskilling,Personal Development,Productivity,Focus and Discipline,4.7
+41,37,High School,Upskilling,Business,Finance,Investing Basics,3.2
+42,24,Bachelors,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,4.4
+43,31,Masters,Switching Career,Personal Development,Productivity,Time Management,4.3
+44,35,High School,Job,Language Learning,Spanish,Conversational Spanish,3.3
+45,46,PhD,Job,Business,Marketing,Digital Marketing 101,4.1
+46,41,Bachelors,Switching Career,Design,Figma,Figma for Teams,3.7
+47,20,Masters,Freelancing,Writing,Content Writing,Blog Writing,3.7
+48,44,Bachelors,Freelancing,Design,Canva,Designing with Canva,3.0
+49,39,PhD,Freelancing,Personal Development,Productivity,Time Management,3.8
+50,20,PhD,Freelancing,Writing,Copywriting,Ad Copy Techniques,3.6
+51,32,Bachelors,Job,Writing,Copywriting,Ad Copy Techniques,3.6
+52,22,Masters,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.9
+53,25,Masters,Freelancing,Engineering,Civil,Structural Engineering,3.2
+54,45,Masters,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.8
+55,30,Masters,Job,Health & Fitness,Nutrition,Healthy Eating,3.7
+56,22,Masters,Upskilling,Business,Entrepreneurship,Business Planning,4.3
+57,38,PhD,Upskilling,Photography,DSLR Basics,Camera Settings 101,3.8
+58,42,Bachelors,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.6
+59,31,PhD,Upskilling,Music,Piano,Classical Piano,4.4
+60,48,Bachelors,Job,Personal Development,Public Speaking,TED Talk Techniques,3.2
+61,33,Masters,Freelancing,Writing,Creative Writing,Writing Fiction,3.1
+62,48,High School,Switching Career,Health & Fitness,Mental Health,Managing Stress,4.4
+63,42,PhD,Switching Career,Writing,Creative Writing,Writing Fiction,4.8
+64,24,PhD,Freelancing,Design,Graphic Design,Photoshop Basics,4.1
+65,25,PhD,Freelancing,Music,Music Theory,Advanced Harmony,4.9
+66,46,PhD,Switching Career,Design,Graphic Design,Illustrator Course,3.5
+67,33,Masters,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.2
+68,36,Bachelors,Upskilling,Language Learning,French,French for Travelers,3.3
+69,32,PhD,Freelancing,Writing,Creative Writing,Short Story Writing,3.8
+70,47,PhD,Job,Writing,Copywriting,Ad Copy Techniques,4.8
+71,19,PhD,Switching Career,Programming,Machine Learning,Intro to TensorFlow,4.5
+72,44,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.0
+73,42,Masters,Switching Career,Design,Graphic Design,Photoshop Basics,5.0
+74,19,PhD,Job,Business,Management,Project Management,4.7
+75,29,High School,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.9
+76,39,PhD,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.9
+77,21,Masters,Freelancing,Business,Marketing,Digital Marketing 101,4.9
+78,30,High School,Freelancing,Writing,Creative Writing,Short Story Writing,4.3
+79,31,PhD,Upskilling,Language Learning,Spanish,Beginner Spanish,4.6
+80,28,Masters,Job,Engineering,Electrical,Power Engineering,4.2
+81,42,PhD,Freelancing,Business,Finance,Personal Finance,4.4
+82,37,High School,Job,Language Learning,German,Intermediate German,3.1
+83,39,High School,Switching Career,Music,Guitar,Fingerstyle Guitar,4.9
+84,47,Bachelors,Switching Career,Design,UI/UX,UI Design Principles,3.9
+85,35,Masters,Freelancing,Business,Entrepreneurship,Business Planning,3.5
+86,47,PhD,Upskilling,Programming,Data Science,Data Analysis with Pandas,3.4
+87,31,Masters,Upskilling,Language Learning,French,Basic French A1,4.1
+88,30,High School,Freelancing,Health & Fitness,Yoga,Beginner Yoga,4.4
+89,49,PhD,Job,Business,Entrepreneurship,Startup Success,3.8
+90,33,Masters,Upskilling,Music,Music Theory,Advanced Harmony,3.9
+91,39,Masters,Switching Career,Personal Development,Leadership,Emotional Intelligence,3.5
+92,30,Masters,Job,Photography,Lighting Techniques,Natural Lighting,3.4
+93,48,Masters,Upskilling,Business,Finance,Investing Basics,3.5
+94,29,Masters,Job,Photography,DSLR Basics,Photography Composition,3.1
+95,21,Masters,Freelancing,Music,Guitar,Guitar for Beginners,4.1
+96,48,PhD,Switching Career,Language Learning,Spanish,Beginner Spanish,3.5
+97,48,High School,Job,Health & Fitness,Yoga,Beginner Yoga,4.2
+98,21,Bachelors,Freelancing,Engineering,Civil,Structural Engineering,5.0
+99,25,PhD,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.8
+100,37,PhD,Upskilling,Engineering,Electrical,Circuits and Systems,4.9
+101,31,Bachelors,Upskilling,Business,Finance,Personal Finance,3.3
+102,22,Bachelors,Job,Health & Fitness,Yoga,Advanced Yoga Poses,3.6
+103,32,Masters,Upskilling,Music,Guitar,Guitar for Beginners,4.8
+104,30,PhD,Job,Photography,DSLR Basics,Camera Settings 101,4.8
+105,27,High School,Job,Design,UI/UX,UI Design Principles,3.9
+106,47,Masters,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.9
+107,20,PhD,Upskilling,Engineering,Civil,Structural Engineering,3.2
+108,19,Masters,Job,Design,Graphic Design,Illustrator Course,4.8
+109,29,PhD,Switching Career,Business,Management,Leadership Skills,3.8
+110,38,High School,Freelancing,Language Learning,German,Intermediate German,3.6
+111,43,High School,Switching Career,Business,Entrepreneurship,Business Planning,3.6
+112,43,High School,Switching Career,Health & Fitness,Nutrition,Healthy Eating,4.0
+113,49,PhD,Job,Writing,Copywriting,Sales Copy Mastery,4.9
+114,46,PhD,Job,Programming,Cybersecurity,Ethical Hacking,4.4
+115,37,High School,Switching Career,Business,Finance,Personal Finance,3.9
+116,25,Bachelors,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.8
+117,48,PhD,Freelancing,Music,Music Theory,Music Theory Basics,3.8
+118,26,High School,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.6
+119,36,Masters,Switching Career,Design,Graphic Design,Illustrator Course,3.7
+120,42,PhD,Upskilling,Writing,Content Writing,Blog Writing,4.1
+121,32,PhD,Job,Language Learning,German,Intermediate German,3.8
+122,27,PhD,Job,Design,UI/UX,UX Research,4.7
+123,46,High School,Switching Career,Programming,App Development,React Native Guide,4.7
+124,27,High School,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.3
+125,39,PhD,Upskilling,Music,Music Theory,Music Theory Basics,4.2
+126,33,Masters,Freelancing,Business,Management,Project Management,4.5
+127,24,PhD,Freelancing,Personal Development,Productivity,Time Management,3.6
+128,21,Masters,Upskilling,Language Learning,German,German Basics,3.5
+129,44,Bachelors,Freelancing,Design,Figma,Figma for Teams,4.2
+130,33,PhD,Freelancing,Writing,Copywriting,Ad Copy Techniques,3.9
+131,18,PhD,Upskilling,Photography,DSLR Basics,Camera Settings 101,3.9
+132,40,Masters,Switching Career,Personal Development,Leadership,Emotional Intelligence,3.4
+133,42,PhD,Job,Writing,Copywriting,Ad Copy Techniques,4.1
+134,36,High School,Switching Career,Personal Development,Productivity,Time Management,4.8
+135,49,Masters,Freelancing,Engineering,Civil,Structural Engineering,4.3
+136,34,Bachelors,Job,Programming,Machine Learning,Intro to TensorFlow,3.1
+137,41,Bachelors,Job,Personal Development,Leadership,Emotional Intelligence,3.4
+138,26,Masters,Upskilling,Design,UI/UX,UI Design Principles,4.9
+139,36,Masters,Job,Music,Guitar,Guitar for Beginners,4.5
+140,32,PhD,Upskilling,Business,Management,Project Management,3.5
+141,25,PhD,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,4.6
+142,41,High School,Freelancing,Music,Guitar,Fingerstyle Guitar,4.8
+143,32,High School,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.2
+144,20,High School,Upskilling,Music,Guitar,Guitar for Beginners,3.5
+145,26,PhD,Switching Career,Language Learning,German,German Basics,4.8
+146,24,PhD,Switching Career,Personal Development,Productivity,Focus and Discipline,3.4
+147,46,Bachelors,Upskilling,Business,Entrepreneurship,Business Planning,3.1
+148,35,Bachelors,Job,Music,Guitar,Guitar for Beginners,4.3
+149,19,High School,Upskilling,Writing,Creative Writing,Writing Fiction,3.1
+150,31,Bachelors,Freelancing,Language Learning,Spanish,Beginner Spanish,3.6
+151,27,Bachelors,Upskilling,Design,Figma,Figma Masterclass,3.3
+152,40,Bachelors,Upskilling,Programming,App Development,React Native Guide,3.1
+153,44,High School,Job,Music,Piano,Classical Piano,4.0
+154,24,PhD,Freelancing,Engineering,Electrical,Power Engineering,3.9
+155,19,High School,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.0
+156,46,High School,Job,Language Learning,Spanish,Beginner Spanish,3.3
+157,38,PhD,Upskilling,Music,Music Theory,Advanced Harmony,3.2
+158,25,Bachelors,Switching Career,Music,Guitar,Fingerstyle Guitar,3.7
+159,47,PhD,Switching Career,Business,Entrepreneurship,Business Planning,3.6
+160,34,Masters,Freelancing,Music,Guitar,Guitar for Beginners,4.7
+161,23,PhD,Job,Language Learning,Spanish,Beginner Spanish,4.2
+162,39,High School,Switching Career,Language Learning,German,German Basics,4.9
+163,37,Masters,Job,Engineering,Mechanical,Thermodynamics,4.3
+164,32,High School,Upskilling,Photography,Photo Editing,Lightroom Editing,4.5
+165,32,PhD,Job,Engineering,Civil,Structural Engineering,3.4
+166,37,Masters,Upskilling,Programming,App Development,Flutter Beginner,4.1
+167,43,High School,Freelancing,Programming,Web Development,React Full Course,4.1
+168,42,PhD,Switching Career,Language Learning,Spanish,Conversational Spanish,3.6
+169,38,High School,Job,Design,Canva,Canva for Beginners,4.3
+170,35,PhD,Switching Career,Music,Music Theory,Advanced Harmony,3.8
+171,31,High School,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.4
+172,49,Masters,Job,Writing,Copywriting,Sales Copy Mastery,3.0
+173,37,Bachelors,Freelancing,Personal Development,Leadership,Emotional Intelligence,3.2
+174,49,PhD,Freelancing,Design,Graphic Design,Photoshop Basics,4.0
+175,40,High School,Switching Career,Programming,Data Science,Python for Data Science,3.9
+176,22,Masters,Switching Career,Engineering,Robotics,Building Arduino Robots,3.6
+177,43,High School,Upskilling,Design,Graphic Design,Illustrator Course,3.2
+178,24,Bachelors,Switching Career,Engineering,Robotics,Intro to Robotics,3.8
+179,37,Masters,Freelancing,Language Learning,Spanish,Beginner Spanish,4.0
+180,25,Bachelors,Upskilling,Language Learning,Spanish,Beginner Spanish,3.2
+181,34,Bachelors,Freelancing,Engineering,Mechanical,Thermodynamics,3.4
+182,49,PhD,Switching Career,Engineering,Civil,AutoCAD Civil,3.3
+183,22,PhD,Switching Career,Personal Development,Leadership,Leadership in Teams,3.7
+184,22,Masters,Switching Career,Music,Guitar,Guitar for Beginners,3.7
+185,36,High School,Job,Engineering,Robotics,Building Arduino Robots,4.2
+186,20,PhD,Freelancing,Language Learning,German,German Basics,4.9
+187,46,High School,Upskilling,Business,Finance,Personal Finance,3.5
+188,46,PhD,Freelancing,Language Learning,French,Basic French A1,3.8
+189,39,High School,Upskilling,Business,Entrepreneurship,Startup Success,4.1
+190,42,Masters,Upskilling,Engineering,Mechanical,CAD Design,3.2
+191,27,Masters,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.6
+192,42,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,4.0
+193,19,Masters,Upskilling,Design,Canva,Designing with Canva,4.9
+194,49,Bachelors,Freelancing,Design,Canva,Canva for Beginners,3.6
+195,24,High School,Upskilling,Engineering,Mechanical,CAD Design,3.3
+196,29,Bachelors,Switching Career,Programming,Data Science,Data Analysis with Pandas,4.4
+197,33,PhD,Upskilling,Music,Guitar,Guitar for Beginners,3.6
+198,48,Bachelors,Upskilling,Engineering,Robotics,Building Arduino Robots,4.5
+199,42,PhD,Freelancing,Writing,Content Writing,Blog Writing,4.7
+200,21,PhD,Upskilling,Photography,DSLR Basics,Camera Settings 101,3.6
+201,28,Masters,Switching Career,Photography,DSLR Basics,Photography Composition,3.2
+202,32,PhD,Upskilling,Programming,Data Science,Python for Data Science,3.8
+203,41,Bachelors,Switching Career,Business,Entrepreneurship,Startup Success,3.1
+204,24,Masters,Freelancing,Design,Figma,Figma for Teams,4.8
+205,48,Bachelors,Switching Career,Music,Music Theory,Music Theory Basics,4.8
+206,19,Masters,Freelancing,Design,Graphic Design,Photoshop Basics,4.6
+207,33,Masters,Job,Programming,App Development,React Native Guide,4.3
+208,47,High School,Job,Music,Music Theory,Music Theory Basics,4.3
+209,33,Bachelors,Upskilling,Health & Fitness,Nutrition,Meal Planning,3.5
+210,44,Bachelors,Job,Photography,Photo Editing,Lightroom Editing,4.9
+211,19,PhD,Switching Career,Programming,Data Science,Data Analysis with Pandas,3.5
+212,19,Masters,Job,Language Learning,Spanish,Beginner Spanish,4.5
+213,39,Bachelors,Job,Language Learning,French,French for Travelers,4.7
+214,47,PhD,Freelancing,Design,Figma,Figma for Teams,3.1
+215,30,High School,Freelancing,Programming,Machine Learning,Intro to TensorFlow,4.0
+216,48,Masters,Job,Writing,Copywriting,Ad Copy Techniques,4.7
+217,21,Masters,Upskilling,Business,Entrepreneurship,Business Planning,4.8
+218,46,PhD,Upskilling,Design,Graphic Design,Illustrator Course,3.7
+219,35,High School,Switching Career,Business,Management,Project Management,4.1
+220,38,High School,Job,Language Learning,French,Basic French A1,3.9
+221,45,Bachelors,Switching Career,Language Learning,German,German Basics,4.5
+222,40,PhD,Upskilling,Programming,Web Development,React Full Course,4.3
+223,41,Bachelors,Job,Design,Graphic Design,Photoshop Basics,3.3
+224,33,Masters,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.2
+225,46,Masters,Upskilling,Music,Guitar,Guitar for Beginners,4.1
+226,43,Masters,Upskilling,Writing,Creative Writing,Writing Fiction,4.5
+227,49,PhD,Job,Personal Development,Leadership,Emotional Intelligence,3.4
+228,36,PhD,Freelancing,Business,Finance,Personal Finance,3.9
+229,46,High School,Upskilling,Language Learning,English,Spoken English,4.8
+230,28,Bachelors,Upskilling,Photography,DSLR Basics,Camera Settings 101,5.0
+231,26,Bachelors,Switching Career,Programming,Machine Learning,Scikit-learn Basics,4.1
+232,47,Bachelors,Job,Business,Entrepreneurship,Business Planning,5.0
+233,48,PhD,Switching Career,Engineering,Electrical,Circuits and Systems,4.9
+234,22,PhD,Switching Career,Photography,Photo Editing,Lightroom Editing,4.8
+235,29,Bachelors,Switching Career,Photography,DSLR Basics,Camera Settings 101,4.0
+236,37,Bachelors,Freelancing,Language Learning,Spanish,Conversational Spanish,4.9
+237,36,High School,Upskilling,Writing,Content Writing,SEO Content Writing,3.3
+238,37,High School,Freelancing,Engineering,Mechanical,Thermodynamics,4.3
+239,39,High School,Job,Business,Marketing,SEO Mastery,4.3
+240,44,High School,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.0
+241,43,Masters,Switching Career,Business,Marketing,Digital Marketing 101,3.9
+242,48,PhD,Freelancing,Language Learning,Spanish,Conversational Spanish,4.7
+243,38,Masters,Switching Career,Design,UI/UX,UX Research,3.6
+244,47,High School,Upskilling,Music,Guitar,Guitar for Beginners,3.2
+245,36,PhD,Switching Career,Writing,Creative Writing,Short Story Writing,4.9
+246,38,Bachelors,Freelancing,Music,Music Theory,Advanced Harmony,4.0
+247,37,PhD,Job,Business,Management,Leadership Skills,4.9
+248,31,Masters,Job,Programming,Machine Learning,Intro to TensorFlow,4.2
+249,48,Masters,Job,Business,Management,Project Management,4.8
+250,41,PhD,Upskilling,Programming,Data Science,Python for Data Science,4.1
+251,30,Masters,Upskilling,Business,Management,Leadership Skills,4.5
+252,35,High School,Freelancing,Business,Management,Leadership Skills,4.6
+253,39,Masters,Freelancing,Writing,Content Writing,SEO Content Writing,4.0
+254,20,High School,Freelancing,Language Learning,German,Intermediate German,3.3
+255,26,Masters,Upskilling,Design,Graphic Design,Illustrator Course,4.2
+256,49,Masters,Switching Career,Programming,Machine Learning,Intro to TensorFlow,4.3
+257,44,Masters,Job,Engineering,Robotics,Building Arduino Robots,4.9
+258,32,High School,Switching Career,Design,Graphic Design,Photoshop Basics,4.6
+259,33,High School,Job,Writing,Creative Writing,Short Story Writing,3.6
+260,27,PhD,Freelancing,Health & Fitness,Mental Health,Mindfulness Meditation,4.7
+261,21,Bachelors,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.1
+262,38,Bachelors,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.4
+263,34,PhD,Freelancing,Writing,Copywriting,Ad Copy Techniques,3.4
+264,37,Masters,Freelancing,Music,Piano,Classical Piano,3.7
+265,35,Masters,Job,Engineering,Robotics,Building Arduino Robots,4.6
+266,27,Masters,Job,Personal Development,Public Speaking,Speaking with Confidence,3.7
+267,46,Masters,Switching Career,Writing,Creative Writing,Short Story Writing,4.9
+268,35,Bachelors,Job,Engineering,Mechanical,Thermodynamics,3.1
+269,32,Bachelors,Job,Business,Management,Leadership Skills,4.4
+270,24,Bachelors,Job,Photography,DSLR Basics,Photography Composition,4.3
+271,48,PhD,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.3
+272,23,Bachelors,Job,Design,Graphic Design,Photoshop Basics,4.9
+273,20,PhD,Switching Career,Design,UI/UX,UX Research,3.0
+274,24,Masters,Upskilling,Music,Music Theory,Advanced Harmony,4.8
+275,26,PhD,Upskilling,Writing,Creative Writing,Short Story Writing,3.3
+276,47,Masters,Freelancing,Programming,Machine Learning,Intro to TensorFlow,4.1
+277,30,Bachelors,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,3.2
+278,24,Bachelors,Freelancing,Music,Piano,Piano Lessons 101,3.0
+279,42,Bachelors,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.2
+280,18,Masters,Upskilling,Writing,Creative Writing,Writing Fiction,3.9
+281,28,PhD,Upskilling,Business,Entrepreneurship,Business Planning,4.2
+282,32,Bachelors,Switching Career,Design,Graphic Design,Illustrator Course,3.8
+283,48,Bachelors,Freelancing,Engineering,Electrical,Power Engineering,4.1
+284,41,High School,Job,Programming,Cybersecurity,Ethical Hacking,4.1
+285,27,Bachelors,Upskilling,Photography,Photo Editing,Lightroom Editing,4.4
+286,49,High School,Switching Career,Programming,Data Science,Python for Data Science,4.0
+287,47,High School,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,3.8
+288,18,Bachelors,Job,Programming,Data Science,Data Analysis with Pandas,4.4
+289,21,High School,Switching Career,Programming,Machine Learning,Intro to TensorFlow,3.4
+290,26,PhD,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,3.8
+291,26,Masters,Job,Design,Graphic Design,Photoshop Basics,4.5
+292,32,High School,Job,Personal Development,Leadership,Emotional Intelligence,4.1
+293,32,Bachelors,Switching Career,Language Learning,Spanish,Conversational Spanish,3.4
+294,25,High School,Switching Career,Engineering,Electrical,Circuits and Systems,3.4
+295,24,High School,Switching Career,Engineering,Electrical,Circuits and Systems,4.5
+296,43,PhD,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.3
+297,36,Bachelors,Upskilling,Engineering,Civil,Structural Engineering,3.6
+298,27,Bachelors,Switching Career,Personal Development,Leadership,Leadership in Teams,4.1
+299,29,PhD,Switching Career,Programming,Machine Learning,Scikit-learn Basics,4.3
+300,38,PhD,Switching Career,Design,UI/UX,UI Design Principles,3.4
+301,48,Bachelors,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,4.6
+302,21,PhD,Switching Career,Photography,Lighting Techniques,Natural Lighting,3.8
+303,34,Bachelors,Upskilling,Business,Management,Leadership Skills,3.2
+304,30,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.7
+305,30,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.9
+306,18,Bachelors,Freelancing,Business,Management,Project Management,4.4
+307,31,PhD,Freelancing,Photography,Photo Editing,Photoshop for Photographers,3.8
+308,40,Masters,Upskilling,Language Learning,German,Intermediate German,3.2
+309,48,Masters,Freelancing,Language Learning,French,Basic French A1,3.1
+310,32,Bachelors,Job,Personal Development,Public Speaking,TED Talk Techniques,3.6
+311,30,Masters,Freelancing,Health & Fitness,Mental Health,Managing Stress,4.0
+312,39,Masters,Switching Career,Music,Piano,Piano Lessons 101,4.5
+313,40,Bachelors,Freelancing,Photography,Photo Editing,Lightroom Editing,4.8
+314,21,High School,Job,Programming,Web Development,HTML CSS JS Mastery,3.3
+315,32,High School,Freelancing,Programming,App Development,Kotlin for Android,3.9
+316,21,PhD,Switching Career,Programming,Web Development,React Full Course,4.1
+317,18,High School,Upskilling,Photography,Photo Editing,Lightroom Editing,4.0
+318,45,Bachelors,Job,Business,Finance,Personal Finance,3.4
+319,34,Masters,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.9
+320,47,Bachelors,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,4.3
+321,20,High School,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.1
+322,18,Bachelors,Job,Music,Piano,Classical Piano,4.1
+323,24,High School,Freelancing,Writing,Content Writing,SEO Content Writing,3.5
+324,22,Masters,Job,Design,UI/UX,UX Research,4.9
+325,27,PhD,Job,Personal Development,Productivity,Time Management,4.1
+326,42,Masters,Switching Career,Design,Figma,Figma for Teams,3.1
+327,45,Bachelors,Job,Language Learning,German,Intermediate German,3.1
+328,35,PhD,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.9
+329,42,High School,Upskilling,Writing,Content Writing,Blog Writing,3.2
+330,27,PhD,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,3.2
+331,18,Masters,Switching Career,Language Learning,French,French for Travelers,3.3
+332,29,PhD,Switching Career,Photography,Lighting Techniques,Studio Setup,3.2
+333,23,Masters,Job,Engineering,Civil,AutoCAD Civil,3.0
+334,44,PhD,Job,Photography,DSLR Basics,Camera Settings 101,4.4
+335,28,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,3.3
+336,28,PhD,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.6
+337,41,Masters,Freelancing,Music,Music Theory,Music Theory Basics,3.9
+338,26,Masters,Job,Health & Fitness,Yoga,Advanced Yoga Poses,4.6
+339,39,PhD,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.6
+340,30,PhD,Upskilling,Design,Graphic Design,Illustrator Course,3.6
+341,49,Bachelors,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,3.7
+342,30,Bachelors,Job,Music,Music Theory,Music Theory Basics,3.9
+343,36,High School,Switching Career,Music,Guitar,Fingerstyle Guitar,3.5
+344,27,PhD,Switching Career,Business,Management,Leadership Skills,4.2
+345,44,High School,Upskilling,Photography,Lighting Techniques,Natural Lighting,3.2
+346,33,Masters,Freelancing,Engineering,Electrical,Power Engineering,4.9
+347,39,PhD,Job,Programming,Web Development,HTML CSS JS Mastery,3.4
+348,32,PhD,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.7
+349,19,PhD,Job,Personal Development,Leadership,Leadership in Teams,3.2
+350,27,Masters,Upskilling,Language Learning,German,German Basics,4.0
+351,40,PhD,Job,Music,Music Theory,Advanced Harmony,3.6
+352,37,High School,Job,Programming,Machine Learning,Scikit-learn Basics,3.2
+353,28,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,4.1
+354,47,Bachelors,Switching Career,Design,Canva,Designing with Canva,3.8
+355,30,PhD,Switching Career,Health & Fitness,Nutrition,Healthy Eating,3.4
+356,22,High School,Freelancing,Language Learning,French,French for Travelers,3.9
+357,34,PhD,Upskilling,Engineering,Robotics,Building Arduino Robots,4.2
+358,40,Masters,Switching Career,Engineering,Mechanical,CAD Design,4.8
+359,23,Bachelors,Upskilling,Business,Finance,Investing Basics,3.2
+360,41,Bachelors,Switching Career,Health & Fitness,Mental Health,Managing Stress,4.1
+361,45,Bachelors,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.1
+362,49,Masters,Freelancing,Design,UI/UX,UI Design Principles,4.2
+363,40,High School,Switching Career,Design,Canva,Designing with Canva,4.9
+364,49,PhD,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.0
+365,23,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,3.4
+366,36,Bachelors,Switching Career,Engineering,Robotics,Intro to Robotics,4.1
+367,35,Masters,Job,Music,Music Theory,Music Theory Basics,5.0
+368,24,Bachelors,Upskilling,Programming,Data Science,Data Analysis with Pandas,3.7
+369,23,PhD,Job,Writing,Creative Writing,Short Story Writing,4.7
+370,45,Bachelors,Freelancing,Writing,Creative Writing,Writing Fiction,4.1
+371,35,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,4.9
+372,24,Bachelors,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.3
+373,26,Bachelors,Freelancing,Language Learning,Spanish,Conversational Spanish,4.0
+374,35,PhD,Switching Career,Music,Guitar,Guitar for Beginners,3.8
+375,35,Masters,Switching Career,Music,Piano,Piano Lessons 101,4.7
+376,23,PhD,Upskilling,Business,Management,Project Management,4.9
+377,31,PhD,Upskilling,Language Learning,French,Basic French A1,4.1
+378,26,PhD,Upskilling,Programming,Web Development,Complete Web Dev Bootcamp,4.3
+379,47,High School,Job,Design,Graphic Design,Illustrator Course,3.0
+380,45,Bachelors,Freelancing,Personal Development,Productivity,Focus and Discipline,3.2
+381,41,Masters,Job,Language Learning,Spanish,Beginner Spanish,3.8
+382,37,Bachelors,Switching Career,Business,Marketing,Digital Marketing 101,3.4
+383,22,Bachelors,Freelancing,Photography,Lighting Techniques,Studio Setup,3.0
+384,39,High School,Switching Career,Design,Graphic Design,Photoshop Basics,3.5
+385,23,High School,Job,Language Learning,French,Basic French A1,3.3
+386,26,Bachelors,Job,Photography,Lighting Techniques,Natural Lighting,4.2
+387,28,PhD,Upskilling,Writing,Content Writing,Blog Writing,4.8
+388,46,Bachelors,Job,Business,Finance,Personal Finance,4.2
+389,42,Masters,Switching Career,Language Learning,Spanish,Beginner Spanish,3.6
+390,23,Bachelors,Upskilling,Programming,Machine Learning,ML A-Z,4.0
+391,30,PhD,Upskilling,Programming,App Development,React Native Guide,3.8
+392,33,PhD,Job,Photography,DSLR Basics,Photography Composition,4.9
+393,26,PhD,Switching Career,Language Learning,Spanish,Conversational Spanish,4.9
+394,22,High School,Job,Programming,Machine Learning,ML A-Z,3.1
+395,21,PhD,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.4
+396,23,Bachelors,Upskilling,Business,Entrepreneurship,Startup Success,4.0
+397,31,Bachelors,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.6
+398,45,Bachelors,Job,Writing,Creative Writing,Short Story Writing,3.2
+399,21,Masters,Freelancing,Business,Marketing,Digital Marketing 101,4.4
+400,28,PhD,Upskilling,Photography,Lighting Techniques,Studio Setup,3.3
+401,26,Masters,Job,Programming,Machine Learning,Intro to TensorFlow,3.5
+402,22,Masters,Job,Music,Piano,Classical Piano,3.1
+403,28,Masters,Freelancing,Personal Development,Productivity,Time Management,3.5
+404,18,High School,Job,Writing,Creative Writing,Short Story Writing,3.7
+405,27,Bachelors,Job,Photography,Lighting Techniques,Studio Setup,3.4
+406,33,PhD,Upskilling,Personal Development,Productivity,Focus and Discipline,3.2
+407,21,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,3.1
+408,47,Masters,Upskilling,Language Learning,English,Spoken English,3.0
+409,30,Masters,Upskilling,Engineering,Mechanical,CAD Design,3.7
+410,49,Bachelors,Freelancing,Design,Figma,Figma for Teams,3.0
+411,40,High School,Upskilling,Programming,Data Science,Data Analysis with Pandas,3.2
+412,33,PhD,Switching Career,Programming,App Development,Kotlin for Android,3.6
+413,20,Bachelors,Switching Career,Language Learning,German,German Basics,4.2
+414,26,PhD,Job,Engineering,Electrical,Power Engineering,4.3
+415,26,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,4.4
+416,38,Masters,Switching Career,Personal Development,Productivity,Time Management,4.9
+417,26,High School,Freelancing,Business,Finance,Investing Basics,3.9
+418,44,High School,Upskilling,Writing,Copywriting,Ad Copy Techniques,3.9
+419,25,High School,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,3.4
+420,38,Bachelors,Job,Writing,Copywriting,Ad Copy Techniques,4.0
+421,37,Masters,Freelancing,Programming,Data Science,Data Analysis with Pandas,4.1
+422,33,High School,Switching Career,Business,Finance,Personal Finance,3.0
+423,32,Bachelors,Freelancing,Health & Fitness,Yoga,Beginner Yoga,4.2
+424,34,High School,Job,Business,Finance,Investing Basics,4.6
+425,23,Masters,Job,Programming,Data Science,Python for Data Science,3.3
+426,45,PhD,Switching Career,Programming,Data Science,Data Analysis with Pandas,3.3
+427,31,Bachelors,Upskilling,Personal Development,Leadership,Leadership in Teams,3.1
+428,33,Masters,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,3.1
+429,35,PhD,Freelancing,Health & Fitness,Nutrition,Healthy Eating,4.3
+430,19,PhD,Upskilling,Music,Music Theory,Advanced Harmony,3.7
+431,38,PhD,Upskilling,Design,Figma,Figma for Teams,4.2
+432,19,Masters,Job,Music,Music Theory,Advanced Harmony,4.5
+433,32,Bachelors,Job,Writing,Content Writing,Blog Writing,3.5
+434,21,Bachelors,Switching Career,Language Learning,Spanish,Beginner Spanish,3.5
+435,38,Masters,Job,Language Learning,Spanish,Beginner Spanish,4.7
+436,49,Masters,Freelancing,Music,Guitar,Guitar for Beginners,3.1
+437,32,High School,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.4
+438,26,Masters,Freelancing,Language Learning,English,English Grammar,3.3
+439,27,High School,Upskilling,Business,Entrepreneurship,Business Planning,4.2
+440,39,Masters,Upskilling,Design,Canva,Designing with Canva,4.6
+441,49,Masters,Freelancing,Photography,Lighting Techniques,Studio Setup,3.4
+442,29,PhD,Upskilling,Personal Development,Productivity,Time Management,4.5
+443,43,High School,Freelancing,Engineering,Civil,Structural Engineering,4.3
+444,24,PhD,Freelancing,Language Learning,English,English Grammar,3.7
+445,38,Bachelors,Job,Language Learning,German,German Basics,3.5
+446,33,High School,Upskilling,Personal Development,Productivity,Time Management,3.1
+447,46,PhD,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,3.7
+448,42,High School,Switching Career,Engineering,Mechanical,Thermodynamics,3.9
+449,20,Masters,Job,Language Learning,French,French for Travelers,3.1
+450,28,PhD,Freelancing,Business,Marketing,SEO Mastery,4.2
+451,48,High School,Switching Career,Design,Graphic Design,Photoshop Basics,3.1
+452,39,Bachelors,Freelancing,Health & Fitness,Mental Health,Mindfulness Meditation,4.3
+453,37,Bachelors,Job,Programming,Data Science,Data Analysis with Pandas,3.3
+454,41,High School,Switching Career,Business,Entrepreneurship,Business Planning,3.4
+455,19,Bachelors,Freelancing,Personal Development,Productivity,Focus and Discipline,4.7
+456,37,PhD,Switching Career,Music,Music Theory,Advanced Harmony,3.2
+457,42,Bachelors,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.9
+458,34,PhD,Switching Career,Personal Development,Productivity,Focus and Discipline,4.1
+459,27,High School,Job,Language Learning,German,German Basics,4.1
+460,42,PhD,Switching Career,Engineering,Mechanical,CAD Design,3.6
+461,43,High School,Freelancing,Business,Management,Project Management,4.9
+462,28,Bachelors,Freelancing,Design,Figma,Figma for Teams,3.2
+463,45,Bachelors,Freelancing,Engineering,Civil,AutoCAD Civil,4.8
+464,22,High School,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.7
+465,47,High School,Switching Career,Business,Management,Project Management,3.3
+466,24,High School,Job,Personal Development,Public Speaking,TED Talk Techniques,4.8
+467,34,PhD,Switching Career,Engineering,Robotics,Intro to Robotics,3.3
+468,43,Bachelors,Switching Career,Programming,Data Science,Data Analysis with Pandas,4.4
+469,21,PhD,Upskilling,Language Learning,English,Spoken English,4.6
+470,37,Masters,Upskilling,Music,Music Theory,Music Theory Basics,4.9
+471,32,Bachelors,Upskilling,Music,Piano,Classical Piano,4.5
+472,23,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.5
+473,41,High School,Freelancing,Business,Entrepreneurship,Business Planning,3.3
+474,19,Bachelors,Freelancing,Writing,Creative Writing,Writing Fiction,3.1
+475,21,Masters,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.0
+476,25,High School,Freelancing,Language Learning,German,Intermediate German,3.4
+477,48,Masters,Upskilling,Design,UI/UX,UX Research,3.6
+478,42,High School,Freelancing,Engineering,Mechanical,Thermodynamics,4.3
+479,31,Masters,Switching Career,Photography,DSLR Basics,Camera Settings 101,3.9
+480,26,Bachelors,Job,Writing,Copywriting,Ad Copy Techniques,4.4
+481,35,PhD,Switching Career,Language Learning,German,Intermediate German,3.4
+482,37,PhD,Job,Programming,Cybersecurity,Network Security,4.1
+483,36,Masters,Job,Music,Guitar,Fingerstyle Guitar,5.0
+484,38,Masters,Upskilling,Personal Development,Productivity,Time Management,4.0
+485,33,High School,Switching Career,Language Learning,Spanish,Beginner Spanish,4.3
+486,36,Masters,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.2
+487,30,Masters,Freelancing,Photography,Lighting Techniques,Studio Setup,4.8
+488,40,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,3.2
+489,26,Masters,Freelancing,Language Learning,English,English Grammar,3.7
+490,37,PhD,Upskilling,Language Learning,French,Basic French A1,3.9
+491,25,PhD,Job,Engineering,Electrical,Power Engineering,4.8
+492,25,PhD,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.3
+493,30,Masters,Switching Career,Engineering,Robotics,Intro to Robotics,3.6
+494,29,High School,Switching Career,Language Learning,Spanish,Conversational Spanish,4.3
+495,18,PhD,Upskilling,Writing,Creative Writing,Writing Fiction,4.0
+496,23,Bachelors,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.9
+497,42,High School,Job,Photography,DSLR Basics,Photography Composition,4.9
+498,38,Bachelors,Job,Programming,App Development,Flutter Beginner,4.4
+499,40,Masters,Freelancing,Business,Management,Leadership Skills,3.3
+500,20,Masters,Upskilling,Music,Music Theory,Advanced Harmony,3.9
+501,26,Masters,Switching Career,Language Learning,Spanish,Beginner Spanish,4.9
+502,43,High School,Freelancing,Writing,Content Writing,Blog Writing,3.4
+503,19,Bachelors,Job,Language Learning,English,Spoken English,4.8
+504,34,High School,Job,Business,Marketing,Digital Marketing 101,4.4
+505,44,PhD,Switching Career,Business,Entrepreneurship,Business Planning,4.4
+506,31,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.3
+507,35,Bachelors,Switching Career,Business,Marketing,SEO Mastery,3.2
+508,24,PhD,Freelancing,Engineering,Mechanical,CAD Design,4.7
+509,30,Masters,Switching Career,Personal Development,Productivity,Time Management,4.1
+510,31,PhD,Upskilling,Writing,Creative Writing,Writing Fiction,4.3
+511,25,PhD,Freelancing,Business,Marketing,Digital Marketing 101,4.8
+512,32,PhD,Upskilling,Personal Development,Leadership,Leadership in Teams,3.2
+513,29,High School,Upskilling,Language Learning,French,Basic French A1,4.5
+514,24,High School,Job,Design,Canva,Designing with Canva,3.7
+515,46,Masters,Job,Language Learning,French,French for Travelers,3.2
+516,43,PhD,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,4.6
+517,28,High School,Freelancing,Programming,App Development,Flutter Beginner,3.8
+518,48,PhD,Freelancing,Engineering,Robotics,Building Arduino Robots,4.2
+519,26,PhD,Switching Career,Business,Management,Leadership Skills,3.1
+520,34,Masters,Job,Photography,Lighting Techniques,Natural Lighting,5.0
+521,39,High School,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.3
+522,42,Bachelors,Job,Programming,App Development,Kotlin for Android,4.7
+523,49,Bachelors,Job,Music,Piano,Piano Lessons 101,3.7
+524,35,High School,Freelancing,Photography,Lighting Techniques,Studio Setup,3.8
+525,33,High School,Switching Career,Music,Music Theory,Advanced Harmony,3.2
+526,49,PhD,Upskilling,Business,Management,Project Management,3.2
+527,44,High School,Job,Business,Entrepreneurship,Startup Success,4.3
+528,47,Masters,Upskilling,Programming,App Development,React Native Guide,3.7
+529,48,Masters,Switching Career,Business,Marketing,Digital Marketing 101,3.0
+530,40,Masters,Upskilling,Business,Marketing,Digital Marketing 101,4.0
+531,44,High School,Upskilling,Engineering,Mechanical,Thermodynamics,3.2
+532,43,Bachelors,Switching Career,Writing,Content Writing,SEO Content Writing,3.2
+533,44,High School,Job,Music,Piano,Piano Lessons 101,4.9
+534,18,High School,Switching Career,Engineering,Robotics,Intro to Robotics,4.4
+535,29,Bachelors,Job,Health & Fitness,Mental Health,Mindfulness Meditation,4.0
+536,42,PhD,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.9
+537,46,Bachelors,Freelancing,Health & Fitness,Mental Health,Mindfulness Meditation,4.7
+538,38,Bachelors,Freelancing,Writing,Content Writing,SEO Content Writing,4.4
+539,26,Bachelors,Upskilling,Business,Entrepreneurship,Business Planning,4.2
+540,44,Masters,Switching Career,Programming,Cybersecurity,Ethical Hacking,3.1
+541,27,High School,Job,Writing,Copywriting,Sales Copy Mastery,5.0
+542,34,Bachelors,Job,Personal Development,Productivity,Time Management,3.7
+543,46,High School,Freelancing,Photography,Photo Editing,Lightroom Editing,4.0
+544,36,High School,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.9
+545,21,High School,Upskilling,Writing,Content Writing,SEO Content Writing,4.7
+546,41,Bachelors,Freelancing,Personal Development,Leadership,Leadership in Teams,5.0
+547,22,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,3.1
+548,35,Masters,Freelancing,Design,UI/UX,UX Research,3.7
+549,27,High School,Freelancing,Language Learning,English,Spoken English,4.0
+550,40,High School,Upskilling,Photography,DSLR Basics,Camera Settings 101,4.0
+551,28,PhD,Switching Career,Business,Entrepreneurship,Startup Success,4.8
+552,39,Masters,Upskilling,Personal Development,Productivity,Focus and Discipline,5.0
+553,18,High School,Upskilling,Music,Guitar,Guitar for Beginners,4.9
+554,38,PhD,Job,Health & Fitness,Yoga,Advanced Yoga Poses,3.0
+555,41,PhD,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.4
+556,23,High School,Freelancing,Photography,Lighting Techniques,Natural Lighting,4.3
+557,31,Bachelors,Switching Career,Business,Finance,Investing Basics,4.3
+558,22,Bachelors,Job,Music,Music Theory,Advanced Harmony,3.1
+559,22,High School,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,4.1
+560,32,Masters,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.9
+561,19,PhD,Job,Photography,DSLR Basics,Camera Settings 101,4.5
+562,20,High School,Upskilling,Photography,DSLR Basics,Photography Composition,4.6
+563,37,High School,Upskilling,Music,Piano,Classical Piano,4.6
+564,19,PhD,Freelancing,Photography,DSLR Basics,Camera Settings 101,4.5
+565,36,Bachelors,Upskilling,Language Learning,English,English Grammar,3.2
+566,18,PhD,Job,Personal Development,Productivity,Focus and Discipline,3.4
+567,27,Bachelors,Freelancing,Writing,Content Writing,SEO Content Writing,3.4
+568,29,High School,Switching Career,Photography,DSLR Basics,Photography Composition,4.3
+569,34,High School,Freelancing,Engineering,Robotics,Building Arduino Robots,3.7
+570,33,High School,Upskilling,Engineering,Electrical,Circuits and Systems,3.6
+571,46,Masters,Upskilling,Engineering,Mechanical,CAD Design,4.6
+572,45,Bachelors,Job,Language Learning,Spanish,Beginner Spanish,4.4
+573,45,Masters,Upskilling,Design,UI/UX,UI Design Principles,3.9
+574,40,Masters,Switching Career,Photography,DSLR Basics,Camera Settings 101,4.3
+575,23,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,4.5
+576,22,High School,Job,Photography,Lighting Techniques,Natural Lighting,4.6
+577,43,Bachelors,Job,Photography,Photo Editing,Photoshop for Photographers,4.3
+578,27,Masters,Switching Career,Writing,Content Writing,SEO Content Writing,3.3
+579,23,PhD,Upskilling,Photography,DSLR Basics,Camera Settings 101,4.7
+580,28,Bachelors,Switching Career,Design,Canva,Canva for Beginners,4.5
+581,48,Masters,Job,Writing,Copywriting,Sales Copy Mastery,3.1
+582,41,Bachelors,Job,Writing,Content Writing,SEO Content Writing,3.8
+583,47,High School,Job,Language Learning,English,Spoken English,4.7
+584,34,Bachelors,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.0
+585,42,Bachelors,Switching Career,Language Learning,French,Basic French A1,4.6
+586,18,Bachelors,Switching Career,Design,Canva,Canva for Beginners,4.0
+587,35,Bachelors,Freelancing,Design,Canva,Designing with Canva,4.2
+588,25,Bachelors,Switching Career,Language Learning,English,Spoken English,4.4
+589,48,Bachelors,Freelancing,Health & Fitness,Nutrition,Healthy Eating,3.1
+590,28,Bachelors,Job,Engineering,Mechanical,Thermodynamics,3.3
+591,29,PhD,Job,Personal Development,Productivity,Time Management,3.9
+592,48,PhD,Freelancing,Writing,Copywriting,Sales Copy Mastery,4.6
+593,29,Masters,Freelancing,Language Learning,German,German Basics,3.5
+594,42,Bachelors,Job,Programming,App Development,Kotlin for Android,4.7
+595,44,Bachelors,Job,Design,Graphic Design,Photoshop Basics,4.8
+596,25,High School,Switching Career,Design,Figma,Figma for Teams,4.0
+597,41,High School,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.7
+598,24,PhD,Freelancing,Personal Development,Leadership,Leadership in Teams,4.8
+599,23,Masters,Switching Career,Personal Development,Productivity,Time Management,4.4
+600,18,High School,Job,Health & Fitness,Mental Health,Managing Stress,4.4
+601,38,PhD,Upskilling,Business,Finance,Investing Basics,4.3
+602,34,Masters,Switching Career,Engineering,Civil,AutoCAD Civil,5.0
+603,43,Bachelors,Switching Career,Photography,Lighting Techniques,Studio Setup,3.4
+604,48,Masters,Upskilling,Engineering,Civil,AutoCAD Civil,4.5
+605,25,Bachelors,Switching Career,Design,Figma,Figma Masterclass,4.0
+606,39,High School,Freelancing,Health & Fitness,Mental Health,Managing Stress,4.6
+607,27,PhD,Switching Career,Business,Marketing,SEO Mastery,3.4
+608,23,High School,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.4
+609,21,Bachelors,Switching Career,Music,Guitar,Guitar for Beginners,4.7
+610,36,Bachelors,Job,Engineering,Mechanical,Thermodynamics,4.3
+611,41,Bachelors,Job,Design,Figma,Figma for Teams,4.6
+612,40,PhD,Switching Career,Engineering,Mechanical,Thermodynamics,4.5
+613,22,High School,Upskilling,Photography,Lighting Techniques,Studio Setup,3.7
+614,35,Bachelors,Freelancing,Music,Piano,Piano Lessons 101,3.5
+615,44,High School,Job,Photography,Photo Editing,Photoshop for Photographers,4.9
+616,34,Masters,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.5
+617,39,PhD,Switching Career,Engineering,Electrical,Power Engineering,3.2
+618,22,PhD,Freelancing,Writing,Copywriting,Ad Copy Techniques,4.9
+619,18,Masters,Freelancing,Personal Development,Productivity,Focus and Discipline,4.3
+620,39,High School,Freelancing,Music,Piano,Classical Piano,3.4
+621,35,Bachelors,Freelancing,Music,Music Theory,Music Theory Basics,3.5
+622,33,Masters,Freelancing,Writing,Creative Writing,Writing Fiction,4.7
+623,40,Bachelors,Job,Business,Marketing,SEO Mastery,4.2
+624,20,PhD,Upskilling,Engineering,Civil,AutoCAD Civil,4.8
+625,35,PhD,Freelancing,Photography,Photo Editing,Photoshop for Photographers,3.4
+626,26,High School,Switching Career,Music,Music Theory,Music Theory Basics,4.0
+627,43,Bachelors,Switching Career,Business,Management,Leadership Skills,4.4
+628,18,Bachelors,Switching Career,Engineering,Electrical,Power Engineering,3.7
+629,34,Bachelors,Upskilling,Writing,Copywriting,Ad Copy Techniques,4.9
+630,39,Masters,Freelancing,Music,Piano,Piano Lessons 101,3.8
+631,41,Masters,Switching Career,Personal Development,Leadership,Leadership in Teams,4.1
+632,32,High School,Upskilling,Writing,Content Writing,SEO Content Writing,4.7
+633,30,Bachelors,Freelancing,Music,Guitar,Guitar for Beginners,3.8
+634,26,Masters,Switching Career,Personal Development,Leadership,Leadership in Teams,3.8
+635,28,High School,Freelancing,Personal Development,Leadership,Leadership in Teams,3.9
+636,39,Masters,Upskilling,Language Learning,French,Basic French A1,3.0
+637,25,Masters,Freelancing,Engineering,Mechanical,CAD Design,3.7
+638,49,PhD,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.9
+639,27,Bachelors,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,4.7
+640,22,High School,Freelancing,Language Learning,Spanish,Conversational Spanish,3.6
+641,36,Masters,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.5
+642,46,PhD,Freelancing,Design,Figma,Figma Masterclass,4.5
+643,34,High School,Freelancing,Design,Graphic Design,Photoshop Basics,3.2
+644,48,High School,Job,Health & Fitness,Mental Health,Managing Stress,3.2
+645,27,High School,Switching Career,Personal Development,Productivity,Time Management,4.5
+646,46,Bachelors,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.1
+647,40,Masters,Switching Career,Music,Music Theory,Advanced Harmony,4.1
+648,26,Bachelors,Switching Career,Engineering,Robotics,Building Arduino Robots,4.8
+649,48,Bachelors,Job,Music,Piano,Classical Piano,3.8
+650,27,Masters,Job,Programming,Cybersecurity,Ethical Hacking,3.7
+651,48,High School,Switching Career,Music,Piano,Piano Lessons 101,4.5
+652,36,Bachelors,Job,Photography,Photo Editing,Lightroom Editing,3.8
+653,45,PhD,Freelancing,Design,Graphic Design,Illustrator Course,3.4
+654,23,PhD,Freelancing,Photography,Lighting Techniques,Studio Setup,3.6
+655,35,PhD,Freelancing,Business,Finance,Personal Finance,3.6
+656,47,PhD,Upskilling,Engineering,Robotics,Intro to Robotics,3.6
+657,27,High School,Job,Design,Figma,Figma for Teams,3.5
+658,46,High School,Freelancing,Business,Finance,Personal Finance,4.0
+659,39,PhD,Upskilling,Music,Piano,Classical Piano,4.4
+660,20,Masters,Job,Design,Figma,Figma for Teams,4.6
+661,22,PhD,Freelancing,Writing,Copywriting,Ad Copy Techniques,4.7
+662,25,Bachelors,Switching Career,Music,Guitar,Guitar for Beginners,3.4
+663,24,Bachelors,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.9
+664,28,High School,Job,Personal Development,Leadership,Emotional Intelligence,3.4
+665,21,Bachelors,Job,Writing,Content Writing,SEO Content Writing,3.6
+666,28,Masters,Job,Health & Fitness,Nutrition,Healthy Eating,4.9
+667,48,Bachelors,Upskilling,Business,Finance,Personal Finance,4.0
+668,39,High School,Job,Language Learning,Spanish,Beginner Spanish,3.3
+669,32,Masters,Upskilling,Music,Music Theory,Music Theory Basics,3.0
+670,42,Masters,Freelancing,Personal Development,Productivity,Focus and Discipline,4.4
+671,36,PhD,Freelancing,Engineering,Mechanical,CAD Design,3.6
+672,47,Masters,Freelancing,Business,Finance,Investing Basics,3.6
+673,34,Masters,Switching Career,Programming,Cybersecurity,Network Security,4.5
+674,19,Masters,Freelancing,Language Learning,English,Spoken English,3.4
+675,49,Bachelors,Upskilling,Language Learning,German,Intermediate German,3.2
+676,22,High School,Freelancing,Design,Figma,Figma Masterclass,3.2
+677,30,High School,Job,Engineering,Robotics,Building Arduino Robots,4.1
+678,34,High School,Upskilling,Writing,Content Writing,Blog Writing,3.0
+679,31,PhD,Job,Music,Music Theory,Music Theory Basics,3.7
+680,44,Masters,Job,Engineering,Civil,Structural Engineering,4.5
+681,37,High School,Freelancing,Photography,DSLR Basics,Camera Settings 101,4.5
+682,42,Bachelors,Freelancing,Photography,Lighting Techniques,Natural Lighting,4.1
+683,29,PhD,Job,Engineering,Civil,AutoCAD Civil,4.4
+684,45,High School,Freelancing,Design,Graphic Design,Illustrator Course,4.3
+685,46,Masters,Upskilling,Photography,Photo Editing,Photoshop for Photographers,3.8
+686,45,Masters,Freelancing,Engineering,Mechanical,CAD Design,4.5
+687,34,Masters,Switching Career,Music,Piano,Piano Lessons 101,4.5
+688,36,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,5.0
+689,31,Masters,Job,Personal Development,Public Speaking,Speaking with Confidence,3.2
+690,47,Masters,Freelancing,Design,UI/UX,UI Design Principles,4.8
+691,33,Bachelors,Upskilling,Personal Development,Productivity,Focus and Discipline,4.1
+692,31,High School,Upskilling,Music,Guitar,Fingerstyle Guitar,4.7
+693,24,Masters,Job,Engineering,Robotics,Intro to Robotics,4.6
+694,39,Masters,Switching Career,Health & Fitness,Nutrition,Healthy Eating,4.5
+695,18,PhD,Job,Personal Development,Public Speaking,Speaking with Confidence,3.6
+696,27,Masters,Freelancing,Design,Figma,Figma for Teams,4.9
+697,23,Bachelors,Switching Career,Personal Development,Leadership,Leadership in Teams,3.3
+698,23,PhD,Job,Photography,Photo Editing,Photoshop for Photographers,3.2
+699,45,Bachelors,Freelancing,Music,Music Theory,Music Theory Basics,4.0
+700,30,Bachelors,Freelancing,Business,Entrepreneurship,Business Planning,3.6
+701,23,High School,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.4
+702,40,High School,Upskilling,Design,UI/UX,UI Design Principles,4.2
+703,46,High School,Freelancing,Writing,Content Writing,SEO Content Writing,3.3
+704,23,High School,Job,Writing,Content Writing,Blog Writing,4.7
+705,36,High School,Upskilling,Business,Entrepreneurship,Business Planning,3.9
+706,39,Bachelors,Freelancing,Writing,Content Writing,SEO Content Writing,4.1
+707,27,High School,Switching Career,Engineering,Electrical,Power Engineering,3.3
+708,36,Bachelors,Upskilling,Programming,Data Science,Python for Data Science,3.1
+709,35,Masters,Job,Programming,Machine Learning,Scikit-learn Basics,3.8
+710,42,High School,Upskilling,Music,Music Theory,Music Theory Basics,3.4
+711,47,High School,Job,Writing,Content Writing,SEO Content Writing,3.7
+712,43,Bachelors,Job,Language Learning,French,Basic French A1,4.3
+713,33,Masters,Job,Personal Development,Leadership,Leadership in Teams,4.9
+714,35,Bachelors,Freelancing,Language Learning,German,German Basics,3.2
+715,42,Bachelors,Switching Career,Writing,Content Writing,Blog Writing,3.9
+716,37,Masters,Switching Career,Photography,DSLR Basics,Camera Settings 101,4.3
+717,30,Bachelors,Upskilling,Photography,DSLR Basics,Photography Composition,5.0
+718,27,Bachelors,Upskilling,Business,Marketing,Digital Marketing 101,3.6
+719,27,High School,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,3.9
+720,35,Bachelors,Freelancing,Business,Finance,Personal Finance,3.1
+721,35,Bachelors,Freelancing,Writing,Content Writing,Blog Writing,3.7
+722,48,Bachelors,Switching Career,Language Learning,Spanish,Conversational Spanish,4.0
+723,26,Bachelors,Freelancing,Writing,Creative Writing,Short Story Writing,4.5
+724,18,Masters,Switching Career,Writing,Content Writing,Blog Writing,4.5
+725,22,Bachelors,Switching Career,Engineering,Robotics,Building Arduino Robots,4.7
+726,33,PhD,Switching Career,Programming,Cybersecurity,Network Security,4.4
+727,43,High School,Job,Music,Piano,Piano Lessons 101,4.8
+728,33,PhD,Job,Photography,Photo Editing,Lightroom Editing,3.4
+729,46,PhD,Upskilling,Personal Development,Leadership,Leadership in Teams,3.8
+730,21,Bachelors,Switching Career,Music,Guitar,Guitar for Beginners,3.4
+731,26,PhD,Switching Career,Language Learning,German,German Basics,3.4
+732,30,PhD,Job,Personal Development,Leadership,Leadership in Teams,4.4
+733,25,High School,Job,Music,Music Theory,Advanced Harmony,3.2
+734,42,Bachelors,Switching Career,Photography,Photo Editing,Lightroom Editing,4.5
+735,39,Bachelors,Freelancing,Design,Canva,Canva for Beginners,3.8
+736,37,PhD,Upskilling,Design,Figma,Figma Masterclass,4.9
+737,18,Masters,Job,Music,Piano,Classical Piano,4.1
+738,18,PhD,Freelancing,Writing,Content Writing,SEO Content Writing,3.9
+739,46,High School,Job,Writing,Content Writing,SEO Content Writing,4.2
+740,31,High School,Freelancing,Design,Figma,Figma for Teams,3.1
+741,20,Masters,Upskilling,Business,Marketing,Digital Marketing 101,3.8
+742,29,Bachelors,Upskilling,Engineering,Mechanical,CAD Design,4.5
+743,41,High School,Job,Personal Development,Leadership,Emotional Intelligence,4.8
+744,22,PhD,Job,Personal Development,Leadership,Leadership in Teams,3.2
+745,35,Masters,Switching Career,Photography,DSLR Basics,Camera Settings 101,4.2
+746,24,High School,Switching Career,Engineering,Civil,AutoCAD Civil,4.2
+747,38,Masters,Upskilling,Design,Graphic Design,Illustrator Course,4.0
+748,29,Bachelors,Upskilling,Writing,Creative Writing,Writing Fiction,3.0
+749,25,Bachelors,Switching Career,Health & Fitness,Nutrition,Meal Planning,3.7
+750,31,High School,Freelancing,Personal Development,Leadership,Leadership in Teams,3.6
+751,38,High School,Job,Language Learning,French,Basic French A1,4.4
+752,19,Bachelors,Freelancing,Language Learning,French,Basic French A1,4.8
+753,20,Bachelors,Switching Career,Design,Graphic Design,Illustrator Course,3.9
+754,44,High School,Upskilling,Engineering,Civil,Structural Engineering,3.4
+755,39,Masters,Job,Design,UI/UX,UX Research,3.7
+756,42,Bachelors,Switching Career,Design,Figma,Figma for Teams,4.4
+757,38,High School,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.8
+758,41,PhD,Upskilling,Writing,Content Writing,SEO Content Writing,3.4
+759,41,High School,Freelancing,Business,Management,Project Management,4.6
+760,27,Bachelors,Upskilling,Music,Music Theory,Advanced Harmony,4.6
+761,27,High School,Freelancing,Writing,Content Writing,Blog Writing,3.9
+762,25,High School,Upskilling,Programming,Cybersecurity,Ethical Hacking,3.7
+763,20,High School,Upskilling,Programming,Cybersecurity,Network Security,4.3
+764,31,Masters,Freelancing,Writing,Copywriting,Ad Copy Techniques,4.1
+765,46,High School,Upskilling,Design,Canva,Designing with Canva,3.2
+766,24,Bachelors,Upskilling,Photography,Photo Editing,Photoshop for Photographers,3.3
+767,36,Bachelors,Freelancing,Business,Entrepreneurship,Business Planning,4.1
+768,21,Bachelors,Job,Music,Music Theory,Music Theory Basics,3.2
+769,21,High School,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.2
+770,37,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,4.1
+771,23,PhD,Job,Music,Piano,Classical Piano,3.9
+772,32,Bachelors,Upskilling,Language Learning,German,German Basics,4.4
+773,39,Masters,Switching Career,Music,Guitar,Guitar for Beginners,4.0
+774,40,PhD,Switching Career,Design,UI/UX,UI Design Principles,4.2
+775,26,High School,Switching Career,Business,Entrepreneurship,Startup Success,4.6
+776,47,PhD,Switching Career,Writing,Content Writing,Blog Writing,4.1
+777,48,PhD,Job,Language Learning,Spanish,Conversational Spanish,4.6
+778,45,Masters,Freelancing,Design,Figma,Figma for Teams,3.2
+779,47,Masters,Job,Music,Guitar,Fingerstyle Guitar,4.9
+780,22,High School,Switching Career,Language Learning,German,German Basics,3.2
+781,26,High School,Freelancing,Design,Graphic Design,Illustrator Course,3.8
+782,46,Bachelors,Freelancing,Language Learning,French,Basic French A1,4.8
+783,45,Masters,Job,Engineering,Electrical,Power Engineering,4.7
+784,36,High School,Upskilling,Photography,DSLR Basics,Camera Settings 101,4.4
+785,40,High School,Upskilling,Programming,App Development,React Native Guide,4.4
+786,43,Masters,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.1
+787,29,PhD,Freelancing,Writing,Content Writing,SEO Content Writing,4.7
+788,41,PhD,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,3.3
+789,22,High School,Freelancing,Music,Music Theory,Advanced Harmony,4.9
+790,26,High School,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,4.2
+791,47,PhD,Switching Career,Health & Fitness,Yoga,Beginner Yoga,3.4
+792,18,PhD,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.9
+793,41,High School,Job,Engineering,Robotics,Building Arduino Robots,3.2
+794,48,High School,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.0
+795,23,Bachelors,Switching Career,Business,Entrepreneurship,Startup Success,4.8
+796,18,PhD,Switching Career,Photography,Photo Editing,Photoshop for Photographers,3.8
+797,36,Masters,Freelancing,Programming,Cybersecurity,Network Security,4.5
+798,34,High School,Switching Career,Engineering,Mechanical,Thermodynamics,4.3
+799,36,High School,Upskilling,Music,Guitar,Guitar for Beginners,4.0
+800,35,Masters,Freelancing,Engineering,Civil,AutoCAD Civil,4.7
+801,18,High School,Freelancing,Engineering,Mechanical,CAD Design,3.7
+802,29,Masters,Freelancing,Music,Guitar,Guitar for Beginners,3.7
+803,23,Bachelors,Freelancing,Music,Piano,Classical Piano,3.5
+804,46,Bachelors,Freelancing,Engineering,Civil,Structural Engineering,4.3
+805,25,High School,Freelancing,Music,Piano,Classical Piano,3.6
+806,32,PhD,Switching Career,Music,Piano,Piano Lessons 101,4.1
+807,45,High School,Upskilling,Music,Piano,Classical Piano,4.9
+808,20,High School,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.7
+809,35,High School,Upskilling,Engineering,Robotics,Building Arduino Robots,4.5
+810,33,Bachelors,Upskilling,Design,UI/UX,UX Research,4.3
+811,22,High School,Switching Career,Business,Marketing,SEO Mastery,3.7
+812,36,Masters,Freelancing,Programming,Web Development,React Full Course,3.2
+813,31,High School,Job,Business,Finance,Investing Basics,4.3
+814,29,High School,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.3
+815,22,PhD,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.5
+816,22,Masters,Job,Health & Fitness,Yoga,Advanced Yoga Poses,5.0
+817,34,Masters,Freelancing,Music,Guitar,Fingerstyle Guitar,5.0
+818,30,PhD,Freelancing,Music,Guitar,Guitar for Beginners,4.1
+819,45,Bachelors,Job,Music,Music Theory,Advanced Harmony,3.2
+820,22,High School,Upskilling,Music,Guitar,Fingerstyle Guitar,3.3
+821,18,High School,Switching Career,Personal Development,Productivity,Focus and Discipline,4.8
+822,18,PhD,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.1
+823,18,PhD,Switching Career,Business,Entrepreneurship,Business Planning,4.4
+824,43,High School,Job,Language Learning,French,French for Travelers,4.7
+825,36,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,4.3
+826,37,PhD,Job,Language Learning,German,German Basics,4.8
+827,46,Bachelors,Freelancing,Programming,App Development,Flutter Beginner,4.4
+828,33,PhD,Switching Career,Business,Entrepreneurship,Business Planning,4.1
+829,46,High School,Job,Language Learning,English,Spoken English,4.6
+830,20,PhD,Job,Writing,Content Writing,SEO Content Writing,4.9
+831,27,Bachelors,Job,Programming,App Development,React Native Guide,4.3
+832,48,High School,Freelancing,Design,Figma,Figma Masterclass,4.3
+833,37,High School,Switching Career,Engineering,Mechanical,Thermodynamics,4.6
+834,24,High School,Switching Career,Engineering,Mechanical,Thermodynamics,4.6
+835,45,Masters,Switching Career,Language Learning,English,English Grammar,3.6
+836,31,High School,Freelancing,Language Learning,English,English Grammar,3.5
+837,44,Bachelors,Upskilling,Photography,DSLR Basics,Photography Composition,3.5
+838,20,Bachelors,Job,Engineering,Robotics,Intro to Robotics,3.0
+839,49,High School,Job,Programming,App Development,Flutter Beginner,4.4
+840,36,PhD,Switching Career,Design,Canva,Canva for Beginners,4.3
+841,46,PhD,Freelancing,Design,Figma,Figma Masterclass,4.4
+842,23,Masters,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.4
+843,24,Masters,Freelancing,Music,Music Theory,Music Theory Basics,3.6
+844,30,High School,Freelancing,Music,Piano,Piano Lessons 101,3.3
+845,20,High School,Upskilling,Personal Development,Productivity,Focus and Discipline,3.5
+846,47,High School,Job,Programming,Cybersecurity,Ethical Hacking,3.3
+847,19,PhD,Job,Business,Finance,Investing Basics,4.2
+848,38,PhD,Freelancing,Language Learning,Spanish,Beginner Spanish,3.7
+849,24,Bachelors,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.1
+850,49,High School,Switching Career,Design,Canva,Designing with Canva,3.4
+851,41,Bachelors,Switching Career,Writing,Content Writing,SEO Content Writing,5.0
+852,30,Masters,Freelancing,Programming,Cybersecurity,Ethical Hacking,3.6
+853,25,PhD,Switching Career,Health & Fitness,Nutrition,Meal Planning,3.4
+854,36,Bachelors,Freelancing,Engineering,Mechanical,Thermodynamics,3.8
+855,49,Bachelors,Switching Career,Music,Piano,Piano Lessons 101,4.5
+856,33,Bachelors,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.8
+857,27,High School,Switching Career,Programming,Web Development,HTML CSS JS Mastery,4.5
+858,20,PhD,Switching Career,Music,Music Theory,Music Theory Basics,3.9
+859,33,High School,Job,Health & Fitness,Nutrition,Healthy Eating,3.7
+860,33,High School,Job,Music,Music Theory,Advanced Harmony,3.3
+861,47,High School,Switching Career,Music,Guitar,Fingerstyle Guitar,3.4
+862,41,PhD,Job,Business,Management,Leadership Skills,4.1
+863,36,PhD,Upskilling,Engineering,Mechanical,Thermodynamics,4.2
+864,39,High School,Upskilling,Programming,Web Development,HTML CSS JS Mastery,3.7
+865,20,Masters,Upskilling,Design,Figma,Figma Masterclass,3.3
+866,39,Bachelors,Job,Music,Music Theory,Music Theory Basics,4.5
+867,32,Masters,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,3.6
+868,22,Masters,Upskilling,Music,Piano,Piano Lessons 101,3.9
+869,36,PhD,Upskilling,Business,Finance,Investing Basics,3.2
+870,43,Bachelors,Upskilling,Business,Marketing,Digital Marketing 101,3.6
+871,27,PhD,Freelancing,Writing,Content Writing,Blog Writing,3.6
+872,26,PhD,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.6
+873,22,High School,Freelancing,Photography,Lighting Techniques,Studio Setup,3.8
+874,39,Masters,Switching Career,Engineering,Robotics,Building Arduino Robots,3.6
+875,26,Masters,Freelancing,Personal Development,Productivity,Focus and Discipline,3.7
+876,36,High School,Freelancing,Language Learning,French,Basic French A1,4.9
+877,28,Masters,Freelancing,Design,Canva,Canva for Beginners,3.5
+878,20,Masters,Freelancing,Music,Piano,Classical Piano,3.4
+879,20,Masters,Upskilling,Design,UI/UX,UI Design Principles,4.1
+880,28,Masters,Job,Programming,Data Science,Data Analysis with Pandas,4.5
+881,47,Masters,Freelancing,Programming,Cybersecurity,Network Security,4.3
+882,36,PhD,Upskilling,Engineering,Mechanical,CAD Design,3.7
+883,25,PhD,Job,Design,Figma,Figma for Teams,3.0
+884,32,PhD,Upskilling,Business,Entrepreneurship,Startup Success,4.2
+885,30,Bachelors,Upskilling,Writing,Creative Writing,Writing Fiction,4.1
+886,46,High School,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.2
+887,21,Masters,Switching Career,Design,Graphic Design,Illustrator Course,3.8
+888,18,Masters,Upskilling,Language Learning,French,Basic French A1,4.7
+889,23,Bachelors,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.3
+890,45,PhD,Freelancing,Engineering,Electrical,Circuits and Systems,3.4
+891,48,Masters,Job,Engineering,Robotics,Intro to Robotics,3.0
+892,35,PhD,Freelancing,Photography,Photo Editing,Lightroom Editing,3.4
+893,42,Masters,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.6
+894,47,Bachelors,Job,Programming,App Development,React Native Guide,3.6
+895,48,High School,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.8
+896,33,High School,Job,Personal Development,Leadership,Leadership in Teams,4.2
+897,41,PhD,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,4.9
+898,25,Masters,Job,Personal Development,Productivity,Time Management,3.3
+899,47,Bachelors,Upskilling,Design,Figma,Figma for Teams,3.7
+900,40,High School,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,4.0
+901,29,High School,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.7
+902,37,Masters,Upskilling,Business,Entrepreneurship,Startup Success,3.0
+903,36,Masters,Switching Career,Health & Fitness,Yoga,Beginner Yoga,3.2
+904,27,Bachelors,Freelancing,Photography,Lighting Techniques,Natural Lighting,3.8
+905,22,High School,Freelancing,Programming,Data Science,Data Analysis with Pandas,3.6
+906,41,Bachelors,Switching Career,Engineering,Civil,Structural Engineering,4.4
+907,19,High School,Freelancing,Design,Canva,Canva for Beginners,3.6
+908,31,Bachelors,Job,Health & Fitness,Mental Health,Managing Stress,3.2
+909,48,PhD,Job,Writing,Creative Writing,Writing Fiction,4.6
+910,21,PhD,Job,Personal Development,Productivity,Time Management,3.6
+911,18,High School,Job,Engineering,Mechanical,Thermodynamics,3.4
+912,40,High School,Job,Design,UI/UX,UI Design Principles,3.7
+913,33,High School,Job,Engineering,Electrical,Circuits and Systems,4.4
+914,36,Bachelors,Job,Business,Finance,Investing Basics,3.7
+915,29,PhD,Job,Design,UI/UX,UI Design Principles,3.8
+916,32,PhD,Job,Language Learning,English,Spoken English,3.2
+917,26,PhD,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,3.2
+918,49,High School,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.4
+919,46,Bachelors,Switching Career,Personal Development,Leadership,Leadership in Teams,4.7
+920,48,Masters,Freelancing,Programming,Data Science,Python for Data Science,3.8
+921,23,High School,Freelancing,Health & Fitness,Yoga,Beginner Yoga,4.5
+922,28,High School,Upskilling,Writing,Copywriting,Sales Copy Mastery,4.2
+923,43,High School,Freelancing,Health & Fitness,Mental Health,Mindfulness Meditation,3.6
+924,35,PhD,Upskilling,Music,Music Theory,Advanced Harmony,5.0
+925,35,Bachelors,Switching Career,Business,Marketing,SEO Mastery,4.0
+926,32,Bachelors,Job,Business,Marketing,Digital Marketing 101,4.0
+927,19,Bachelors,Switching Career,Engineering,Civil,Structural Engineering,3.6
+928,24,High School,Switching Career,Music,Guitar,Fingerstyle Guitar,4.3
+929,49,Masters,Upskilling,Photography,Lighting Techniques,Natural Lighting,4.9
+930,20,PhD,Job,Health & Fitness,Yoga,Advanced Yoga Poses,4.7
+931,46,PhD,Job,Programming,App Development,Kotlin for Android,4.3
+932,37,Bachelors,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.4
+933,49,High School,Switching Career,Photography,Lighting Techniques,Studio Setup,4.0
+934,28,High School,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.2
+935,40,Masters,Upskilling,Programming,Web Development,React Full Course,3.1
+936,41,Masters,Job,Language Learning,German,German Basics,3.9
+937,40,PhD,Upskilling,Programming,App Development,Flutter Beginner,3.5
+938,37,High School,Job,Personal Development,Productivity,Focus and Discipline,3.3
+939,38,High School,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,3.5
+940,48,High School,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.6
+941,24,PhD,Job,Writing,Copywriting,Ad Copy Techniques,4.0
+942,39,Bachelors,Upskilling,Language Learning,German,German Basics,4.0
+943,22,Bachelors,Upskilling,Personal Development,Productivity,Focus and Discipline,5.0
+944,43,Bachelors,Job,Engineering,Electrical,Power Engineering,3.5
+945,48,PhD,Freelancing,Language Learning,English,Spoken English,4.0
+946,37,PhD,Upskilling,Writing,Copywriting,Ad Copy Techniques,3.5
+947,47,Bachelors,Job,Photography,DSLR Basics,Photography Composition,3.4
+948,47,Masters,Switching Career,Engineering,Electrical,Circuits and Systems,3.7
+949,27,Bachelors,Freelancing,Personal Development,Leadership,Emotional Intelligence,3.6
+950,22,Bachelors,Switching Career,Personal Development,Leadership,Leadership in Teams,3.5
+951,33,PhD,Freelancing,Business,Finance,Personal Finance,3.1
+952,37,PhD,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.3
+953,20,Bachelors,Freelancing,Personal Development,Productivity,Time Management,3.5
+954,35,Bachelors,Job,Music,Guitar,Guitar for Beginners,4.7
+955,23,Masters,Upskilling,Business,Management,Leadership Skills,4.3
+956,23,PhD,Freelancing,Writing,Creative Writing,Writing Fiction,4.0
+957,34,PhD,Job,Writing,Content Writing,Blog Writing,4.5
+958,38,Masters,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.3
+959,29,Bachelors,Upskilling,Music,Piano,Classical Piano,4.7
+960,21,PhD,Upskilling,Business,Entrepreneurship,Business Planning,3.9
+961,33,Masters,Freelancing,Language Learning,German,Intermediate German,4.6
+962,19,High School,Job,Writing,Copywriting,Ad Copy Techniques,3.6
+963,41,High School,Freelancing,Music,Piano,Piano Lessons 101,4.8
+964,43,Masters,Upskilling,Business,Finance,Investing Basics,3.4
+965,28,PhD,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.7
+966,49,PhD,Switching Career,Language Learning,German,German Basics,4.6
+967,34,High School,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.9
+968,19,High School,Freelancing,Music,Music Theory,Music Theory Basics,3.0
+969,30,Masters,Upskilling,Engineering,Electrical,Circuits and Systems,3.3
+970,26,PhD,Upskilling,Music,Piano,Piano Lessons 101,3.5
+971,38,Masters,Freelancing,Business,Management,Leadership Skills,3.4
+972,42,Bachelors,Job,Programming,Cybersecurity,Ethical Hacking,4.8
+973,47,Bachelors,Upskilling,Design,Figma,Figma for Teams,4.2
+974,34,Bachelors,Job,Language Learning,Spanish,Beginner Spanish,3.0
+975,45,PhD,Switching Career,Business,Finance,Personal Finance,3.4
+976,35,Masters,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.7
+977,31,Masters,Freelancing,Health & Fitness,Nutrition,Meal Planning,4.6
+978,19,Masters,Upskilling,Writing,Content Writing,SEO Content Writing,4.8
+979,41,PhD,Job,Programming,Data Science,Python for Data Science,4.7
+980,43,Bachelors,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,3.1
+981,21,High School,Upskilling,Writing,Copywriting,Ad Copy Techniques,5.0
+982,20,High School,Upskilling,Photography,Lighting Techniques,Studio Setup,3.6
+983,43,Masters,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.5
+984,49,Masters,Switching Career,Design,Figma,Figma for Teams,4.4
+985,45,Bachelors,Upskilling,Business,Entrepreneurship,Startup Success,5.0
+986,49,Masters,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.2
+987,34,Masters,Switching Career,Design,UI/UX,UI Design Principles,4.5
+988,27,PhD,Job,Writing,Creative Writing,Writing Fiction,3.5
+989,20,PhD,Upskilling,Design,Graphic Design,Illustrator Course,3.2
+990,49,High School,Switching Career,Language Learning,German,Intermediate German,4.0
+991,27,High School,Upskilling,Business,Finance,Investing Basics,3.4
+992,28,Masters,Freelancing,Engineering,Electrical,Circuits and Systems,3.8
+993,22,Bachelors,Switching Career,Business,Entrepreneurship,Startup Success,3.6
+994,25,PhD,Upskilling,Engineering,Electrical,Power Engineering,3.3
+995,23,PhD,Switching Career,Music,Music Theory,Advanced Harmony,4.2
+996,18,Masters,Job,Engineering,Robotics,Building Arduino Robots,4.9
+997,26,Bachelors,Job,Personal Development,Leadership,Leadership in Teams,4.5
+998,42,High School,Switching Career,Personal Development,Productivity,Time Management,4.9
+999,43,High School,Job,Writing,Creative Writing,Short Story Writing,4.6
+1000,36,Bachelors,Job,Personal Development,Leadership,Emotional Intelligence,4.5
+1001,37,Bachelors,Upskilling,Business,Entrepreneurship,Startup Success,4.0
+1002,42,PhD,Upskilling,Engineering,Robotics,Intro to Robotics,4.5
+1003,41,Bachelors,Switching Career,Health & Fitness,Nutrition,Healthy Eating,4.0
+1004,47,Bachelors,Freelancing,Music,Music Theory,Music Theory Basics,3.6
+1005,45,High School,Switching Career,Personal Development,Productivity,Time Management,4.4
+1006,37,Bachelors,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,4.1
+1007,20,High School,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.3
+1008,34,Masters,Upskilling,Engineering,Electrical,Circuits and Systems,3.2
+1009,47,Bachelors,Freelancing,Health & Fitness,Nutrition,Healthy Eating,3.8
+1010,37,Masters,Switching Career,Music,Music Theory,Advanced Harmony,3.7
+1011,29,Bachelors,Freelancing,Business,Entrepreneurship,Startup Success,3.9
+1012,19,High School,Switching Career,Business,Marketing,Digital Marketing 101,4.3
+1013,47,PhD,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,4.4
+1014,43,Masters,Job,Design,Canva,Canva for Beginners,3.4
+1015,19,Bachelors,Job,Writing,Copywriting,Sales Copy Mastery,4.3
+1016,45,Bachelors,Job,Personal Development,Leadership,Leadership in Teams,3.9
+1017,19,High School,Freelancing,Design,Graphic Design,Illustrator Course,3.9
+1018,46,Bachelors,Freelancing,Personal Development,Public Speaking,TED Talk Techniques,3.1
+1019,18,High School,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.1
+1020,43,PhD,Switching Career,Writing,Content Writing,Blog Writing,4.1
+1021,45,Masters,Job,Personal Development,Public Speaking,TED Talk Techniques,4.8
+1022,25,PhD,Upskilling,Music,Music Theory,Advanced Harmony,3.0
+1023,36,Bachelors,Switching Career,Language Learning,German,German Basics,4.0
+1024,39,PhD,Freelancing,Personal Development,Public Speaking,TED Talk Techniques,4.9
+1025,41,PhD,Freelancing,Engineering,Mechanical,CAD Design,4.4
+1026,23,PhD,Freelancing,Design,Canva,Canva for Beginners,4.2
+1027,24,PhD,Switching Career,Personal Development,Productivity,Time Management,4.1
+1028,19,Masters,Upskilling,Language Learning,Spanish,Beginner Spanish,4.7
+1029,20,High School,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.2
+1030,32,PhD,Upskilling,Language Learning,French,French for Travelers,4.5
+1031,35,Bachelors,Job,Programming,Data Science,Data Analysis with Pandas,4.9
+1032,25,High School,Job,Photography,DSLR Basics,Camera Settings 101,3.3
+1033,25,Bachelors,Upskilling,Design,UI/UX,UI Design Principles,4.5
+1034,49,High School,Freelancing,Language Learning,French,French for Travelers,3.2
+1035,30,PhD,Switching Career,Programming,App Development,React Native Guide,3.7
+1036,28,High School,Upskilling,Language Learning,German,Intermediate German,4.3
+1037,33,Bachelors,Switching Career,Writing,Creative Writing,Short Story Writing,3.8
+1038,44,PhD,Upskilling,Programming,Data Science,Python for Data Science,4.5
+1039,22,High School,Upskilling,Language Learning,German,German Basics,3.9
+1040,43,High School,Freelancing,Engineering,Electrical,Power Engineering,3.8
+1041,37,Masters,Upskilling,Programming,Machine Learning,Scikit-learn Basics,4.2
+1042,27,PhD,Switching Career,Writing,Content Writing,SEO Content Writing,4.4
+1043,43,Bachelors,Upskilling,Business,Marketing,SEO Mastery,3.8
+1044,26,Masters,Freelancing,Business,Entrepreneurship,Business Planning,4.5
+1045,28,High School,Job,Photography,Lighting Techniques,Studio Setup,3.5
+1046,37,PhD,Job,Programming,Machine Learning,Intro to TensorFlow,4.3
+1047,40,High School,Job,Business,Management,Leadership Skills,4.1
+1048,18,PhD,Upskilling,Writing,Content Writing,Blog Writing,3.7
+1049,36,Bachelors,Switching Career,Photography,Lighting Techniques,Natural Lighting,3.2
+1050,30,Masters,Switching Career,Business,Finance,Investing Basics,4.7
+1051,23,High School,Job,Health & Fitness,Nutrition,Meal Planning,3.4
+1052,22,Masters,Switching Career,Engineering,Robotics,Building Arduino Robots,4.2
+1053,45,PhD,Switching Career,Health & Fitness,Nutrition,Healthy Eating,4.0
+1054,49,PhD,Freelancing,Photography,Lighting Techniques,Natural Lighting,4.4
+1055,47,PhD,Job,Design,UI/UX,UX Research,4.2
+1056,44,High School,Job,Language Learning,French,French for Travelers,4.0
+1057,25,Masters,Upskilling,Language Learning,French,Basic French A1,4.0
+1058,27,Bachelors,Switching Career,Programming,Machine Learning,Intro to TensorFlow,3.4
+1059,49,High School,Job,Photography,Photo Editing,Lightroom Editing,4.7
+1060,44,PhD,Upskilling,Engineering,Robotics,Building Arduino Robots,4.6
+1061,48,Bachelors,Freelancing,Photography,Lighting Techniques,Studio Setup,4.5
+1062,46,Bachelors,Upskilling,Business,Management,Leadership Skills,3.5
+1063,43,Masters,Job,Music,Music Theory,Advanced Harmony,4.3
+1064,28,High School,Upskilling,Photography,Lighting Techniques,Natural Lighting,4.3
+1065,23,Bachelors,Job,Engineering,Mechanical,CAD Design,4.0
+1066,19,High School,Freelancing,Programming,Machine Learning,ML A-Z,3.5
+1067,46,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.0
+1068,19,Masters,Switching Career,Design,Graphic Design,Photoshop Basics,4.7
+1069,38,PhD,Upskilling,Business,Marketing,Digital Marketing 101,4.1
+1070,36,Bachelors,Freelancing,Personal Development,Productivity,Time Management,3.6
+1071,44,Bachelors,Job,Engineering,Civil,Structural Engineering,3.1
+1072,21,Masters,Switching Career,Business,Entrepreneurship,Startup Success,3.8
+1073,38,Masters,Switching Career,Business,Marketing,Digital Marketing 101,3.5
+1074,33,PhD,Switching Career,Business,Entrepreneurship,Startup Success,3.6
+1075,44,High School,Switching Career,Programming,Data Science,Python for Data Science,4.8
+1076,19,Masters,Job,Writing,Content Writing,Blog Writing,3.6
+1077,44,PhD,Job,Photography,DSLR Basics,Camera Settings 101,3.7
+1078,28,Bachelors,Switching Career,Photography,Photo Editing,Lightroom Editing,3.0
+1079,47,Masters,Freelancing,Programming,Web Development,HTML CSS JS Mastery,3.5
+1080,34,PhD,Upskilling,Writing,Content Writing,SEO Content Writing,3.1
+1081,22,Masters,Job,Health & Fitness,Mental Health,Managing Stress,4.7
+1082,35,PhD,Freelancing,Engineering,Civil,AutoCAD Civil,4.3
+1083,46,Masters,Freelancing,Language Learning,French,French for Travelers,3.9
+1084,39,High School,Freelancing,Programming,Cybersecurity,Network Security,3.0
+1085,18,Bachelors,Switching Career,Photography,Lighting Techniques,Studio Setup,4.5
+1086,23,High School,Job,Music,Music Theory,Music Theory Basics,3.7
+1087,42,Masters,Switching Career,Design,Figma,Figma Masterclass,3.9
+1088,30,PhD,Job,Writing,Content Writing,Blog Writing,4.5
+1089,40,Bachelors,Job,Engineering,Civil,Structural Engineering,3.5
+1090,49,Masters,Job,Personal Development,Leadership,Leadership in Teams,3.0
+1091,43,High School,Upskilling,Engineering,Robotics,Intro to Robotics,4.1
+1092,29,High School,Freelancing,Business,Finance,Investing Basics,4.9
+1093,32,Masters,Freelancing,Programming,Cybersecurity,Network Security,4.4
+1094,47,High School,Switching Career,Programming,Machine Learning,Intro to TensorFlow,4.7
+1095,44,Masters,Job,Photography,Photo Editing,Photoshop for Photographers,3.7
+1096,20,Bachelors,Job,Personal Development,Leadership,Emotional Intelligence,3.6
+1097,43,Bachelors,Upskilling,Business,Marketing,Digital Marketing 101,5.0
+1098,45,High School,Freelancing,Writing,Creative Writing,Short Story Writing,3.6
+1099,24,High School,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.7
+1100,33,High School,Switching Career,Writing,Copywriting,Sales Copy Mastery,4.6
+1101,33,High School,Switching Career,Business,Management,Project Management,3.2
+1102,21,High School,Switching Career,Language Learning,English,English Grammar,3.1
+1103,46,High School,Upskilling,Engineering,Robotics,Intro to Robotics,3.2
+1104,21,High School,Upskilling,Health & Fitness,Yoga,Beginner Yoga,4.2
+1105,44,Bachelors,Job,Music,Piano,Classical Piano,4.6
+1106,24,Masters,Job,Music,Music Theory,Advanced Harmony,4.2
+1107,24,High School,Job,Engineering,Electrical,Circuits and Systems,4.8
+1108,26,Masters,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,3.4
+1109,26,High School,Job,Design,UI/UX,UI Design Principles,4.0
+1110,40,Masters,Freelancing,Design,Graphic Design,Illustrator Course,4.2
+1111,36,Masters,Job,Photography,Lighting Techniques,Natural Lighting,3.1
+1112,21,PhD,Upskilling,Writing,Creative Writing,Writing Fiction,4.6
+1113,39,Bachelors,Switching Career,Music,Music Theory,Advanced Harmony,4.7
+1114,39,Masters,Switching Career,Language Learning,Spanish,Beginner Spanish,3.9
+1115,20,PhD,Freelancing,Programming,App Development,Kotlin for Android,3.5
+1116,31,Bachelors,Switching Career,Language Learning,German,German Basics,3.8
+1117,18,Masters,Job,Business,Entrepreneurship,Startup Success,4.1
+1118,27,Masters,Switching Career,Writing,Content Writing,SEO Content Writing,3.1
+1119,19,Bachelors,Freelancing,Personal Development,Productivity,Time Management,4.8
+1120,29,Masters,Freelancing,Design,Canva,Canva for Beginners,3.4
+1121,34,High School,Job,Design,Graphic Design,Photoshop Basics,3.7
+1122,31,Masters,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.3
+1123,45,High School,Job,Design,Canva,Canva for Beginners,3.4
+1124,42,Masters,Upskilling,Engineering,Robotics,Intro to Robotics,4.8
+1125,30,Masters,Freelancing,Language Learning,Spanish,Beginner Spanish,4.3
+1126,35,Bachelors,Switching Career,Writing,Content Writing,Blog Writing,4.6
+1127,22,Bachelors,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.0
+1128,29,Masters,Upskilling,Photography,Lighting Techniques,Studio Setup,4.4
+1129,49,PhD,Upskilling,Engineering,Robotics,Intro to Robotics,3.4
+1130,30,PhD,Freelancing,Health & Fitness,Nutrition,Meal Planning,3.9
+1131,42,Bachelors,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,3.3
+1132,23,Masters,Switching Career,Photography,Photo Editing,Lightroom Editing,4.2
+1133,47,Masters,Switching Career,Music,Piano,Classical Piano,3.8
+1134,49,Masters,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.9
+1135,34,High School,Upskilling,Business,Entrepreneurship,Startup Success,4.6
+1136,32,High School,Job,Business,Entrepreneurship,Startup Success,4.1
+1137,39,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,3.4
+1138,26,Masters,Job,Personal Development,Leadership,Emotional Intelligence,4.6
+1139,43,PhD,Job,Music,Music Theory,Music Theory Basics,4.7
+1140,32,Bachelors,Freelancing,Music,Guitar,Fingerstyle Guitar,4.4
+1141,47,Masters,Job,Language Learning,Spanish,Conversational Spanish,4.5
+1142,44,Bachelors,Switching Career,Music,Music Theory,Music Theory Basics,3.7
+1143,26,Masters,Job,Music,Music Theory,Advanced Harmony,3.7
+1144,44,PhD,Switching Career,Photography,Photo Editing,Photoshop for Photographers,4.2
+1145,20,Bachelors,Freelancing,Language Learning,German,Intermediate German,3.4
+1146,43,High School,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.7
+1147,46,Masters,Job,Design,Figma,Figma Masterclass,3.1
+1148,49,High School,Freelancing,Writing,Creative Writing,Short Story Writing,3.6
+1149,32,Masters,Job,Music,Guitar,Fingerstyle Guitar,4.0
+1150,28,Masters,Switching Career,Health & Fitness,Nutrition,Healthy Eating,3.3
+1151,44,PhD,Job,Health & Fitness,Nutrition,Healthy Eating,4.7
+1152,37,PhD,Switching Career,Design,UI/UX,UX Research,4.0
+1153,47,Masters,Freelancing,Programming,App Development,React Native Guide,3.1
+1154,43,Bachelors,Upskilling,Engineering,Robotics,Building Arduino Robots,3.9
+1155,20,High School,Upskilling,Music,Piano,Classical Piano,3.8
+1156,29,PhD,Freelancing,Design,Graphic Design,Illustrator Course,3.8
+1157,29,High School,Switching Career,Programming,App Development,Flutter Beginner,3.5
+1158,36,High School,Freelancing,Music,Piano,Piano Lessons 101,5.0
+1159,22,High School,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.5
+1160,20,PhD,Job,Business,Management,Leadership Skills,3.7
+1161,43,Bachelors,Switching Career,Programming,Web Development,HTML CSS JS Mastery,3.2
+1162,26,Masters,Switching Career,Music,Piano,Piano Lessons 101,3.2
+1163,33,PhD,Freelancing,Music,Piano,Piano Lessons 101,3.3
+1164,19,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,3.3
+1165,18,Masters,Freelancing,Music,Piano,Piano Lessons 101,3.4
+1166,20,Bachelors,Switching Career,Programming,Cybersecurity,Ethical Hacking,3.8
+1167,37,PhD,Job,Engineering,Electrical,Circuits and Systems,4.5
+1168,30,Bachelors,Upskilling,Writing,Creative Writing,Writing Fiction,3.0
+1169,19,High School,Upskilling,Writing,Content Writing,Blog Writing,3.4
+1170,24,Bachelors,Freelancing,Programming,Data Science,Python for Data Science,4.6
+1171,38,Bachelors,Freelancing,Photography,Photo Editing,Photoshop for Photographers,3.2
+1172,31,High School,Upskilling,Language Learning,Spanish,Beginner Spanish,3.8
+1173,38,High School,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.1
+1174,35,Masters,Job,Business,Finance,Investing Basics,3.6
+1175,49,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,5.0
+1176,42,Bachelors,Upskilling,Design,UI/UX,UI Design Principles,3.1
+1177,19,PhD,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.0
+1178,18,Bachelors,Job,Engineering,Electrical,Power Engineering,3.5
+1179,45,Bachelors,Job,Programming,App Development,React Native Guide,4.0
+1180,30,Bachelors,Switching Career,Writing,Content Writing,Blog Writing,3.5
+1181,46,Masters,Freelancing,Personal Development,Leadership,Leadership in Teams,4.0
+1182,44,Masters,Job,Writing,Content Writing,SEO Content Writing,3.7
+1183,31,High School,Freelancing,Writing,Content Writing,SEO Content Writing,4.0
+1184,29,PhD,Job,Business,Management,Project Management,4.9
+1185,21,Bachelors,Freelancing,Design,Figma,Figma Masterclass,4.2
+1186,31,Bachelors,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.6
+1187,30,Bachelors,Switching Career,Design,Canva,Designing with Canva,3.6
+1188,46,Bachelors,Upskilling,Music,Guitar,Fingerstyle Guitar,3.8
+1189,28,PhD,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.5
+1190,48,High School,Switching Career,Health & Fitness,Nutrition,Meal Planning,4.2
+1191,27,Bachelors,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,3.9
+1192,42,PhD,Job,Language Learning,Spanish,Conversational Spanish,3.4
+1193,30,High School,Job,Photography,Lighting Techniques,Studio Setup,4.0
+1194,44,PhD,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.3
+1195,22,PhD,Job,Business,Management,Project Management,3.4
+1196,45,Masters,Upskilling,Photography,Lighting Techniques,Studio Setup,4.3
+1197,41,High School,Switching Career,Health & Fitness,Mental Health,Managing Stress,3.5
+1198,20,Masters,Job,Design,UI/UX,UI Design Principles,4.9
+1199,27,Masters,Freelancing,Engineering,Mechanical,Thermodynamics,3.2
+1200,23,PhD,Switching Career,Engineering,Electrical,Circuits and Systems,4.8
+1201,28,PhD,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,4.2
+1202,44,High School,Job,Engineering,Civil,Structural Engineering,3.5
+1203,31,PhD,Upskilling,Programming,App Development,React Native Guide,3.0
+1204,22,PhD,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.3
+1205,41,Bachelors,Freelancing,Writing,Copywriting,Sales Copy Mastery,4.0
+1206,25,PhD,Freelancing,Design,Canva,Canva for Beginners,4.5
+1207,30,Masters,Switching Career,Music,Music Theory,Music Theory Basics,4.7
+1208,28,High School,Upskilling,Business,Management,Project Management,3.6
+1209,39,High School,Freelancing,Music,Piano,Piano Lessons 101,3.0
+1210,35,High School,Job,Business,Finance,Personal Finance,3.8
+1211,35,PhD,Switching Career,Language Learning,German,Intermediate German,3.7
+1212,39,Masters,Freelancing,Language Learning,German,Intermediate German,4.2
+1213,40,Masters,Job,Programming,Data Science,Data Analysis with Pandas,4.5
+1214,26,High School,Job,Photography,Photo Editing,Lightroom Editing,3.7
+1215,48,PhD,Freelancing,Programming,Machine Learning,ML A-Z,4.3
+1216,20,Masters,Switching Career,Writing,Content Writing,SEO Content Writing,3.8
+1217,23,Masters,Switching Career,Music,Music Theory,Music Theory Basics,4.5
+1218,36,Bachelors,Freelancing,Photography,Lighting Techniques,Natural Lighting,3.3
+1219,23,Masters,Switching Career,Design,Graphic Design,Photoshop Basics,4.0
+1220,33,Bachelors,Freelancing,Design,Figma,Figma Masterclass,3.9
+1221,19,Bachelors,Upskilling,Health & Fitness,Yoga,Beginner Yoga,4.4
+1222,48,High School,Freelancing,Photography,Lighting Techniques,Studio Setup,3.2
+1223,39,Bachelors,Job,Language Learning,German,Intermediate German,4.3
+1224,45,Bachelors,Freelancing,Personal Development,Productivity,Focus and Discipline,3.2
+1225,23,Masters,Freelancing,Business,Entrepreneurship,Startup Success,4.7
+1226,42,High School,Upskilling,Programming,Cybersecurity,Ethical Hacking,4.7
+1227,45,Masters,Upskilling,Design,Canva,Canva for Beginners,3.8
+1228,47,Masters,Freelancing,Personal Development,Productivity,Focus and Discipline,4.4
+1229,27,Masters,Freelancing,Programming,Cybersecurity,Network Security,3.6
+1230,25,Masters,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.4
+1231,42,High School,Upskilling,Design,Canva,Canva for Beginners,4.4
+1232,21,Bachelors,Switching Career,Health & Fitness,Yoga,Beginner Yoga,5.0
+1233,43,Masters,Switching Career,Music,Piano,Classical Piano,3.8
+1234,36,Masters,Freelancing,Photography,Photo Editing,Lightroom Editing,3.3
+1235,21,Masters,Switching Career,Design,Canva,Designing with Canva,4.4
+1236,36,Bachelors,Freelancing,Writing,Content Writing,Blog Writing,4.5
+1237,18,Masters,Job,Design,Graphic Design,Illustrator Course,4.4
+1238,28,High School,Job,Language Learning,German,German Basics,4.9
+1239,25,Masters,Switching Career,Design,Graphic Design,Photoshop Basics,3.1
+1240,33,PhD,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,4.3
+1241,42,High School,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.7
+1242,25,High School,Job,Business,Management,Project Management,3.0
+1243,48,Masters,Job,Engineering,Mechanical,CAD Design,4.0
+1244,45,Masters,Freelancing,Business,Entrepreneurship,Startup Success,4.4
+1245,29,PhD,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.1
+1246,25,Bachelors,Job,Design,Canva,Canva for Beginners,4.1
+1247,38,High School,Job,Design,Canva,Canva for Beginners,3.2
+1248,34,High School,Job,Business,Entrepreneurship,Business Planning,4.9
+1249,28,PhD,Job,Writing,Copywriting,Sales Copy Mastery,4.9
+1250,36,PhD,Freelancing,Engineering,Robotics,Building Arduino Robots,4.0
+1251,40,Bachelors,Job,Programming,App Development,Flutter Beginner,3.4
+1252,37,Bachelors,Freelancing,Engineering,Mechanical,CAD Design,3.6
+1253,45,High School,Upskilling,Personal Development,Leadership,Leadership in Teams,3.8
+1254,23,Masters,Switching Career,Design,Canva,Canva for Beginners,4.3
+1255,35,Bachelors,Upskilling,Engineering,Mechanical,CAD Design,4.6
+1256,38,PhD,Switching Career,Programming,Cybersecurity,Ethical Hacking,3.2
+1257,25,High School,Switching Career,Business,Entrepreneurship,Startup Success,3.7
+1258,39,Masters,Freelancing,Writing,Copywriting,Sales Copy Mastery,3.2
+1259,32,PhD,Job,Business,Finance,Investing Basics,4.2
+1260,49,High School,Upskilling,Engineering,Civil,AutoCAD Civil,4.2
+1261,21,Bachelors,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.6
+1262,43,PhD,Freelancing,Personal Development,Productivity,Time Management,4.3
+1263,27,PhD,Upskilling,Programming,Machine Learning,Scikit-learn Basics,4.6
+1264,44,PhD,Freelancing,Music,Piano,Classical Piano,4.0
+1265,35,PhD,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,4.9
+1266,44,Masters,Job,Business,Marketing,Digital Marketing 101,4.9
+1267,28,High School,Job,Personal Development,Public Speaking,TED Talk Techniques,4.6
+1268,18,PhD,Freelancing,Music,Piano,Piano Lessons 101,3.8
+1269,30,High School,Switching Career,Photography,Lighting Techniques,Studio Setup,3.5
+1270,20,PhD,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.2
+1271,26,Masters,Job,Health & Fitness,Yoga,Advanced Yoga Poses,3.3
+1272,25,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,3.6
+1273,36,Masters,Freelancing,Programming,Cybersecurity,Network Security,3.4
+1274,37,High School,Switching Career,Engineering,Robotics,Intro to Robotics,3.7
+1275,47,Masters,Upskilling,Language Learning,English,English Grammar,3.7
+1276,29,PhD,Upskilling,Programming,Web Development,HTML CSS JS Mastery,4.0
+1277,23,Bachelors,Switching Career,Business,Management,Project Management,3.3
+1278,34,Bachelors,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.7
+1279,29,Masters,Job,Music,Music Theory,Advanced Harmony,3.3
+1280,40,PhD,Job,Language Learning,Spanish,Beginner Spanish,3.4
+1281,20,Bachelors,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.8
+1282,28,Bachelors,Switching Career,Personal Development,Productivity,Focus and Discipline,4.0
+1283,49,Bachelors,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.3
+1284,24,High School,Freelancing,Design,UI/UX,UX Research,4.5
+1285,33,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.9
+1286,36,Masters,Switching Career,Business,Management,Project Management,4.2
+1287,29,Bachelors,Upskilling,Business,Entrepreneurship,Startup Success,4.3
+1288,45,Bachelors,Switching Career,Business,Finance,Personal Finance,5.0
+1289,27,Bachelors,Job,Design,Graphic Design,Photoshop Basics,3.5
+1290,30,Bachelors,Switching Career,Programming,Cybersecurity,Ethical Hacking,3.2
+1291,21,PhD,Switching Career,Photography,Photo Editing,Lightroom Editing,3.4
+1292,45,PhD,Job,Photography,Photo Editing,Lightroom Editing,3.6
+1293,35,Masters,Upskilling,Language Learning,German,German Basics,3.6
+1294,21,Bachelors,Job,Programming,Web Development,React Full Course,4.5
+1295,31,Masters,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,3.9
+1296,34,PhD,Upskilling,Language Learning,French,French for Travelers,3.2
+1297,18,Bachelors,Upskilling,Language Learning,French,Basic French A1,3.5
+1298,35,Bachelors,Switching Career,Business,Marketing,Digital Marketing 101,4.3
+1299,25,High School,Freelancing,Writing,Content Writing,SEO Content Writing,4.9
+1300,22,Masters,Upskilling,Music,Guitar,Guitar for Beginners,3.1
+1301,30,PhD,Upskilling,Photography,Photo Editing,Photoshop for Photographers,3.9
+1302,25,PhD,Job,Music,Piano,Piano Lessons 101,3.3
+1303,35,Bachelors,Upskilling,Programming,Cybersecurity,Ethical Hacking,4.6
+1304,30,PhD,Switching Career,Photography,Lighting Techniques,Natural Lighting,3.3
+1305,42,PhD,Switching Career,Engineering,Civil,Structural Engineering,3.4
+1306,28,Bachelors,Job,Photography,Photo Editing,Photoshop for Photographers,3.6
+1307,32,Masters,Upskilling,Photography,DSLR Basics,Camera Settings 101,3.4
+1308,33,Masters,Job,Design,UI/UX,UX Research,3.5
+1309,21,Bachelors,Freelancing,Photography,DSLR Basics,Camera Settings 101,4.3
+1310,41,Masters,Job,Photography,Photo Editing,Lightroom Editing,3.8
+1311,36,Masters,Job,Programming,Machine Learning,ML A-Z,4.5
+1312,35,Bachelors,Upskilling,Programming,Cybersecurity,Ethical Hacking,4.4
+1313,42,Masters,Freelancing,Music,Guitar,Fingerstyle Guitar,3.5
+1314,43,Bachelors,Switching Career,Writing,Content Writing,SEO Content Writing,3.7
+1315,48,High School,Switching Career,Design,Graphic Design,Photoshop Basics,4.6
+1316,29,Bachelors,Switching Career,Design,UI/UX,UX Research,3.6
+1317,29,PhD,Freelancing,Business,Finance,Personal Finance,3.9
+1318,47,PhD,Job,Photography,DSLR Basics,Camera Settings 101,4.2
+1319,42,PhD,Job,Business,Marketing,Digital Marketing 101,3.3
+1320,23,Masters,Freelancing,Engineering,Electrical,Circuits and Systems,4.9
+1321,24,Masters,Job,Writing,Creative Writing,Short Story Writing,4.5
+1322,46,Bachelors,Upskilling,Language Learning,German,German Basics,3.5
+1323,35,High School,Job,Programming,Web Development,React Full Course,3.6
+1324,44,Bachelors,Job,Writing,Creative Writing,Writing Fiction,3.9
+1325,27,Masters,Upskilling,Writing,Content Writing,SEO Content Writing,4.4
+1326,25,PhD,Freelancing,Business,Finance,Personal Finance,4.9
+1327,36,Masters,Job,Engineering,Civil,Structural Engineering,3.7
+1328,23,High School,Freelancing,Design,Graphic Design,Illustrator Course,4.2
+1329,45,Bachelors,Upskilling,Engineering,Civil,AutoCAD Civil,4.8
+1330,35,PhD,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,4.6
+1331,27,Bachelors,Upskilling,Design,Graphic Design,Illustrator Course,4.4
+1332,48,High School,Job,Engineering,Robotics,Building Arduino Robots,3.3
+1333,38,Bachelors,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,4.0
+1334,48,PhD,Upskilling,Design,Canva,Designing with Canva,3.8
+1335,49,PhD,Freelancing,Health & Fitness,Nutrition,Meal Planning,4.1
+1336,32,High School,Freelancing,Language Learning,English,English Grammar,5.0
+1337,19,Masters,Switching Career,Design,Figma,Figma Masterclass,4.8
+1338,41,Bachelors,Upskilling,Music,Guitar,Fingerstyle Guitar,3.5
+1339,32,High School,Freelancing,Business,Finance,Investing Basics,4.5
+1340,45,Masters,Job,Business,Marketing,SEO Mastery,4.7
+1341,28,High School,Freelancing,Language Learning,Spanish,Beginner Spanish,3.5
+1342,18,PhD,Freelancing,Design,Graphic Design,Photoshop Basics,4.5
+1343,37,PhD,Switching Career,Language Learning,German,German Basics,3.6
+1344,27,High School,Job,Engineering,Mechanical,Thermodynamics,3.0
+1345,45,PhD,Upskilling,Engineering,Civil,Structural Engineering,3.8
+1346,28,Masters,Job,Photography,Photo Editing,Lightroom Editing,4.5
+1347,43,High School,Freelancing,Health & Fitness,Nutrition,Healthy Eating,4.6
+1348,47,PhD,Upskilling,Health & Fitness,Yoga,Beginner Yoga,3.1
+1349,41,PhD,Freelancing,Personal Development,Productivity,Time Management,3.2
+1350,39,High School,Freelancing,Personal Development,Productivity,Time Management,3.1
+1351,18,Masters,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.5
+1352,23,High School,Switching Career,Programming,Web Development,HTML CSS JS Mastery,3.2
+1353,37,High School,Upskilling,Personal Development,Leadership,Leadership in Teams,3.6
+1354,43,Masters,Freelancing,Business,Entrepreneurship,Business Planning,4.8
+1355,24,Bachelors,Job,Engineering,Robotics,Building Arduino Robots,4.2
+1356,20,Masters,Freelancing,Design,Graphic Design,Photoshop Basics,4.8
+1357,23,Bachelors,Freelancing,Design,Canva,Designing with Canva,3.9
+1358,26,Masters,Upskilling,Language Learning,German,German Basics,4.8
+1359,42,Bachelors,Freelancing,Engineering,Electrical,Circuits and Systems,4.1
+1360,49,High School,Job,Design,UI/UX,UX Research,4.0
+1361,47,Masters,Freelancing,Personal Development,Productivity,Time Management,3.6
+1362,41,Masters,Job,Business,Finance,Investing Basics,3.5
+1363,48,Masters,Switching Career,Design,Figma,Figma for Teams,3.1
+1364,36,PhD,Switching Career,Engineering,Mechanical,CAD Design,3.7
+1365,38,Masters,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.5
+1366,20,High School,Freelancing,Photography,DSLR Basics,Camera Settings 101,4.7
+1367,36,PhD,Freelancing,Engineering,Robotics,Intro to Robotics,3.4
+1368,47,High School,Upskilling,Music,Piano,Classical Piano,3.2
+1369,29,High School,Switching Career,Health & Fitness,Nutrition,Meal Planning,3.7
+1370,38,Masters,Switching Career,Writing,Content Writing,SEO Content Writing,3.2
+1371,47,High School,Freelancing,Music,Guitar,Guitar for Beginners,3.6
+1372,20,PhD,Job,Language Learning,German,Intermediate German,3.4
+1373,31,High School,Switching Career,Personal Development,Leadership,Leadership in Teams,3.2
+1374,22,Masters,Switching Career,Business,Entrepreneurship,Business Planning,4.7
+1375,31,Masters,Freelancing,Programming,Web Development,HTML CSS JS Mastery,3.7
+1376,37,Bachelors,Freelancing,Language Learning,German,Intermediate German,4.0
+1377,28,PhD,Upskilling,Engineering,Robotics,Intro to Robotics,4.1
+1378,30,High School,Freelancing,Language Learning,French,French for Travelers,3.3
+1379,47,Bachelors,Switching Career,Language Learning,English,Spoken English,3.5
+1380,18,PhD,Freelancing,Music,Music Theory,Music Theory Basics,3.1
+1381,30,PhD,Freelancing,Engineering,Robotics,Intro to Robotics,3.7
+1382,30,High School,Upskilling,Language Learning,English,Spoken English,4.8
+1383,25,PhD,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,3.7
+1384,45,Masters,Job,Design,Graphic Design,Illustrator Course,3.7
+1385,28,PhD,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,4.3
+1386,24,High School,Job,Business,Marketing,SEO Mastery,3.2
+1387,24,PhD,Job,Personal Development,Leadership,Leadership in Teams,3.4
+1388,47,PhD,Job,Writing,Copywriting,Sales Copy Mastery,3.7
+1389,47,PhD,Switching Career,Programming,Machine Learning,ML A-Z,4.0
+1390,35,Masters,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.0
+1391,44,High School,Job,Programming,App Development,React Native Guide,4.7
+1392,38,Masters,Freelancing,Engineering,Robotics,Intro to Robotics,4.1
+1393,43,Bachelors,Switching Career,Programming,Cybersecurity,Network Security,3.3
+1394,42,Bachelors,Switching Career,Language Learning,Spanish,Conversational Spanish,3.5
+1395,26,High School,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,4.9
+1396,31,High School,Job,Programming,Data Science,Python for Data Science,4.3
+1397,27,High School,Job,Engineering,Robotics,Intro to Robotics,4.5
+1398,26,PhD,Upskilling,Design,Canva,Canva for Beginners,3.6
+1399,33,PhD,Upskilling,Programming,Machine Learning,ML A-Z,4.9
+1400,19,High School,Job,Music,Music Theory,Music Theory Basics,3.2
+1401,36,Masters,Freelancing,Business,Marketing,SEO Mastery,4.7
+1402,31,PhD,Job,Music,Guitar,Fingerstyle Guitar,3.1
+1403,22,Bachelors,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.6
+1404,29,Masters,Job,Design,Figma,Figma Masterclass,5.0
+1405,40,PhD,Job,Design,UI/UX,UX Research,3.4
+1406,19,High School,Freelancing,Writing,Copywriting,Sales Copy Mastery,4.8
+1407,19,Masters,Freelancing,Writing,Creative Writing,Writing Fiction,3.5
+1408,48,Bachelors,Job,Language Learning,French,Basic French A1,4.5
+1409,49,PhD,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.4
+1410,35,PhD,Job,Engineering,Civil,Structural Engineering,4.6
+1411,49,PhD,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.6
+1412,24,PhD,Switching Career,Writing,Content Writing,SEO Content Writing,3.7
+1413,22,PhD,Freelancing,Programming,Cybersecurity,Network Security,4.2
+1414,36,Masters,Switching Career,Programming,Web Development,Complete Web Dev Bootcamp,4.6
+1415,45,Bachelors,Upskilling,Writing,Creative Writing,Writing Fiction,4.3
+1416,41,Bachelors,Upskilling,Business,Marketing,SEO Mastery,4.4
+1417,39,Bachelors,Switching Career,Engineering,Civil,Structural Engineering,4.1
+1418,42,Masters,Freelancing,Photography,DSLR Basics,Camera Settings 101,4.1
+1419,22,PhD,Switching Career,Language Learning,French,French for Travelers,3.4
+1420,49,PhD,Job,Personal Development,Leadership,Leadership in Teams,3.2
+1421,28,Masters,Switching Career,Writing,Content Writing,Blog Writing,3.6
+1422,18,PhD,Upskilling,Design,Graphic Design,Photoshop Basics,4.8
+1423,20,Masters,Job,Business,Management,Project Management,4.7
+1424,44,Masters,Upskilling,Language Learning,French,Basic French A1,3.2
+1425,38,PhD,Job,Health & Fitness,Yoga,Advanced Yoga Poses,4.0
+1426,25,Masters,Job,Programming,App Development,Flutter Beginner,4.7
+1427,26,High School,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.2
+1428,41,High School,Job,Personal Development,Productivity,Time Management,3.1
+1429,37,High School,Upskilling,Language Learning,German,Intermediate German,4.4
+1430,26,PhD,Job,Design,UI/UX,UX Research,4.5
+1431,44,PhD,Job,Photography,Lighting Techniques,Natural Lighting,4.2
+1432,49,Masters,Upskilling,Music,Guitar,Guitar for Beginners,3.5
+1433,36,High School,Upskilling,Photography,DSLR Basics,Camera Settings 101,4.4
+1434,22,PhD,Job,Writing,Creative Writing,Writing Fiction,3.9
+1435,42,Bachelors,Switching Career,Business,Entrepreneurship,Startup Success,4.6
+1436,38,Masters,Switching Career,Design,Figma,Figma Masterclass,3.4
+1437,41,PhD,Switching Career,Engineering,Mechanical,CAD Design,3.4
+1438,35,PhD,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,3.3
+1439,24,High School,Freelancing,Programming,Data Science,Python for Data Science,3.5
+1440,48,PhD,Upskilling,Personal Development,Productivity,Time Management,3.7
+1441,31,Bachelors,Switching Career,Photography,Photo Editing,Photoshop for Photographers,3.1
+1442,35,Masters,Job,Programming,Data Science,Data Analysis with Pandas,3.4
+1443,30,PhD,Freelancing,Engineering,Civil,AutoCAD Civil,4.0
+1444,24,High School,Freelancing,Business,Finance,Personal Finance,3.1
+1445,20,Masters,Freelancing,Business,Marketing,SEO Mastery,3.5
+1446,43,PhD,Switching Career,Business,Finance,Investing Basics,4.0
+1447,28,Bachelors,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,4.5
+1448,24,Bachelors,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,3.3
+1449,22,Bachelors,Freelancing,Language Learning,German,German Basics,4.9
+1450,48,PhD,Upskilling,Programming,App Development,React Native Guide,4.8
+1451,28,High School,Upskilling,Music,Music Theory,Music Theory Basics,4.0
+1452,33,PhD,Job,Programming,Web Development,React Full Course,4.4
+1453,36,Bachelors,Freelancing,Design,Figma,Figma Masterclass,3.6
+1454,39,PhD,Switching Career,Language Learning,French,Basic French A1,3.5
+1455,47,High School,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,4.8
+1456,48,High School,Upskilling,Photography,Lighting Techniques,Natural Lighting,3.3
+1457,44,Bachelors,Freelancing,Language Learning,German,German Basics,3.5
+1458,45,Masters,Freelancing,Business,Finance,Investing Basics,4.3
+1459,35,PhD,Freelancing,Personal Development,Public Speaking,TED Talk Techniques,4.8
+1460,43,PhD,Upskilling,Personal Development,Productivity,Time Management,4.2
+1461,39,High School,Switching Career,Music,Music Theory,Advanced Harmony,3.6
+1462,18,PhD,Freelancing,Music,Music Theory,Music Theory Basics,4.0
+1463,36,Bachelors,Upskilling,Music,Piano,Piano Lessons 101,4.6
+1464,18,PhD,Job,Writing,Copywriting,Sales Copy Mastery,3.1
+1465,37,High School,Switching Career,Language Learning,English,English Grammar,3.5
+1466,40,Masters,Freelancing,Business,Entrepreneurship,Startup Success,5.0
+1467,30,PhD,Job,Personal Development,Productivity,Time Management,3.9
+1468,40,Bachelors,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.8
+1469,37,Masters,Freelancing,Engineering,Robotics,Building Arduino Robots,4.6
+1470,26,Bachelors,Upskilling,Design,Graphic Design,Photoshop Basics,3.6
+1471,23,Masters,Switching Career,Photography,DSLR Basics,Photography Composition,4.6
+1472,45,High School,Freelancing,Photography,Photo Editing,Photoshop for Photographers,4.0
+1473,40,PhD,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.9
+1474,47,High School,Job,Health & Fitness,Nutrition,Healthy Eating,4.2
+1475,37,Bachelors,Upskilling,Design,UI/UX,UX Research,4.5
+1476,43,Bachelors,Switching Career,Programming,Data Science,Data Analysis with Pandas,4.7
+1477,23,High School,Upskilling,Business,Entrepreneurship,Startup Success,4.6
+1478,48,Masters,Job,Business,Marketing,Digital Marketing 101,4.0
+1479,49,Bachelors,Freelancing,Design,UI/UX,UI Design Principles,4.4
+1480,18,PhD,Freelancing,Business,Marketing,Digital Marketing 101,3.3
+1481,25,High School,Freelancing,Writing,Creative Writing,Short Story Writing,3.0
+1482,46,PhD,Job,Business,Entrepreneurship,Business Planning,4.0
+1483,29,Bachelors,Upskilling,Engineering,Robotics,Intro to Robotics,3.9
+1484,19,Bachelors,Freelancing,Writing,Creative Writing,Writing Fiction,4.0
+1485,36,Masters,Job,Engineering,Robotics,Building Arduino Robots,4.3
+1486,43,PhD,Job,Music,Piano,Classical Piano,3.3
+1487,36,PhD,Job,Engineering,Robotics,Intro to Robotics,4.2
+1488,20,PhD,Job,Language Learning,Spanish,Conversational Spanish,4.8
+1489,47,Masters,Job,Design,UI/UX,UX Research,3.7
+1490,42,High School,Freelancing,Design,UI/UX,UI Design Principles,3.9
+1491,26,Masters,Upskilling,Health & Fitness,Nutrition,Meal Planning,3.8
+1492,48,Bachelors,Upskilling,Design,UI/UX,UI Design Principles,4.2
+1493,43,High School,Job,Programming,App Development,Flutter Beginner,3.2
+1494,24,PhD,Switching Career,Language Learning,Spanish,Beginner Spanish,3.2
+1495,29,PhD,Switching Career,Business,Marketing,SEO Mastery,3.2
+1496,22,PhD,Upskilling,Engineering,Electrical,Circuits and Systems,3.6
+1497,46,PhD,Freelancing,Engineering,Mechanical,Thermodynamics,3.5
+1498,46,Masters,Freelancing,Writing,Content Writing,Blog Writing,3.9
+1499,30,High School,Job,Business,Finance,Personal Finance,4.6
+1500,18,Masters,Switching Career,Engineering,Electrical,Power Engineering,3.4
+1501,49,Bachelors,Freelancing,Engineering,Robotics,Building Arduino Robots,3.7
+1502,26,High School,Switching Career,Health & Fitness,Mental Health,Mindfulness Meditation,4.7
+1503,23,Bachelors,Upskilling,Business,Marketing,SEO Mastery,3.5
+1504,39,High School,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.4
+1505,22,Bachelors,Upskilling,Business,Finance,Investing Basics,3.8
+1506,21,High School,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,3.1
+1507,44,Masters,Freelancing,Language Learning,English,English Grammar,3.4
+1508,39,High School,Freelancing,Music,Guitar,Guitar for Beginners,3.7
+1509,22,PhD,Job,Photography,Photo Editing,Lightroom Editing,3.5
+1510,20,High School,Job,Music,Music Theory,Music Theory Basics,4.3
+1511,45,PhD,Upskilling,Writing,Creative Writing,Writing Fiction,3.1
+1512,30,PhD,Job,Photography,Photo Editing,Lightroom Editing,3.8
+1513,42,Bachelors,Switching Career,Health & Fitness,Mental Health,Managing Stress,3.2
+1514,25,Masters,Upskilling,Writing,Copywriting,Ad Copy Techniques,4.8
+1515,33,Bachelors,Job,Engineering,Electrical,Circuits and Systems,3.8
+1516,20,High School,Freelancing,Programming,Web Development,Complete Web Dev Bootcamp,3.3
+1517,29,Masters,Job,Language Learning,French,French for Travelers,5.0
+1518,26,PhD,Switching Career,Business,Marketing,Digital Marketing 101,3.5
+1519,31,PhD,Upskilling,Writing,Copywriting,Ad Copy Techniques,4.9
+1520,36,Bachelors,Upskilling,Language Learning,English,English Grammar,3.7
+1521,44,PhD,Upskilling,Business,Finance,Personal Finance,4.7
+1522,32,Masters,Freelancing,Business,Entrepreneurship,Startup Success,3.1
+1523,33,PhD,Switching Career,Business,Marketing,SEO Mastery,4.7
+1524,35,Masters,Switching Career,Personal Development,Productivity,Time Management,3.6
+1525,42,PhD,Job,Health & Fitness,Yoga,Advanced Yoga Poses,3.1
+1526,31,PhD,Freelancing,Health & Fitness,Mental Health,Managing Stress,4.3
+1527,20,Masters,Job,Engineering,Civil,AutoCAD Civil,4.6
+1528,31,High School,Upskilling,Engineering,Robotics,Building Arduino Robots,4.6
+1529,21,High School,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.8
+1530,34,Bachelors,Switching Career,Music,Music Theory,Music Theory Basics,3.3
+1531,18,Masters,Upskilling,Business,Finance,Investing Basics,3.7
+1532,43,High School,Upskilling,Language Learning,French,Basic French A1,4.6
+1533,18,High School,Upskilling,Engineering,Civil,AutoCAD Civil,4.7
+1534,46,PhD,Job,Music,Guitar,Fingerstyle Guitar,3.1
+1535,40,PhD,Freelancing,Health & Fitness,Nutrition,Healthy Eating,3.6
+1536,38,High School,Switching Career,Design,UI/UX,UI Design Principles,3.5
+1537,49,Bachelors,Freelancing,Design,Canva,Canva for Beginners,3.5
+1538,20,Bachelors,Switching Career,Engineering,Civil,Structural Engineering,4.1
+1539,32,High School,Upskilling,Personal Development,Productivity,Focus and Discipline,4.1
+1540,20,Bachelors,Upskilling,Business,Marketing,SEO Mastery,3.2
+1541,22,Bachelors,Freelancing,Language Learning,French,Basic French A1,3.1
+1542,45,Masters,Freelancing,Programming,Machine Learning,Scikit-learn Basics,4.6
+1543,39,PhD,Upskilling,Music,Piano,Piano Lessons 101,3.3
+1544,20,Masters,Freelancing,Engineering,Electrical,Circuits and Systems,4.2
+1545,38,Masters,Freelancing,Health & Fitness,Mental Health,Managing Stress,4.3
+1546,27,PhD,Job,Business,Finance,Investing Basics,4.1
+1547,25,High School,Switching Career,Photography,Lighting Techniques,Studio Setup,3.6
+1548,30,Masters,Freelancing,Language Learning,Spanish,Conversational Spanish,3.5
+1549,38,High School,Freelancing,Music,Music Theory,Advanced Harmony,3.7
+1550,40,High School,Upskilling,Music,Music Theory,Music Theory Basics,3.9
+1551,44,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,4.3
+1552,26,Masters,Upskilling,Language Learning,French,French for Travelers,3.2
+1553,44,Bachelors,Switching Career,Writing,Creative Writing,Short Story Writing,3.0
+1554,25,PhD,Upskilling,Photography,Lighting Techniques,Studio Setup,4.5
+1555,26,High School,Switching Career,Programming,App Development,Flutter Beginner,3.3
+1556,42,PhD,Upskilling,Design,Graphic Design,Photoshop Basics,4.4
+1557,25,Masters,Upskilling,Engineering,Electrical,Circuits and Systems,3.1
+1558,40,PhD,Switching Career,Music,Music Theory,Advanced Harmony,3.6
+1559,48,Bachelors,Freelancing,Engineering,Electrical,Circuits and Systems,4.8
+1560,41,PhD,Switching Career,Language Learning,German,German Basics,4.0
+1561,35,High School,Freelancing,Personal Development,Leadership,Emotional Intelligence,3.1
+1562,45,Masters,Upskilling,Health & Fitness,Yoga,Beginner Yoga,4.9
+1563,20,Bachelors,Switching Career,Photography,Photo Editing,Photoshop for Photographers,3.2
+1564,36,Bachelors,Job,Personal Development,Leadership,Emotional Intelligence,3.9
+1565,28,Masters,Upskilling,Engineering,Electrical,Circuits and Systems,4.3
+1566,27,High School,Freelancing,Photography,Lighting Techniques,Natural Lighting,3.1
+1567,20,Bachelors,Job,Music,Guitar,Fingerstyle Guitar,3.4
+1568,45,PhD,Freelancing,Music,Piano,Piano Lessons 101,4.4
+1569,25,PhD,Switching Career,Music,Piano,Piano Lessons 101,4.7
+1570,35,High School,Upskilling,Business,Finance,Personal Finance,3.7
+1571,39,Masters,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.4
+1572,38,High School,Switching Career,Business,Entrepreneurship,Startup Success,4.7
+1573,20,High School,Freelancing,Design,Graphic Design,Photoshop Basics,4.3
+1574,34,PhD,Freelancing,Music,Guitar,Fingerstyle Guitar,3.6
+1575,30,High School,Freelancing,Programming,Data Science,Python for Data Science,4.0
+1576,31,Bachelors,Job,Health & Fitness,Mental Health,Mindfulness Meditation,4.2
+1577,33,Masters,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.8
+1578,32,Masters,Switching Career,Music,Music Theory,Advanced Harmony,4.2
+1579,48,Masters,Job,Writing,Creative Writing,Short Story Writing,3.8
+1580,46,Masters,Freelancing,Health & Fitness,Nutrition,Healthy Eating,3.9
+1581,38,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.5
+1582,48,PhD,Switching Career,Writing,Creative Writing,Short Story Writing,3.5
+1583,31,PhD,Job,Photography,Photo Editing,Photoshop for Photographers,4.3
+1584,44,PhD,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.8
+1585,35,PhD,Freelancing,Language Learning,English,Spoken English,3.9
+1586,32,Bachelors,Freelancing,Business,Entrepreneurship,Startup Success,4.2
+1587,19,High School,Switching Career,Business,Entrepreneurship,Business Planning,4.5
+1588,22,High School,Freelancing,Language Learning,Spanish,Beginner Spanish,4.7
+1589,43,Bachelors,Upskilling,Design,UI/UX,UI Design Principles,3.8
+1590,33,High School,Job,Programming,Cybersecurity,Ethical Hacking,4.0
+1591,49,High School,Freelancing,Personal Development,Leadership,Leadership in Teams,3.5
+1592,33,High School,Upskilling,Business,Management,Leadership Skills,3.3
+1593,35,High School,Job,Business,Management,Project Management,3.0
+1594,27,High School,Switching Career,Writing,Content Writing,SEO Content Writing,4.6
+1595,45,High School,Upskilling,Personal Development,Leadership,Leadership in Teams,3.2
+1596,48,PhD,Upskilling,Health & Fitness,Nutrition,Healthy Eating,4.9
+1597,35,PhD,Upskilling,Photography,Lighting Techniques,Natural Lighting,3.8
+1598,49,PhD,Upskilling,Photography,Lighting Techniques,Natural Lighting,3.9
+1599,19,PhD,Freelancing,Music,Piano,Classical Piano,4.1
+1600,37,Masters,Freelancing,Business,Marketing,Digital Marketing 101,3.4
+1601,49,Bachelors,Job,Design,Graphic Design,Illustrator Course,4.0
+1602,32,High School,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.5
+1603,27,High School,Upskilling,Engineering,Robotics,Intro to Robotics,3.5
+1604,31,PhD,Switching Career,Language Learning,Spanish,Conversational Spanish,3.9
+1605,48,High School,Job,Health & Fitness,Mental Health,Managing Stress,3.8
+1606,18,Bachelors,Job,Design,Canva,Designing with Canva,4.7
+1607,25,High School,Switching Career,Music,Guitar,Fingerstyle Guitar,3.3
+1608,44,PhD,Job,Personal Development,Productivity,Focus and Discipline,5.0
+1609,35,Masters,Upskilling,Engineering,Mechanical,Thermodynamics,3.6
+1610,31,Masters,Upskilling,Music,Piano,Piano Lessons 101,4.9
+1611,26,Bachelors,Switching Career,Programming,Machine Learning,Intro to TensorFlow,3.4
+1612,48,High School,Job,Personal Development,Public Speaking,Speaking with Confidence,3.4
+1613,24,PhD,Upskilling,Business,Marketing,SEO Mastery,4.2
+1614,22,Masters,Freelancing,Language Learning,English,English Grammar,3.5
+1615,45,Masters,Upskilling,Engineering,Robotics,Building Arduino Robots,4.1
+1616,30,High School,Freelancing,Business,Finance,Investing Basics,3.4
+1617,24,Bachelors,Switching Career,Language Learning,French,Basic French A1,3.4
+1618,18,Bachelors,Freelancing,Business,Finance,Personal Finance,3.3
+1619,18,Masters,Job,Programming,App Development,Kotlin for Android,4.6
+1620,45,PhD,Upskilling,Personal Development,Public Speaking,Speaking with Confidence,3.5
+1621,43,PhD,Switching Career,Music,Piano,Classical Piano,4.7
+1622,38,High School,Freelancing,Design,UI/UX,UX Research,4.7
+1623,46,PhD,Upskilling,Business,Management,Leadership Skills,3.4
+1624,41,PhD,Upskilling,Health & Fitness,Nutrition,Healthy Eating,3.8
+1625,29,High School,Freelancing,Music,Piano,Piano Lessons 101,3.0
+1626,37,Masters,Job,Language Learning,French,French for Travelers,4.2
+1627,20,Masters,Switching Career,Health & Fitness,Nutrition,Meal Planning,3.5
+1628,21,High School,Switching Career,Engineering,Robotics,Building Arduino Robots,3.3
+1629,24,High School,Upskilling,Programming,Cybersecurity,Ethical Hacking,4.4
+1630,29,Bachelors,Job,Health & Fitness,Nutrition,Healthy Eating,3.9
+1631,21,Masters,Job,Photography,Photo Editing,Lightroom Editing,4.3
+1632,19,Masters,Upskilling,Design,UI/UX,UX Research,4.9
+1633,43,PhD,Job,Business,Finance,Personal Finance,4.5
+1634,23,Bachelors,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.4
+1635,44,Bachelors,Job,Personal Development,Leadership,Emotional Intelligence,3.2
+1636,47,High School,Switching Career,Business,Marketing,Digital Marketing 101,3.4
+1637,23,Bachelors,Upskilling,Engineering,Electrical,Circuits and Systems,4.6
+1638,31,Masters,Switching Career,Business,Finance,Investing Basics,4.7
+1639,30,Bachelors,Upskilling,Programming,Data Science,Data Analysis with Pandas,3.4
+1640,26,Masters,Switching Career,Writing,Creative Writing,Short Story Writing,4.8
+1641,29,Masters,Upskilling,Music,Piano,Piano Lessons 101,4.0
+1642,41,Masters,Switching Career,Design,Figma,Figma for Teams,3.3
+1643,31,PhD,Upskilling,Personal Development,Productivity,Focus and Discipline,4.4
+1644,35,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,3.5
+1645,25,Bachelors,Switching Career,Design,Graphic Design,Illustrator Course,3.7
+1646,42,High School,Upskilling,Business,Entrepreneurship,Startup Success,3.3
+1647,48,Masters,Upskilling,Business,Finance,Investing Basics,3.6
+1648,47,Bachelors,Job,Music,Music Theory,Advanced Harmony,4.2
+1649,45,PhD,Switching Career,Writing,Copywriting,Ad Copy Techniques,4.2
+1650,48,PhD,Upskilling,Programming,App Development,Kotlin for Android,3.2
+1651,45,Masters,Switching Career,Engineering,Electrical,Circuits and Systems,4.0
+1652,37,Bachelors,Freelancing,Design,UI/UX,UX Research,4.9
+1653,37,Bachelors,Upskilling,Music,Piano,Piano Lessons 101,3.9
+1654,27,Bachelors,Freelancing,Personal Development,Leadership,Leadership in Teams,3.4
+1655,31,PhD,Job,Writing,Creative Writing,Short Story Writing,3.0
+1656,28,Masters,Job,Music,Music Theory,Advanced Harmony,4.4
+1657,48,PhD,Switching Career,Writing,Creative Writing,Short Story Writing,3.3
+1658,26,PhD,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,4.2
+1659,22,Masters,Switching Career,Engineering,Electrical,Circuits and Systems,4.8
+1660,29,Bachelors,Upskilling,Language Learning,French,French for Travelers,4.2
+1661,43,High School,Freelancing,Design,Graphic Design,Photoshop Basics,3.1
+1662,37,PhD,Job,Language Learning,German,German Basics,3.9
+1663,36,Masters,Switching Career,Music,Guitar,Fingerstyle Guitar,4.9
+1664,44,Bachelors,Freelancing,Health & Fitness,Mental Health,Managing Stress,3.9
+1665,23,Masters,Job,Health & Fitness,Nutrition,Healthy Eating,3.6
+1666,42,PhD,Job,Music,Music Theory,Advanced Harmony,3.8
+1667,21,Masters,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,4.2
+1668,46,Masters,Switching Career,Language Learning,French,French for Travelers,4.6
+1669,45,PhD,Job,Design,Figma,Figma for Teams,4.9
+1670,34,Bachelors,Switching Career,Health & Fitness,Nutrition,Meal Planning,3.6
+1671,25,PhD,Switching Career,Language Learning,English,Spoken English,3.5
+1672,39,Masters,Job,Photography,Photo Editing,Lightroom Editing,3.6
+1673,44,High School,Switching Career,Language Learning,French,French for Travelers,4.2
+1674,40,High School,Switching Career,Writing,Creative Writing,Writing Fiction,4.1
+1675,26,Bachelors,Switching Career,Health & Fitness,Yoga,Advanced Yoga Poses,4.9
+1676,33,PhD,Job,Business,Entrepreneurship,Business Planning,3.1
+1677,24,PhD,Job,Language Learning,French,Basic French A1,3.8
+1678,29,Masters,Job,Health & Fitness,Nutrition,Healthy Eating,4.1
+1679,37,Bachelors,Job,Language Learning,German,German Basics,4.5
+1680,45,Masters,Freelancing,Personal Development,Public Speaking,Speaking with Confidence,4.2
+1681,29,Masters,Upskilling,Programming,Data Science,Python for Data Science,3.0
+1682,44,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,3.2
+1683,32,High School,Upskilling,Writing,Creative Writing,Short Story Writing,4.5
+1684,47,PhD,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.9
+1685,18,Masters,Upskilling,Language Learning,French,Basic French A1,3.3
+1686,49,Bachelors,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,3.1
+1687,23,PhD,Upskilling,Business,Finance,Investing Basics,3.6
+1688,38,PhD,Switching Career,Programming,App Development,Kotlin for Android,4.2
+1689,40,PhD,Switching Career,Programming,Machine Learning,Scikit-learn Basics,4.5
+1690,33,PhD,Freelancing,Health & Fitness,Mental Health,Managing Stress,3.2
+1691,31,Bachelors,Job,Engineering,Civil,Structural Engineering,4.7
+1692,43,PhD,Upskilling,Writing,Copywriting,Ad Copy Techniques,3.6
+1693,41,High School,Upskilling,Photography,Lighting Techniques,Studio Setup,3.5
+1694,43,PhD,Switching Career,Personal Development,Leadership,Leadership in Teams,4.8
+1695,29,PhD,Upskilling,Programming,Cybersecurity,Network Security,4.5
+1696,29,High School,Switching Career,Engineering,Robotics,Building Arduino Robots,3.8
+1697,19,Bachelors,Freelancing,Engineering,Electrical,Power Engineering,4.9
+1698,38,Bachelors,Freelancing,Engineering,Robotics,Intro to Robotics,4.9
+1699,19,PhD,Freelancing,Design,Graphic Design,Illustrator Course,4.4
+1700,33,Bachelors,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.6
+1701,19,Bachelors,Switching Career,Music,Guitar,Fingerstyle Guitar,5.0
+1702,29,PhD,Job,Engineering,Civil,Structural Engineering,3.5
+1703,22,High School,Job,Health & Fitness,Mental Health,Mindfulness Meditation,4.7
+1704,22,PhD,Upskilling,Photography,DSLR Basics,Camera Settings 101,3.9
+1705,21,Masters,Switching Career,Programming,Machine Learning,Intro to TensorFlow,4.4
+1706,46,PhD,Job,Business,Finance,Investing Basics,4.5
+1707,25,Bachelors,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.3
+1708,33,PhD,Freelancing,Personal Development,Productivity,Focus and Discipline,4.3
+1709,22,PhD,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.6
+1710,46,Masters,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,4.2
+1711,26,Bachelors,Upskilling,Programming,App Development,React Native Guide,4.1
+1712,36,Masters,Freelancing,Engineering,Civil,AutoCAD Civil,4.4
+1713,36,Bachelors,Freelancing,Design,UI/UX,UI Design Principles,3.5
+1714,32,High School,Freelancing,Engineering,Civil,Structural Engineering,4.2
+1715,34,Masters,Switching Career,Music,Music Theory,Music Theory Basics,4.9
+1716,27,Masters,Upskilling,Health & Fitness,Yoga,Beginner Yoga,4.7
+1717,48,Bachelors,Switching Career,Health & Fitness,Nutrition,Healthy Eating,3.7
+1718,37,Bachelors,Freelancing,Design,UI/UX,UX Research,4.3
+1719,40,PhD,Switching Career,Engineering,Electrical,Circuits and Systems,4.5
+1720,41,High School,Switching Career,Business,Entrepreneurship,Startup Success,3.5
+1721,23,High School,Switching Career,Engineering,Mechanical,Thermodynamics,3.5
+1722,29,Bachelors,Freelancing,Music,Guitar,Guitar for Beginners,5.0
+1723,35,Masters,Job,Writing,Content Writing,Blog Writing,4.8
+1724,26,Masters,Job,Writing,Creative Writing,Writing Fiction,4.2
+1725,48,PhD,Job,Photography,DSLR Basics,Photography Composition,4.6
+1726,22,Bachelors,Switching Career,Business,Management,Project Management,4.0
+1727,24,Bachelors,Switching Career,Personal Development,Public Speaking,Speaking with Confidence,4.2
+1728,25,PhD,Freelancing,Engineering,Robotics,Intro to Robotics,3.5
+1729,44,Masters,Switching Career,Design,UI/UX,UI Design Principles,4.0
+1730,37,Masters,Freelancing,Language Learning,French,Basic French A1,4.3
+1731,25,Bachelors,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.9
+1732,28,Bachelors,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.2
+1733,46,Masters,Freelancing,Writing,Creative Writing,Writing Fiction,3.4
+1734,37,Masters,Switching Career,Business,Entrepreneurship,Startup Success,4.1
+1735,27,Masters,Freelancing,Writing,Copywriting,Sales Copy Mastery,4.7
+1736,28,Masters,Switching Career,Engineering,Robotics,Building Arduino Robots,3.5
+1737,34,PhD,Upskilling,Language Learning,Spanish,Conversational Spanish,3.7
+1738,40,Masters,Switching Career,Personal Development,Leadership,Emotional Intelligence,4.5
+1739,18,PhD,Job,Health & Fitness,Yoga,Beginner Yoga,4.9
+1740,35,High School,Freelancing,Writing,Content Writing,SEO Content Writing,3.6
+1741,41,High School,Upskilling,Health & Fitness,Yoga,Advanced Yoga Poses,4.1
+1742,30,Bachelors,Switching Career,Personal Development,Productivity,Time Management,3.5
+1743,38,PhD,Switching Career,Programming,Data Science,Data Analysis with Pandas,3.5
+1744,42,High School,Job,Programming,Machine Learning,Intro to TensorFlow,4.1
+1745,46,Masters,Job,Music,Guitar,Guitar for Beginners,3.6
+1746,44,Bachelors,Freelancing,Engineering,Civil,Structural Engineering,4.1
+1747,46,Bachelors,Upskilling,Engineering,Civil,AutoCAD Civil,4.4
+1748,26,High School,Upskilling,Language Learning,German,German Basics,3.4
+1749,47,Bachelors,Switching Career,Language Learning,French,French for Travelers,4.4
+1750,34,Masters,Job,Design,Figma,Figma for Teams,3.9
+1751,49,High School,Job,Photography,Photo Editing,Lightroom Editing,4.1
+1752,20,Masters,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,4.3
+1753,22,High School,Job,Photography,DSLR Basics,Camera Settings 101,4.1
+1754,47,Bachelors,Job,Health & Fitness,Yoga,Advanced Yoga Poses,3.9
+1755,27,Masters,Job,Design,UI/UX,UI Design Principles,4.1
+1756,45,High School,Switching Career,Engineering,Civil,Structural Engineering,4.2
+1757,42,High School,Job,Writing,Copywriting,Ad Copy Techniques,3.3
+1758,32,Masters,Switching Career,Writing,Content Writing,SEO Content Writing,4.8
+1759,27,Bachelors,Freelancing,Writing,Copywriting,Sales Copy Mastery,3.2
+1760,20,Bachelors,Upskilling,Business,Entrepreneurship,Business Planning,4.9
+1761,31,Bachelors,Upskilling,Design,Graphic Design,Illustrator Course,3.5
+1762,31,Masters,Job,Design,Graphic Design,Photoshop Basics,4.7
+1763,42,High School,Switching Career,Writing,Copywriting,Sales Copy Mastery,3.9
+1764,43,Bachelors,Freelancing,Health & Fitness,Mental Health,Managing Stress,3.2
+1765,29,High School,Freelancing,Writing,Creative Writing,Short Story Writing,4.5
+1766,40,Masters,Switching Career,Writing,Creative Writing,Writing Fiction,4.6
+1767,41,PhD,Upskilling,Photography,DSLR Basics,Photography Composition,3.0
+1768,42,PhD,Switching Career,Business,Entrepreneurship,Business Planning,4.9
+1769,22,PhD,Upskilling,Writing,Content Writing,Blog Writing,4.3
+1770,42,PhD,Job,Personal Development,Public Speaking,TED Talk Techniques,3.1
+1771,33,Bachelors,Job,Design,Canva,Canva for Beginners,4.4
+1772,20,High School,Freelancing,Personal Development,Leadership,Emotional Intelligence,4.6
+1773,44,Bachelors,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.7
+1774,25,Bachelors,Job,Music,Guitar,Fingerstyle Guitar,3.8
+1775,41,Masters,Upskilling,Programming,Web Development,HTML CSS JS Mastery,3.1
+1776,48,High School,Freelancing,Health & Fitness,Nutrition,Meal Planning,4.5
+1777,28,Bachelors,Job,Programming,Machine Learning,ML A-Z,3.2
+1778,22,High School,Switching Career,Music,Piano,Classical Piano,3.3
+1779,18,Masters,Switching Career,Music,Piano,Piano Lessons 101,3.6
+1780,41,High School,Switching Career,Music,Music Theory,Music Theory Basics,3.3
+1781,26,Bachelors,Freelancing,Business,Marketing,SEO Mastery,3.6
+1782,24,Bachelors,Freelancing,Personal Development,Productivity,Focus and Discipline,3.7
+1783,47,Masters,Freelancing,Language Learning,German,Intermediate German,4.3
+1784,20,PhD,Job,Writing,Creative Writing,Writing Fiction,3.3
+1785,20,Bachelors,Freelancing,Health & Fitness,Yoga,Beginner Yoga,4.1
+1786,48,Masters,Freelancing,Engineering,Robotics,Building Arduino Robots,5.0
+1787,47,Masters,Switching Career,Business,Entrepreneurship,Business Planning,3.7
+1788,29,Masters,Upskilling,Music,Music Theory,Advanced Harmony,4.3
+1789,39,Masters,Job,Language Learning,German,German Basics,4.9
+1790,26,High School,Freelancing,Music,Guitar,Guitar for Beginners,4.1
+1791,36,Bachelors,Upskilling,Personal Development,Leadership,Emotional Intelligence,4.1
+1792,23,Bachelors,Switching Career,Photography,DSLR Basics,Camera Settings 101,4.7
+1793,32,High School,Freelancing,Language Learning,Spanish,Beginner Spanish,4.6
+1794,41,Bachelors,Freelancing,Language Learning,Spanish,Beginner Spanish,4.4
+1795,32,Bachelors,Switching Career,Writing,Copywriting,Sales Copy Mastery,4.9
+1796,43,Masters,Switching Career,Photography,Photo Editing,Photoshop for Photographers,3.9
+1797,26,Masters,Job,Business,Entrepreneurship,Business Planning,3.4
+1798,22,High School,Switching Career,Design,Canva,Designing with Canva,4.6
+1799,33,PhD,Freelancing,Health & Fitness,Yoga,Beginner Yoga,3.5
+1800,40,High School,Freelancing,Personal Development,Productivity,Focus and Discipline,3.2
+1801,27,Bachelors,Switching Career,Design,UI/UX,UI Design Principles,3.0
+1802,25,Masters,Job,Engineering,Robotics,Intro to Robotics,4.3
+1803,37,High School,Switching Career,Design,Figma,Figma for Teams,4.8
+1804,20,PhD,Upskilling,Business,Management,Leadership Skills,4.2
+1805,49,Masters,Freelancing,Photography,DSLR Basics,Camera Settings 101,5.0
+1806,41,Bachelors,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.3
+1807,35,Masters,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.3
+1808,34,Masters,Job,Programming,Web Development,React Full Course,4.6
+1809,33,PhD,Freelancing,Engineering,Robotics,Building Arduino Robots,3.2
+1810,49,PhD,Switching Career,Programming,Cybersecurity,Ethical Hacking,4.2
+1811,24,High School,Job,Writing,Copywriting,Ad Copy Techniques,4.6
+1812,20,Masters,Switching Career,Music,Music Theory,Music Theory Basics,4.9
+1813,45,High School,Freelancing,Engineering,Mechanical,Thermodynamics,4.3
+1814,39,High School,Upskilling,Health & Fitness,Nutrition,Meal Planning,4.7
+1815,34,Masters,Upskilling,Language Learning,Spanish,Conversational Spanish,3.9
+1816,21,Masters,Switching Career,Personal Development,Productivity,Time Management,4.1
+1817,38,PhD,Upskilling,Design,Graphic Design,Photoshop Basics,3.7
+1818,32,Masters,Upskilling,Business,Marketing,SEO Mastery,3.6
+1819,49,Bachelors,Switching Career,Writing,Copywriting,Ad Copy Techniques,3.7
+1820,46,Masters,Freelancing,Design,UI/UX,UX Research,3.2
+1821,37,Masters,Freelancing,Health & Fitness,Mental Health,Managing Stress,3.4
+1822,23,PhD,Upskilling,Design,UI/UX,UI Design Principles,3.8
+1823,42,High School,Upskilling,Engineering,Electrical,Power Engineering,5.0
+1824,46,High School,Freelancing,Photography,DSLR Basics,Photography Composition,3.1
+1825,32,Bachelors,Freelancing,Writing,Copywriting,Sales Copy Mastery,3.3
+1826,36,Bachelors,Job,Engineering,Robotics,Building Arduino Robots,3.8
+1827,30,PhD,Freelancing,Photography,Lighting Techniques,Studio Setup,4.3
+1828,42,Masters,Upskilling,Personal Development,Leadership,Emotional Intelligence,3.7
+1829,33,Masters,Upskilling,Business,Finance,Investing Basics,4.7
+1830,33,Bachelors,Job,Photography,Lighting Techniques,Studio Setup,4.1
+1831,24,Bachelors,Upskilling,Photography,DSLR Basics,Photography Composition,3.5
+1832,21,PhD,Switching Career,Music,Music Theory,Advanced Harmony,3.1
+1833,28,High School,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.8
+1834,48,Bachelors,Job,Language Learning,English,Spoken English,4.1
+1835,19,PhD,Switching Career,Design,Graphic Design,Photoshop Basics,4.3
+1836,37,Masters,Upskilling,Writing,Content Writing,SEO Content Writing,3.3
+1837,38,High School,Job,Language Learning,English,English Grammar,4.2
+1838,44,Bachelors,Freelancing,Writing,Content Writing,Blog Writing,4.7
+1839,19,PhD,Job,Language Learning,English,English Grammar,4.9
+1840,42,PhD,Switching Career,Music,Guitar,Fingerstyle Guitar,3.4
+1841,37,Masters,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,3.2
+1842,34,PhD,Freelancing,Writing,Copywriting,Sales Copy Mastery,3.7
+1843,24,Masters,Job,Engineering,Electrical,Circuits and Systems,4.4
+1844,24,Bachelors,Job,Photography,DSLR Basics,Camera Settings 101,3.7
+1845,37,High School,Upskilling,Business,Finance,Personal Finance,4.3
+1846,49,Bachelors,Freelancing,Language Learning,English,English Grammar,4.2
+1847,29,PhD,Freelancing,Photography,DSLR Basics,Photography Composition,3.1
+1848,20,High School,Upskilling,Personal Development,Productivity,Focus and Discipline,4.4
+1849,28,High School,Switching Career,Writing,Content Writing,Blog Writing,5.0
+1850,39,PhD,Switching Career,Music,Guitar,Guitar for Beginners,3.7
+1851,41,Bachelors,Freelancing,Music,Guitar,Fingerstyle Guitar,3.1
+1852,21,PhD,Job,Photography,DSLR Basics,Photography Composition,4.8
+1853,43,Bachelors,Upskilling,Language Learning,Spanish,Conversational Spanish,4.5
+1854,36,PhD,Switching Career,Health & Fitness,Yoga,Beginner Yoga,4.0
+1855,49,High School,Upskilling,Photography,Photo Editing,Photoshop for Photographers,3.6
+1856,36,High School,Job,Writing,Creative Writing,Short Story Writing,4.8
+1857,29,Masters,Job,Photography,DSLR Basics,Camera Settings 101,4.9
+1858,42,Bachelors,Upskilling,Photography,DSLR Basics,Photography Composition,4.5
+1859,29,Masters,Job,Writing,Creative Writing,Short Story Writing,4.9
+1860,32,Masters,Job,Writing,Copywriting,Sales Copy Mastery,4.1
+1861,18,High School,Switching Career,Writing,Content Writing,Blog Writing,4.8
+1862,18,Bachelors,Upskilling,Design,Graphic Design,Photoshop Basics,3.7
+1863,43,High School,Freelancing,Design,Canva,Designing with Canva,4.8
+1864,45,Masters,Freelancing,Personal Development,Leadership,Leadership in Teams,3.8
+1865,44,PhD,Upskilling,Writing,Copywriting,Ad Copy Techniques,4.2
+1866,43,High School,Switching Career,Design,Canva,Canva for Beginners,4.3
+1867,25,Bachelors,Switching Career,Business,Finance,Investing Basics,3.3
+1868,34,PhD,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.7
+1869,34,High School,Job,Health & Fitness,Nutrition,Healthy Eating,4.1
+1870,49,Bachelors,Freelancing,Photography,DSLR Basics,Photography Composition,4.0
+1871,25,Bachelors,Job,Health & Fitness,Nutrition,Healthy Eating,4.5
+1872,22,Bachelors,Switching Career,Engineering,Civil,AutoCAD Civil,4.5
+1873,46,High School,Freelancing,Writing,Content Writing,SEO Content Writing,3.1
+1874,18,Bachelors,Upskilling,Personal Development,Productivity,Focus and Discipline,3.9
+1875,21,PhD,Switching Career,Design,UI/UX,UX Research,3.5
+1876,30,Masters,Switching Career,Programming,Data Science,Python for Data Science,4.7
+1877,36,Bachelors,Freelancing,Photography,Photo Editing,Lightroom Editing,3.2
+1878,22,PhD,Job,Engineering,Mechanical,CAD Design,3.7
+1879,27,High School,Freelancing,Programming,Data Science,Python for Data Science,4.1
+1880,42,High School,Freelancing,Programming,Cybersecurity,Ethical Hacking,3.0
+1881,48,PhD,Upskilling,Engineering,Robotics,Building Arduino Robots,4.8
+1882,33,PhD,Upskilling,Language Learning,German,Intermediate German,4.8
+1883,27,PhD,Upskilling,Writing,Creative Writing,Short Story Writing,4.3
+1884,29,PhD,Upskilling,Design,UI/UX,UX Research,3.9
+1885,37,Bachelors,Job,Music,Piano,Piano Lessons 101,5.0
+1886,26,Masters,Freelancing,Health & Fitness,Yoga,Advanced Yoga Poses,3.9
+1887,46,PhD,Switching Career,Music,Piano,Classical Piano,3.7
+1888,43,Bachelors,Freelancing,Writing,Creative Writing,Writing Fiction,4.1
+1889,41,PhD,Switching Career,Language Learning,French,French for Travelers,3.8
+1890,48,High School,Switching Career,Personal Development,Public Speaking,TED Talk Techniques,3.1
+1891,31,Masters,Freelancing,Health & Fitness,Mental Health,Mindfulness Meditation,3.4
+1892,46,High School,Freelancing,Health & Fitness,Mental Health,Managing Stress,3.5
+1893,27,PhD,Freelancing,Design,Graphic Design,Illustrator Course,3.9
+1894,26,PhD,Upskilling,Engineering,Electrical,Circuits and Systems,4.6
+1895,23,High School,Job,Programming,Machine Learning,ML A-Z,3.6
+1896,40,Bachelors,Freelancing,Writing,Copywriting,Sales Copy Mastery,3.7
+1897,38,PhD,Switching Career,Language Learning,Spanish,Conversational Spanish,3.6
+1898,28,Bachelors,Freelancing,Health & Fitness,Nutrition,Meal Planning,3.3
+1899,48,Masters,Freelancing,Business,Finance,Investing Basics,3.2
+1900,20,Bachelors,Switching Career,Music,Piano,Classical Piano,3.3
+1901,19,Masters,Switching Career,Engineering,Mechanical,CAD Design,4.8
+1902,49,Masters,Upskilling,Business,Entrepreneurship,Startup Success,3.4
+1903,37,PhD,Freelancing,Business,Finance,Investing Basics,3.6
+1904,23,Masters,Switching Career,Programming,Cybersecurity,Network Security,5.0
+1905,41,Masters,Freelancing,Photography,Photo Editing,Lightroom Editing,4.0
+1906,28,High School,Freelancing,Personal Development,Leadership,Emotional Intelligence,5.0
+1907,39,High School,Upskilling,Music,Music Theory,Music Theory Basics,3.7
+1908,20,Bachelors,Job,Engineering,Electrical,Power Engineering,3.8
+1909,48,PhD,Switching Career,Programming,Machine Learning,Scikit-learn Basics,3.8
+1910,41,PhD,Switching Career,Language Learning,Spanish,Conversational Spanish,4.4
+1911,30,PhD,Upskilling,Personal Development,Productivity,Focus and Discipline,4.8
+1912,23,Masters,Job,Programming,App Development,Flutter Beginner,3.5
+1913,29,Masters,Job,Design,Canva,Canva for Beginners,4.7
+1914,18,High School,Upskilling,Engineering,Electrical,Circuits and Systems,4.2
+1915,47,Masters,Job,Engineering,Electrical,Circuits and Systems,4.4
+1916,30,High School,Freelancing,Business,Marketing,Digital Marketing 101,3.9
+1917,32,Bachelors,Job,Business,Management,Leadership Skills,4.3
+1918,30,PhD,Freelancing,Music,Music Theory,Music Theory Basics,3.9
+1919,21,PhD,Freelancing,Photography,DSLR Basics,Camera Settings 101,3.4
+1920,30,Masters,Freelancing,Photography,Lighting Techniques,Natural Lighting,4.4
+1921,22,Bachelors,Freelancing,Language Learning,Spanish,Beginner Spanish,3.8
+1922,36,PhD,Upskilling,Writing,Copywriting,Ad Copy Techniques,4.6
+1923,33,High School,Upskilling,Personal Development,Productivity,Time Management,3.1
+1924,49,Masters,Job,Engineering,Robotics,Intro to Robotics,4.3
+1925,46,High School,Job,Language Learning,French,French for Travelers,4.1
+1926,38,PhD,Upskilling,Music,Piano,Classical Piano,3.6
+1927,49,Masters,Freelancing,Writing,Content Writing,Blog Writing,3.1
+1928,40,PhD,Switching Career,Music,Piano,Classical Piano,3.9
+1929,47,PhD,Freelancing,Design,Graphic Design,Illustrator Course,4.9
+1930,26,Masters,Switching Career,Design,Graphic Design,Illustrator Course,3.0
+1931,29,Bachelors,Freelancing,Writing,Creative Writing,Writing Fiction,3.8
+1932,27,Masters,Upskilling,Writing,Creative Writing,Short Story Writing,3.8
+1933,37,Masters,Freelancing,Writing,Copywriting,Ad Copy Techniques,3.9
+1934,28,PhD,Job,Language Learning,English,English Grammar,4.9
+1935,48,Masters,Freelancing,Writing,Content Writing,SEO Content Writing,4.6
+1936,44,PhD,Job,Personal Development,Public Speaking,Speaking with Confidence,3.7
+1937,37,PhD,Job,Engineering,Mechanical,CAD Design,3.7
+1938,41,Bachelors,Upskilling,Engineering,Robotics,Intro to Robotics,3.0
+1939,41,PhD,Freelancing,Writing,Copywriting,Sales Copy Mastery,4.8
+1940,38,PhD,Upskilling,Photography,Photo Editing,Photoshop for Photographers,4.4
+1941,26,Masters,Freelancing,Engineering,Mechanical,Thermodynamics,4.0
+1942,48,High School,Upskilling,Photography,DSLR Basics,Photography Composition,4.5
+1943,38,High School,Switching Career,Music,Music Theory,Advanced Harmony,3.1
+1944,42,Bachelors,Upskilling,Design,UI/UX,UX Research,3.9
+1945,32,High School,Upskilling,Language Learning,German,German Basics,4.6
+1946,38,PhD,Upskilling,Engineering,Mechanical,Thermodynamics,4.9
+1947,25,Masters,Job,Writing,Content Writing,SEO Content Writing,3.5
+1948,42,PhD,Job,Personal Development,Leadership,Leadership in Teams,3.3
+1949,19,High School,Switching Career,Business,Entrepreneurship,Business Planning,4.6
+1950,27,PhD,Switching Career,Photography,DSLR Basics,Photography Composition,4.5
+1951,24,Masters,Switching Career,Personal Development,Productivity,Focus and Discipline,3.6
+1952,26,Masters,Job,Business,Marketing,SEO Mastery,4.1
+1953,41,Bachelors,Upskilling,Health & Fitness,Mental Health,Managing Stress,4.3
+1954,38,PhD,Freelancing,Language Learning,English,Spoken English,3.6
+1955,20,High School,Freelancing,Music,Guitar,Guitar for Beginners,3.3
+1956,24,Bachelors,Freelancing,Business,Entrepreneurship,Business Planning,3.7
+1957,44,Masters,Job,Music,Piano,Piano Lessons 101,4.0
+1958,43,Bachelors,Job,Writing,Copywriting,Sales Copy Mastery,3.2
+1959,34,Bachelors,Freelancing,Programming,Cybersecurity,Ethical Hacking,3.1
+1960,32,PhD,Job,Programming,App Development,Flutter Beginner,4.9
+1961,26,Masters,Upskilling,Health & Fitness,Mental Health,Mindfulness Meditation,3.0
+1962,36,PhD,Job,Health & Fitness,Mental Health,Managing Stress,3.1
+1963,20,Bachelors,Freelancing,Engineering,Robotics,Intro to Robotics,3.7
+1964,23,Masters,Freelancing,Health & Fitness,Nutrition,Healthy Eating,4.1
+1965,36,Masters,Upskilling,Photography,Photo Editing,Lightroom Editing,4.7
+1966,34,Masters,Freelancing,Language Learning,French,Basic French A1,3.2
+1967,36,PhD,Job,Music,Music Theory,Advanced Harmony,3.4
+1968,25,High School,Switching Career,Business,Finance,Personal Finance,4.5
+1969,37,Bachelors,Upskilling,Language Learning,German,German Basics,4.3
+1970,32,Masters,Freelancing,Photography,DSLR Basics,Photography Composition,3.0
+1971,29,Masters,Freelancing,Music,Music Theory,Advanced Harmony,4.4
+1972,47,PhD,Freelancing,Music,Piano,Classical Piano,4.6
+1973,33,High School,Job,Programming,Web Development,React Full Course,3.1
+1974,18,Masters,Job,Personal Development,Leadership,Emotional Intelligence,4.5
+1975,28,High School,Job,Language Learning,Spanish,Beginner Spanish,4.9
+1976,41,High School,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.6
+1977,20,High School,Upskilling,Design,UI/UX,UI Design Principles,4.9
+1978,31,High School,Job,Music,Guitar,Guitar for Beginners,3.2
+1979,33,PhD,Upskilling,Personal Development,Productivity,Focus and Discipline,3.1
+1980,27,Bachelors,Job,Health & Fitness,Mental Health,Mindfulness Meditation,3.1
+1981,49,PhD,Switching Career,Health & Fitness,Nutrition,Healthy Eating,4.2
+1982,20,High School,Upskilling,Personal Development,Public Speaking,TED Talk Techniques,3.4
+1983,35,High School,Upskilling,Writing,Creative Writing,Short Story Writing,4.6
+1984,20,PhD,Switching Career,Writing,Content Writing,Blog Writing,3.6
+1985,23,Masters,Switching Career,Music,Music Theory,Music Theory Basics,3.7
+1986,41,Bachelors,Upskilling,Language Learning,German,German Basics,4.2
+1987,41,PhD,Upskilling,Personal Development,Productivity,Focus and Discipline,4.4
+1988,44,Masters,Switching Career,Business,Entrepreneurship,Startup Success,3.7
+1989,40,PhD,Switching Career,Photography,Lighting Techniques,Natural Lighting,4.8
+1990,39,Bachelors,Upskilling,Photography,Lighting Techniques,Natural Lighting,4.7
+1991,26,Bachelors,Switching Career,Business,Management,Project Management,5.0
+1992,20,High School,Job,Personal Development,Public Speaking,Speaking with Confidence,4.5
+1993,39,PhD,Job,Language Learning,French,Basic French A1,4.0
+1994,43,Bachelors,Upskilling,Health & Fitness,Mental Health,Managing Stress,3.5
+1995,47,Bachelors,Freelancing,Programming,Cybersecurity,Ethical Hacking,4.0
+1996,22,Masters,Freelancing,Health & Fitness,Yoga,Beginner Yoga,4.1
+1997,24,Bachelors,Job,Programming,Web Development,HTML CSS JS Mastery,3.2
+1998,29,High School,Job,Personal Development,Leadership,Leadership in Teams,3.8
+1999,40,PhD,Job,Engineering,Civil,AutoCAD Civil,3.8
+2000,31,Masters,Switching Career,Engineering,Robotics,Intro to Robotics,4.4

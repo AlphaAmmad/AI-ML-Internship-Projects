@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> Course Recommendation System</h1>
+            <p>Find the perfect course based on your preferences</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Input Form Section -->
+            <div class="input-section">
+                <h2><i class="fas fa-user-cog"></i> Your Preferences</h2>
+                
+                <!-- Age Slider -->
+                <div class="input-group">
+                    <label for="age">Age: <span id="age-value">25</span></label>
+                    <input type="range" id="age" min="18" max="50" value="25" class="slider">
+                </div>
+
+                <!-- Education Level -->
+                <div class="input-group">
+                    <label for="education">Education Level:</label>
+                    <select id="education" class="select-input">
+                        <option value="">Select Education Level</option>
+                        <option value="High School">High School</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="Masters">Masters</option>
+                        <option value="PhD">PhD</option>
+                    </select>
+                </div>
+
+                <!-- Goal -->
+                <div class="input-group">
+                    <label for="goal">Goal:</label>
+                    <select id="goal" class="select-input">
+                        <option value="">Select Your Goal</option>
+                        <option value="Job">Job</option>
+                        <option value="Upskilling">Upskilling</option>
+                        <option value="Switching Career">Switching Career</option>
+                        <option value="Freelancing">Freelancing</option>
+                    </select>
+                </div>
+
+                <!-- Preferred Category -->
+                <div class="input-group">
+                    <label for="category">Preferred Category:</label>
+                    <select id="category" class="select-input">
+                        <option value="">Select Category</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Design">Design</option>
+                        <option value="Business">Business</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Health & Fitness">Health & Fitness</option>
+                        <option value="Language Learning">Language Learning</option>
+                        <option value="Music">Music</option>
+                        <option value="Personal Development">Personal Development</option>
+                        <option value="Engineering">Engineering</option>
+                    </select>
+                </div>
+
+                <!-- Subcategory Search -->
+                <div class="input-group">
+                    <label for="subcategory-search">Search Subcategory:</label>
+                    <input type="text" id="subcategory-search" placeholder="e.g., machine, web, design..." class="search-input">
+                    <div id="subcategory-suggestions" class="suggestions"></div>
+                </div>
+
+                <!-- Selected Subcategory -->
+                <div class="input-group">
+                    <label for="subcategory">Selected Subcategory:</label>
+                    <select id="subcategory" class="select-input">
+                        <option value="">Select Subcategory</option>
+                    </select>
+                </div>
+
+                <button id="get-recommendations" class="btn-primary">
+                    <i class="fas fa-search"></i> Get Recommendations
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h2><i class="fas fa-star"></i> Recommended Courses</h2>
+                <div id="course-slider" class="course-slider">
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn" id="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="courses-wrapper">
+                            <div id="courses-container" class="courses-container">
+                                <!-- Courses will be dynamically added here -->
+                            </div>
+                        </div>
+                        <button class="slider-btn next-btn" id="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Course Statistics -->
+                <div id="course-stats" class="course-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-courses">0</span>
+                        <span class="stat-label">Total Courses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="avg-rating">0.0</span>
+                        <span class="stat-label">Avg Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="top-rated">0</span>
+                        <span class="stat-label">Top Rated (4.5+)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Finding perfect courses for you...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

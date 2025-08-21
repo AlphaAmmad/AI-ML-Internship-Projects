@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+
+        .predict-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .predict-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .predict-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        .results-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .prediction-result {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .prediction-result.pass {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+
+        .prediction-result.fail {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+
+        .prediction-result h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .confidence-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .confidence-fill.pass {
+            background: linear-gradient(90deg, #28a745, #20c997);
+        }
+
+        .confidence-fill.fail {
+            background: linear-gradient(90deg, #dc3545, #fd7e14);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .stat-card h4 {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4facfe;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Student Performance Predictor</h1>
+            <p>Predict student academic performance using machine learning</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>📝 Student Information</h2>
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="15" max="25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="school_type">School Type:</label>
+                        <select id="school_type" name="school_type" required>
+                            <option value="">Select School Type</option>
+                            <option value="Public">Public</option>
+                            <option value="Private">Private</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance_percentage">Attendance Percentage:</label>
+                        <input type="number" id="attendance_percentage" name="attendance_percentage" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="study_hours_per_day">Study Hours Per Day:</label>
+                        <input type="number" id="study_hours_per_day" name="study_hours_per_day" min="0" max="12" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="past_grade">Past Grade:</label>
+                        <input type="number" id="past_grade" name="past_grade" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignments_completion">Assignments Completion (%):</label>
+                        <input type="number" id="assignments_completion" name="assignments_completion" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="participation_score">Participation Score (1-10):</label>
+                        <input type="number" id="participation_score" name="participation_score" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="internet_access">Internet Access:</label>
+                        <select id="internet_access" name="internet_access" required>
+                            <option value="">Select Internet Access</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="predict-btn" id="predictBtn">
+                        🔮 Predict Performance
+                    </button>
+                </form>
+            </div>
+
+            <div class="results-section">
+                <h2>📊 Prediction Results</h2>
+                
+                <div class="error-message" id="errorMessage"></div>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing student data...</p>
+                </div>
+
+                <div class="prediction-result" id="predictionResult">
+                    <h3 id="predictionText"></h3>
+                    <p id="confidenceText"></p>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confidenceFill"></div>
+                    </div>
+                </div>
+
+                <div class="stats-grid" id="statsGrid" style="display: none;">
+                    <div class="stat-card">
+                        <h4>Pass Probability</h4>
+                        <div class="value" id="passProb">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Fail Probability</h4>
+                        <div class="value" id="failProb">-</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 8px; border-left: 4px solid #2196f3;">
+                    <h4 style="color: #1976d2; margin-bottom: 10px;">💡 Tips for Better Performance:</h4>
+                    <ul style="color: #1565c0; padding-left: 20px;">
+                        <li>Maintain attendance above 85%</li>
+                        <li>Study at least 3-4 hours daily</li>
+                        <li>Complete all assignments on time</li>
+                        <li>Actively participate in class discussions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Convert numeric fields
+            data.age = parseInt(data.age);
+            data.attendance_percentage = parseInt(data.attendance_percentage);
+            data.study_hours_per_day = parseFloat(data.study_hours_per_day);
+            data.past_grade = parseInt(data.past_grade);
+            data.assignments_completion = parseInt(data.assignments_completion);
+            data.participation_score = parseInt(data.participation_score);
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('predictionResult').style.display = 'none';
+            document.getElementById('statsGrid').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('predictBtn').disabled = true;
+            
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    displayPrediction(result);
+                } else {
+                    showError(result.error || 'An error occurred');
+                }
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('predictBtn').disabled = false;
+            }
+        });
+        
+        function displayPrediction(result) {
+            const predictionResult = document.getElementById('predictionResult');
+            const predictionText = document.getElementById('predictionText');
+            const confidenceText = document.getElementById('confidenceText');
+            const confidenceFill = document.getElementById('confidenceFill');
+            const passProb = document.getElementById('passProb');
+            const failProb = document.getElementById('failProb');
+            const statsGrid = document.getElementById('statsGrid');
+            
+            // Set prediction text and styling
+            predictionText.textContent = result.prediction === 'Pass' ? '✅ PASS' : '❌ FAIL';
+            confidenceText.textContent = `Confidence: ${result.confidence}%`;
+            
+            // Set confidence bar
+            confidenceFill.style.width = result.confidence + '%';
+            confidenceFill.className = 'confidence-fill ' + result.prediction.toLowerCase();
+            
+            // Set result styling
+            predictionResult.className = 'prediction-result ' + result.prediction.toLowerCase();
+            
+            // Set probabilities
+            passProb.textContent = result.probabilities.Pass + '%';
+            failProb.textContent = result.probabilities.Fail + '%';
+            
+            // Show results
+            predictionResult.style.display = 'block';
+            statsGrid.style.display = 'grid';
+        }
+        
+        function showError(message) {
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
